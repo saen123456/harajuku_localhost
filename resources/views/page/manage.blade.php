@@ -66,10 +66,10 @@
                 <div class="sidenav-2">
                     <div><h2>จัดการ Orders</h2></div>
                     <div class="sidebar">
-                        <a class="bt row" href="{{url('/manage')}}">
+                        <a class="bt row active" href="{{url('/manage')}}">
                             <div class="col-9">รายการใหม่</div><div class="col-3 num">3</div>
                         </a>
-                        <a class="bt row active" href="{{url('/accept')}}">
+                        <a class="bt row" href="{{url('/accept')}}">
                             <div class="col-9">รายการที่ยอมรับ</div><div class="col-3 num">2</div>
                         </a>
                         <a class="bt row" href="{{url('/send')}}">
@@ -108,31 +108,36 @@
                             <div class="col">Platform</div>
                         </div>
                         <div class="d-flex bd-highlight">
-                            <div class="col">#988120</div>
-                            <div class="col">01/01/2020 14.20น.</div>
-                            <div class="col">อาทิตย์ พากเพียร</div>
-                            <div class="col">086-665-4873</div>
-                            <div class="col"><span class="pickup">Pickup</span></div>
-                            <div class="col">1,200.-</div>
+                            <div class="col">#988123</div>
+                            <div class="col">01/01/2020 14.35น.</div>
+                            <div class="col">สุกัญญา เรียนดี</div>
+                            <div class="col">089-448-6633</div>
+                            <div class="col">Delivery</div>
+                            <div class="col">990.-</div>
                             <div class="col">Application</div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-10 d-flex flex-row bd-highlight .order-hara">
                                 <div class="head grey">รายการ</div>
-                                <div class="dish">ข้าวผัดทะเล x1</div>
-                                <div class="dish">สุกี้รวมหมู x1</div>
-                                <div class="dessert">น้ำแตงโมปั่น x 2</div>
+                                <div class="dish">หมกทะเล x2</div>
+                                <div class="dessert">น้ำพร้าวปั่น x 1</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="time">เหลือเวลารับ 40 วินาที</div>
                             </div>
                         </div>
                         <br>
                         <div class="row more">
                             <div class="col-8">
                                 <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
-                                <div class="msg">สุกี้ไม่ใส่ผักนะครับ</div> 
+                                <div class="msg">หมกทะเลไม่ใส่กุ้งนะครับ ที่บ้านมีคนแพ้</div> 
                             </div>
-                            <div class="col-4">
-                                <div class="rec-ord"><a href="#">ย้ายไปขั้นตอนกำลังปรุง</a></div>
+                            <div class="col-2">
+                                <div class="see-ord"><a href="#">ดู Order</a></div>
+                            </div>
+                            <div class="col-2">
+                                <div class="rec-ord"><a href="#">รับ Order</a></div>
                             </div>
                         </div>
                     </div>
@@ -150,10 +155,58 @@
                             <div class="col">Platform</div>
                         </div>
                         <div class="d-flex bd-highlight">
-                            <div class="col">#988119</div>
+                            <div class="col">#988122</div>
+                            <div class="col">01/01/2020 14.25น.</div>
+                            <div class="col">อาทิตย์ พากเพียร</div>
+                            <div class="col">086-665-4873</div>
+                            <div class="col"><span class="pickup">Pickup</span></div>
+                            <div class="col">1,200.-</div>
+                            <div class="col">Application</div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-10 d-flex flex-row bd-highlight .order-hara">
+                                <div class="head grey">รายการ</div>
+                                <div class="dish">ข้าวผัดทะเล x1</div>
+                                <div class="dish">สุกี้รวมหมู x1</div>
+                                <div class="dessert">น้ำแตงโมปั่น x 2</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="time">เหลือเวลารับ 35 วินาที</div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row more">
+                            <div class="col-8">
+                                <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
+                                <div class="msg">สุกี้ไม่ใส่ผักนะครับ</div> 
+                            </div>
+                            <div class="col-2">
+                                <div class="see-ord"><a href="#">ดู Order</a></div>
+                            </div>
+                            <div class="col-2">
+                                <div class="rec-ord"><a href="#">รับ Order</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--loop 3 -->
+                <div class="order-hara row">
+                    <div class="card mx-auto order col-md-12">
+                        <div class="d-flex bd-highlight grey">
+                            <div class="col">Order Number</div>
+                            <div class="col">Date & Time</div>
+                            <div class="col">Name</div>
+                            <div class="col">Tel</div>
+                            <div class="col">Trans Type</div>
+                            <div class="col">Amount</div>
+                            <div class="col">Platform</div>
+                        </div>
+                        <div class="d-flex bd-highlight">
+                            <div class="col">#988121</div>
                             <div class="col">01/01/2020 14.23น.</div>
-                            <div class="col">กัญญารัตน์  ดีงาม</div>
-                            <div class="col">082-202-1383</div>
+                            <div class="col">Kanokwan K...</div>
+                            <div class="col">099-785-3322</div>
                             <div class="col">Delivery</div>
                             <div class="col">890.-</div>
                             <div class="col">Application</div>
@@ -162,28 +215,30 @@
                         <div class="row">
                             <div class="col-10 d-flex flex-row bd-highlight .order-hara">
                                 <div class="head grey">รายการ</div>
-                                <div class="dish">ข้าวหมูแดง x2</div>
-                                <div class="dish">ข้าวมันไก่ x2</div>
-                                <div class="dessert">น้ำชาเขียวปั่น x 2</div>
-                                <div class="dessert">น้ำสตอเบอรี่ปั่น x 2</div>
+                                <div class="dish">ข้าวคลุกกะปิ x2</div>
+                                <div class="dessert">น้ำมะม่วงปั่น x 1</div>
                             </div>
-                            
+                            <div class="col-2">
+                                <div class="time">เหลือเวลารับ 20 วินาที</div>
+                            </div>
                         </div>
                         <br>
                         <div class="row more">
-                            <div class="col-8 ">
+                            <div class="col-8">
                                 <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
-                                <div class="msg">น้ำชาเขียวปั่น **หวานน้อย**</div> 
+                                <div class="msg">น้ำมะม่วงปั่น **หวานน้อย**</div> 
                             </div>
-                            
-                            <div class="col-4 ">
-                                <div class="rec-ord"><a href="#">ย้ายไปขั้นตอนกำลังปรุง</a></div>
+                            <div class="col-2">
+                                <div class="see-ord"><a href="#">ดู Order</a></div>
+                            </div>
+                            <div class="col-2">
+                                <div class="rec-ord"><a href="#">รับ Order</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                
+
+
             </div>
 
         </div>

@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Manage Order</title>
+    <title>Manage Store</title>
 </head>
 <body class="dashboard">
     <div class="wrapper">
         <div class="db-take">
             <div class="sidenav-db">
                 <div class="sidenav-1">
-                    <a href="#"><img src="../assets/logo/ta-kemall.png" width="100%"></a>
-                    <a href="#" class="active">
+                    <a href="#"><img src="../assets\logo/harajuku.png" width="100%"></a>
+                    <a href="{{url('/manage_order01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,16 +24,16 @@
                         <br>จัดการ<br>
                         Order
                     </a>
-                    <a href="#">
+                    <a href="{{url('/manage_money01')}}">
                         <svg 
                         mlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         width="100%" height="42px">
                         <image  x="0px" y="0px" width="100%" height="42px"  xlink:href="data:img/png;base64,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" />
                         </svg>
-                        <br>จัดการเงิน
+                        <br>จัดการ<br>เงิน
                     </a>
-                    <a href="#">
+                    <a href="{{url('/manage_store01')}}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -64,19 +64,22 @@
                 </div>
                 <!--End sidenav-1 -->
                 <div class="sidenav-2">
-                    <div><h2>จัดการ Orders</h2></div>
+                    <div><h2>จัดการร้าน</h2></div>
                     <div class="sidebar">
-                        <a class="bt row" href="{{url('/manage')}}">
-                            <div class="col-9">รายการใหม่</div><div class="col-3 num">3</div>
+                        <a class="bt row" href="{{url('/manage_store01')}}">
+                            <div class="col-9">ภาพรวม</div><div class="col-3 num">3</div>
                         </a>
-                        <a class="bt row active" href="{{url('/accept')}}">
-                            <div class="col-9">รายการที่ยอมรับ</div><div class="col-3 num">2</div>
+                        <a class="bt row" href="{{url('/manage_store02')}}">
+                            <div class="col-9">สินค้า(เมนูอาหาร)</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="{{url('/send')}}">
-                            <div class="col-9">พร้อมส่ง</div><div class="col-3 num">2</div>
+                        <a class="bt row active" href="{{url('/manage_store03')}}">
+                            <div class="col-9">รายการสั่งซื้อ</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="{{url('/succes')}}">
-                            <div class="col-9">เสร็จสิ้น</div><div class="col-3 num">100</div>
+                        <a class="bt row" href="{{url('/manage_store04')}}">
+                            <div class="col-9">คูปอง</div><div class="col-3 num">100</div>
+                        </a>
+                        <a class="bt row" href="{{url('/manage_store05')}}">
+                            <div class="col-9">ตั้งค่าร้าน</div><div class="col-3 num">100</div>
                         </a>
                     </div>
                 </div>
@@ -90,7 +93,7 @@
         <div class="content2 col-10">
             <div class="right_content_db"><img src="../assets/img/store.png"> ร้านแบมบูใหญ่</div>
             <div class="list">
-                <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>รายการใหม่</div>
+                <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>รายการสั่งซื้อ</div>
                 <hr class="line_hr">
                 <div class="search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#"><img src="../assets/icon/fillter.png">เพิ่มตัวกรอง</a></div>
             </div>
@@ -98,91 +101,94 @@
                 <!--loop 1 -->
                 <div class="order-hara row">
                     <div class="card mx-auto order col-md-12">
-                        <div class="d-flex bd-highlight grey">
-                            <div class="col">Order Number</div>
-                            <div class="col">Date & Time</div>
-                            <div class="col">Name</div>
-                            <div class="col">Tel</div>
-                            <div class="col">Trans Type</div>
-                            <div class="col">Amount</div>
-                            <div class="col">Platform</div>
-                        </div>
                         <div class="d-flex bd-highlight">
-                            <div class="col">#988120</div>
-                            <div class="col">01/01/2020 14.20น.</div>
-                            <div class="col">อาทิตย์ พากเพียร</div>
-                            <div class="col">086-665-4873</div>
-                            <div class="col"><span class="pickup">Pickup</span></div>
-                            <div class="col">1,200.-</div>
-                            <div class="col">Application</div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-10 d-flex flex-row bd-highlight .order-hara">
-                                <div class="head grey">รายการ</div>
-                                <div class="dish">ข้าวผัดทะเล x1</div>
-                                <div class="dish">สุกี้รวมหมู x1</div>
-                                <div class="dessert">น้ำแตงโมปั่น x 2</div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row more">
-                            <div class="col-8">
-                                <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
-                                <div class="msg">สุกี้ไม่ใส่ผักนะครับ</div> 
-                            </div>
-                            <div class="col-4">
-                                <div class="rec-ord"><a href="#">ย้ายไปขั้นตอนกำลังปรุง</a></div>
-                            </div>
+                            <div class="col">รายการสั่งซื้อ</div>
                         </div>
                     </div>
                 </div>
-                <!--loop 2 -->
-                <div class="order-hara row">
-                    <div class="card mx-auto order col-md-12">
-                        <div class="d-flex bd-highlight grey">
-                            <div class="col">Order Number</div>
-                            <div class="col">Date & Time</div>
-                            <div class="col">Name</div>
-                            <div class="col">Tel</div>
-                            <div class="col">Trans Type</div>
-                            <div class="col">Amount</div>
-                            <div class="col">Platform</div>
-                        </div>
-                        <div class="d-flex bd-highlight">
-                            <div class="col">#988119</div>
-                            <div class="col">01/01/2020 14.23น.</div>
-                            <div class="col">กัญญารัตน์  ดีงาม</div>
-                            <div class="col">082-202-1383</div>
-                            <div class="col">Delivery</div>
-                            <div class="col">890.-</div>
-                            <div class="col">Application</div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-10 d-flex flex-row bd-highlight .order-hara">
-                                <div class="head grey">รายการ</div>
-                                <div class="dish">ข้าวหมูแดง x2</div>
-                                <div class="dish">ข้าวมันไก่ x2</div>
-                                <div class="dessert">น้ำชาเขียวปั่น x 2</div>
-                                <div class="dessert">น้ำสตอเบอรี่ปั่น x 2</div>
+                <div class="card-list">
+                    <!--loop 2 -->
+                    <div class="order-hara row">
+                        <div class="card mx-auto order col-md-12">
+                            <div class="d-flex bd-highlight grey">
+                                <div class="col">Order Number</div>
+                                <div class="col">Date & Time</div>
+                                <div class="col">Name</div>
+                                <div class="col">Tel</div>
+                                <div class="col">Trans Type</div>
+                                <div class="col">Amount</div>
+                                <div class="col">Platform</div>
                             </div>
-                            
-                        </div>
-                        <br>
-                        <div class="row more">
-                            <div class="col-8 ">
-                                <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
-                                <div class="msg">น้ำชาเขียวปั่น **หวานน้อย**</div> 
+                            <div class="d-flex bd-highlight">
+                                <div class="col">#988119</div>
+                                <div class="col">01/01/2020 14.23น.</div>
+                                <div class="col">กัญญารัตน์  ดีงาม</div>
+                                <div class="col">082-202-1383</div>
+                                <div class="col">Delivery</div>
+                                <div class="col">890.-</div>
+                                <div class="col">Application</div>
                             </div>
-                            
-                            <div class="col-4 ">
-                                <div class="rec-ord"><a href="#">ย้ายไปขั้นตอนกำลังปรุง</a></div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-10 d-flex flex-row bd-highlight .order-hara">
+                                    <div class="head grey">รายการ</div>
+                                    <div class="dish">ข้าวหมูแดง x2</div>
+                                    <div class="dish">ข้าวมันไก่ x2</div>
+                                    <div class="dessert">น้ำชาเขียวปั่น x 2</div>
+                                    <div class="dessert">น้ำสตอเบอรี่ปั่น x 2</div>
+                                </div>
+                                
+                            </div>
+                            <br>
+                            <div class="row more">
+                                <div class="col-8 ">
+                                    <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
+                                    <div class="msg">น้ำชาเขียวปั่น **หวานน้อย**</div> 
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!--loop 1 -->
+                    <div class="order-hara row">
+                        <div class="card mx-auto order col-md-12">
+                            <div class="d-flex bd-highlight grey">
+                                <div class="col">Order Number</div>
+                                <div class="col">Date & Time</div>
+                                <div class="col">Name</div>
+                                <div class="col">Tel</div>
+                                <div class="col">Trans Type</div>
+                                <div class="col">Amount</div>
+                                <div class="col">Platform</div>
+                            </div>
+                            <div class="d-flex bd-highlight">
+                                <div class="col">#988120</div>
+                                <div class="col">01/01/2020 14.20น.</div>
+                                <div class="col">อาทิตย์ พากเพียร</div>
+                                <div class="col">086-665-4873</div>
+                                <div class="col"><span class="pickup">Pickup</span></div>
+                                <div class="col">1,200.-</div>
+                                <div class="col">Application</div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-10 d-flex flex-row bd-highlight .order-hara">
+                                    <div class="head grey">รายการ</div>
+                                    <div class="dish">ข้าวผัดทะเล x1</div>
+                                    <div class="dish">สุกี้รวมหมู x1</div>
+                                    <div class="dessert">น้ำแตงโมปั่น x 2</div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row more">
+                                <div class="col-8">
+                                    <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
+                                    <div class="msg">สุกี้ไม่ใส่ผักนะครับ</div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
                 </div>
-                
                 
             </div>
 
@@ -202,3 +208,7 @@
     });
  
 </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+

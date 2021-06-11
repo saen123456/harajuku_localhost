@@ -69,10 +69,10 @@
                         <a class="bt row" href="{{url('/manage')}}">
                             <div class="col-9">รายการใหม่</div><div class="col-3 num">3</div>
                         </a>
-                        <a class="bt row active" href="{{url('/accept')}}">
+                        <a class="bt row" href="{{url('/accept')}}">
                             <div class="col-9">รายการที่ยอมรับ</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="{{url('/send')}}">
+                        <a class="bt row active" href="{{url('/send')}}">
                             <div class="col-9">พร้อมส่ง</div><div class="col-3 num">2</div>
                         </a>
                         <a class="bt row" href="{{url('/succes')}}">
@@ -132,7 +132,7 @@
                                 <div class="msg">สุกี้ไม่ใส่ผักนะครับ</div> 
                             </div>
                             <div class="col-4">
-                                <div class="rec-ord"><a href="#">ย้ายไปขั้นตอนกำลังปรุง</a></div>
+                                <div class="rec-ord"><a href="#">เรียก Rider</a></div>
                             </div>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
                             </div>
                             
                             <div class="col-4 ">
-                                <div class="rec-ord"><a href="#">ย้ายไปขั้นตอนกำลังปรุง</a></div>
+                                <div class="rec-ord"><a href="#">เรียก Rider</a></div>
                             </div>
                         </div>
                     </div>
