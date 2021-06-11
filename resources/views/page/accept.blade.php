@@ -66,16 +66,16 @@
                 <div class="sidenav-2">
                     <div><h2>จัดการ Orders</h2></div>
                     <div class="sidebar">
-                        <a class="bt row" href="manage.html">
+                        <a class="bt row" href="{{url('/manage')}}">
                             <div class="col-9">รายการใหม่</div><div class="col-3 num">3</div>
                         </a>
-                        <a class="bt row active" href="accept.html">
+                        <a class="bt row active" href="{{url('/accept')}}">
                             <div class="col-9">รายการที่ยอมรับ</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="send.html">
+                        <a class="bt row" href="{{url('/send')}}">
                             <div class="col-9">พร้อมส่ง</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="succes.html">
+                        <a class="bt row" href="{{url('/succes')}}">
                             <div class="col-9">เสร็จสิ้น</div><div class="col-3 num">100</div>
                         </a>
                     </div>

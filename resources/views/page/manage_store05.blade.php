@@ -66,7 +66,7 @@
                 <div class="sidenav-2">
                     <div><h2>จัดการร้าน</h2></div>
                     <div class="sidebar">
-                        <a class="bt row active" href="{{ url('/manage_store01') }}">
+                        <a class="bt row" href="{{ url('/manage_store01') }}">
                             <div class="col-9">ภาพรวม</div><div class="col-3 num">3</div>
                         </a>
                         <a class="bt row" href="{{ url('/manage_store02') }}">
@@ -78,7 +78,7 @@
                         <a class="bt row" href="{{ url('/manage_store04') }}">
                             <div class="col-9">คูปอง</div><div class="col-3 num">100</div>
                         </a>
-                        <a class="bt row" href="{{ url('/manage_store05') }}">
+                        <a class="bt row active" href="{{ url('/manage_store05') }}">
                             <div class="col-9">ตั้งค่าร้าน</div><div class="col-3 num">100</div>
                         </a>
                     </div>
