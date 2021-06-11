@@ -8,6 +8,6 @@ class ManageController extends Controller
 {
     //
     public function index(){
-        return view('page.accept');
+        return view('page.manage_money01');
     }
 }
