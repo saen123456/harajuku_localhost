@@ -1,0 +1,17 @@
+.footer_top .follow ul {
+    background: #D01F44;
+      border-radius: 100%;
+      display: inline-block;
+      font-size: 25px;
+      height: 50px;
+      line-height: 0;
+      margin-right: 1px;
+      text-align: center;
+      width: 50px;
+      text-align: center;
+      padding: 12px 0 0px 0;
+  }
+  
+  .footer_top .follow ul a:hover {
+    color: black;
+  }

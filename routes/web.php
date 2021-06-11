@@ -69,3 +69,6 @@ Route::get('/succes', function(){
 Route::get('/test_box', function(){
     return view('/admin/test_box');
 });
+Route::get('/voucher', function(){
+    return view('/front/voucher');
+});
