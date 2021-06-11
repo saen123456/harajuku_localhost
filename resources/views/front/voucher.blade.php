@@ -39,7 +39,7 @@ require_once "header.php";
                 <div class="col-12">
                 <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="img-take/สยามเนรี.png" alt=""></a>
+                            <a href="{{url('/shop')}}"><img src="img-take/สยามเนรี.png" alt=""></a>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-4">
