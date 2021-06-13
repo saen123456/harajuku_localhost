@@ -1,5 +1,16 @@
-<link rel="shortcut icon" type="image/x-icon" href="img/logo-take.png">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>menu list</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    
+    <!-- CSS 
+    ========================= -->
+    <!--bootstrap min css-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="css-front/bootstrap.min.css">
     <!--owl carousel min css-->
@@ -34,13 +45,7 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/takev1.css">
-    <link rel="stylesheet" href="assets/css/custom_take.css">
-    <link rel="stylesheet" href="assets/css/takev1.css">
-
+    
     <!--modernizr min js here-->
-    <script src="https://kit.fontawesome.com/f5719a9e1e.js" crossorigin="anonymous"></script>
     <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    <script src="assets/js/take-main.js"></script>
-
 </head>
