@@ -1,8 +1,9 @@
 <?php
 
-//require __DIR__ . "/../../../public/config.php";
+require __DIR__ . "/../../../public/config.php";
+
 ?>
-@include('templates.config')
+
 <!doctype html>
 <html class="no-js" lang="en">
 

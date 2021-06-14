@@ -1,7 +1,7 @@
 <?php
 
-require_once "config')}}";
-require_once "header')}}";
+require_once "config.php";
+require_once "header.php";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -129,7 +129,7 @@ require_once "header')}}";
     <!-- customer login end -->
     <?php
 
-require_once "footer')}}";
+require_once "footer.php";
 
 ?>
     

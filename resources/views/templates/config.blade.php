@@ -1,6 +1,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="img/logo-take.png">
     <!-- Favicon -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="css-front/bootstrap.min.css">
     <!--owl carousel min css-->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
