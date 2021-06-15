@@ -143,7 +143,11 @@ if (! function_exists('asset')) {
      */
     function asset($path, $secure = null)
     {
-        return app('url')->asset($path, $secure);
+        //return app('url')->asset($path, $secure);
+        if($_SERVER['HTTP_HOST']=='127.0.0.1:8000')
+            return app('url')->asset($path, $secure);
+        else
+            return app('url')->asset('public/'.$path, $secure);
     }
 }
 

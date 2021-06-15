@@ -44,7 +44,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                        <img src="{{asset('img-take/Logo-Harajuku.png')}}" width="100" alt="" data-retina="true" class="hidden-xs">
+                        <img src="{{asset('/img-take/Logo-Harajuku.png')}}" width="100" alt="" data-retina="true" class="hidden-xs">
 
                         <a href="{{url('index')}}" id="logo">
                             <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close hidden-lg hidden-md hidden-sm" href="javascript:void(0);"><span>Menu mobile</span></a>
@@ -53,12 +53,12 @@
                     </div>
                     <nav class="col-lg-8 col-md-8 col-sm-6 col-xs-5">
 
-                        <img src="img-take/Logo-Harajuku.png" width="45" height="23" alt="" data-retina="true" class="hidden-lg hidden-md hidden-sm" style="float: right;">
+                        <img src="{{asset('img-take/Logo-Harajuku.png')}}" width="45" height="23" alt="" data-retina="true" class="hidden-lg hidden-md hidden-sm" style="float: right;">
 
                         <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close hidden-xs" href="javascript:void(0);"><span>Menu mobile</span></a>
                         <div class="main-menu main-menu2">
                             <div id="header_menu">
-                                <img src="img/logo-take.png" width="45" height="23" alt="" data-retina="true">
+                                <img src="{{asset('img/logo-take.png')}}" width="45" height="23" alt="" data-retina="true">
                                 <a href="#" class="open_close" id="close_in"><i class="icon_close hidden-lg"></i></a>
 
                             </div>
@@ -105,9 +105,9 @@
                                     </ul>
                                 </li>
 
-                                @foreach($menu as $row)
+                                {{-- @foreach($menu as $row)
                                      <li><a href="{{url('event')}}">กิจกรรม</a></li>
-                                @endforeach
+                                @endforeach --}}
 
                             </ul>
                         </div><!-- End main-menu -->
@@ -191,7 +191,7 @@
             </div>
             <div class="cart_item">
                 <div class="cart_img">
-                    <a href="#"><img src="img-take/ss1-ยำหมูยอไข่แดงเค็ม.jpg" alt=""></a>
+                    <a href="#"><img src="{{asset('/img-take/ss1-ยำหมูยอไข่แดงเค็ม.jpg')}}" alt=""></a>
                 </div>
                 <div class="cart_info">
                     <a href="#">ยำหมูยอไข่เค็ม</a>
@@ -203,7 +203,7 @@
             </div>
             <div class="cart_item">
                 <div class="cart_img">
-                    <a href="#"><img src="img-take/ss2-ผัดไท.jpg" alt=""></a>
+                    <a href="#"><img src="{{asset('img-take/ss2-ผัดไท.jpg')}}" alt=""></a>
                 </div>
                 <div class="cart_info">
                     <a href="#">ผัดไท</a>
@@ -215,7 +215,7 @@
             </div>
             <div class="cart_item">
                 <div class="cart_img">
-                    <a href="#"><img src="img-take/sss1-เสื้อเชิ้ต-Linen-blend-Shirt-Slim-Fit.jpg" alt=""></a>
+                    <a href="#"><img src="{{asset('img-take/sss1-เสื้อเชิ้ต-Linen-blend-Shirt-Slim-Fit.jpg')}}" alt=""></a>
                 </div>
                 <div class="cart_info">
                     <a href="#">เสื้อเชื้ต</a>
@@ -227,7 +227,7 @@
             </div>
             <div class="cart_item">
                 <div class="cart_img">
-                    <a href="#"><img src="img-take/sss2--MARILYN-HANDBAGS.jpg" alt=""></a>
+                    <a href="#"><img src="{{asset('img-take/sss2--MARILYN-HANDBAGS.jpg')}}" alt=""></a>
                 </div>
                 <div class="cart_info">
                     <a href="#">กระเป๋า</a>
@@ -310,6 +310,7 @@
     </section>
     <!-- End SubHeader ============================================ -->
     <!--slider area end-->
+
     <div class="product_area product_deals mb-lg-50 mb-xs-5 mt-xs-2">
         <div class="container-fluid">
             <div class="row">
@@ -327,7 +328,8 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t1.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('/img-take/t1.jpg')}}" alt=""></a>
+                                       
 
 
 
@@ -338,7 +340,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-detail')}}"><img src="img-take/t2.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-detail')}}"><img src="{{asset('img-take/t2.jpg')}}" alt=""></a>
 
 
 
@@ -349,7 +351,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t3.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('img-take/t3.jpg')}}" alt=""></a>
 
 
 
@@ -360,7 +362,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t4.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('img-take/t4.jpg')}}" alt=""></a>
 
 
 
@@ -371,7 +373,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t5.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('img-take/t5.jpg')}}" alt=""></a>
 
 
 
@@ -382,7 +384,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t6.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('img-take/t6.jpg')}}" alt=""></a>
 
 
 
@@ -393,7 +395,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t7.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('img-take/t7.jpg')}}" alt=""></a>
 
 
 
@@ -404,7 +406,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t8.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('img-take/t8.jpg')}}" alt=""></a>
 
 
 
@@ -415,7 +417,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t9.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('img-take/t9.jpg')}}" alt=""></a>
 
 
 
@@ -426,7 +428,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="img-take/t10.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('topdeal-details')}}"><img src="{{asset('img-take/t10.jpg')}}" alt=""></a>
 
 
 
@@ -458,7 +460,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p1.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p1.jpg')}}" alt=""></a>
 
 
 
@@ -469,7 +471,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p6.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p6.jpg')}}" alt=""></a>
 
 
 
@@ -480,7 +482,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p3.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p3.jpg')}}" alt=""></a>
 
 
 
@@ -491,7 +493,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p8.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p8.jpg')}}" alt=""></a>
 
 
 
@@ -502,7 +504,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p5.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p5.jpg')}}" alt=""></a>
 
 
 
@@ -513,7 +515,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p7.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p7.jpg')}}" alt=""></a>
 
 
 
@@ -524,7 +526,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p2.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p2.jpg')}}" alt=""></a>
 
 
 
@@ -535,7 +537,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p4.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p4.jpg')}}" alt=""></a>
 
 
 
@@ -546,7 +548,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p9.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p9.jpg')}}" alt=""></a>
 
 
 
@@ -557,7 +559,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb product_thumb2">
-                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="img-take/p10.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('promotion_detail')}}"><img src="{{asset('img-take/p10.jpg')}}" alt=""></a>
 
 
 
@@ -591,7 +593,7 @@
                     <div class="single_shipping col_2">
 
                         <div class="shipping_icone">
-                            <img src="img-take/hh1.png" alt="">
+                            <img src="{{asset('img-take/hh1.png')}}" alt="">
                         </div>
                         <div class="shipping_content">
                             <h3>Choose Your Favorite</h3>
@@ -602,7 +604,7 @@
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="single_shipping col_3">
                         <div class="shipping_icone">
-                            <img src="img-take/hh2.png" alt="">
+                            <img src="{{asset('img-take/hh2.png')}}" alt="">
                         </div>
                         <div class="shipping_content">
                             <h3>We Deliver Your Meals</h3>
@@ -614,7 +616,7 @@
                 <div class="col-lg-4 col-md-6 col-xs-12">
                     <div class="single_shipping col_4">
                         <div class="shipping_icone">
-                            <img src="img-take/hh3.png" alt="">
+                            <img src="{{asset('img-take/hh3.png')}}" alt="">
                         </div>
                         <div class="shipping_content">
                             <h3>Eat and Enjoy</h3>
@@ -640,7 +642,7 @@
                     <article class="single_blog single_blog2 event-take">
                         <figure>
                             <div class="blog_thumb event-take">
-                                <a href="{{url('allfoods')}}"> <img src="img-take/iconfood1.png" alt=""></a>
+                                <a href="{{url('allfoods')}}"> <img src="{{asset('img-take/iconfood1.png')}}" alt=""></a>
                             </div>
                             <figcaption class="blog_content" style="border-radius: 20px;">
                                 <strong>
@@ -659,7 +661,7 @@
                     <article class="single_blog single_blog2 event-take">
                         <figure>
                             <div class="blog_thumb">
-                                <a href="{{url('menu-list2')}}"><img src="img-take/iconshop1.png" alt=""></a>
+                                <a href="{{url('menu-list2')}}"><img src="{{asset('img-take/iconshop1.png')}}" alt=""></a>
                             </div>
                             <figcaption class="blog_content" style="border-radius: 20px;">
                                 <strong>
@@ -676,7 +678,7 @@
                     <article class="single_blog single_blog2 event-take">
                         <figure>
                             <div class="blog_thumb">
-                                <a href="{{url('voucher')}}"><img src="img-take/iconvoucher.png" alt=""></a>
+                                <a href="{{url('voucher')}}"><img src="{{asset('img-take/iconvoucher.png')}}" alt=""></a>
                             </div>
                             <figcaption class="blog_content" style="border-radius: 20px;">
                                 <strong>
@@ -714,8 +716,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s1-ก๋วยเตี๋ยวไก่สูตรพิเศษ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s1-ก๋วยเตี๋ยวไก่สูตรพิเศษ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s1-ก๋วยเตี๋ยวไก่สูตรพิเศษ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s1-ก๋วยเตี๋ยวไก่สูตรพิเศษ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -770,8 +772,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s2-บอนชอน_0.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s2-บอนชอน_0.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s2-บอนชอน_0.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s2-บอนชอน_0.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -828,8 +830,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s3-pizza-company.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s3-pizza-company.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s3-pizza-company.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s3-pizza-company.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -884,8 +886,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s-9-โอชายะ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s-9-โอชายะ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s-9-โอชายะ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s-9-โอชายะ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -943,8 +945,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s-8-ข้าวมันไก่.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s-8-ข้าวมันไก่.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s-8-ข้าวมันไก่.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s-8-ข้าวมันไก่.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -999,8 +1001,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s-7-กูโรตีชาชัก.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s-7-กูโรตีชาชัก.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s-7-กูโรตีชาชัก.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s-7-กูโรตีชาชัก.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1057,8 +1059,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s-10-ยาโยอิ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s-10-ยาโยอิ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s-10-ยาโยอิ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s-10-ยาโยอิ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1113,8 +1115,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s4-ไข่หวานบ้านซูชิ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s4-ไข่หวานบ้านซูชิ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s4-ไข่หวานบ้านซูชิ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s4-ไข่หวานบ้านซูชิ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1171,8 +1173,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s5-shabushi.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s5-shabushi.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s5-shabushi.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s5-shabushi.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1227,8 +1229,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="img-take/s6-ก๋วยเตี๋ยวเรือปประทีบ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="img-take/s6-ก๋วยเตี๋ยวเรือปประทีบ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s6-ก๋วยเตี๋ยวเรือปประทีบ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('restaurant')}}"><img src="{{asset('img-take/s6-ก๋วยเตี๋ยวเรือปประทีบ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1317,8 +1319,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss7-ทาโก้เนื้อ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss7-ทาโก้เนื้อ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss7-ทาโก้เนื้อ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss7-ทาโก้เนื้อ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1377,8 +1379,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss4-แกงเขียวหวาน.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss4-แกงเขียวหวาน.jpg.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss4-แกงเขียวหวาน.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss4-แกงเขียวหวาน.jpg.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1440,8 +1442,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail2')}}"><img src="img-take/ss2-ผัดไท.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail2')}}"><img src="img-take/ss2-ผัดไท.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail2')}}"><img src="{{asset('img-take/ss2-ผัดไท.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail2')}}"><img src="{{asset('img-take/ss2-ผัดไท.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1500,8 +1502,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss9-ตำข้าวโพดกุ้ง.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss9-ตำข้าวโพดกุ้ง.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss9-ตำข้าวโพดกุ้ง.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss9-ตำข้าวโพดกุ้ง.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1563,8 +1565,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss1-ยำหมูยอไข่แดงเค็ม.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss1-ยำหมูยอไข่แดงเค็ม.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss1-ยำหมูยอไข่แดงเค็ม.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss1-ยำหมูยอไข่แดงเค็ม.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1623,8 +1625,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss10-ข้าวคลุกกะปิ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss10-ข้าวคลุกกะปิ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss10-ข้าวคลุกกะปิ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss10-ข้าวคลุกกะปิ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1684,8 +1686,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss3-ซูขิ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss3-ซูขิ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss3-ซูขิ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss3-ซูขิ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1744,8 +1746,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss5-บัวลอยไข่หวาน.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss5-บัวลอยไข่หวาน.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss5-บัวลอยไข่หวาน.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss5-บัวลอยไข่หวาน.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1806,8 +1808,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss8-สาคูไส้หมู.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss8-สาคูไส้หมู.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss8-สาคูไส้หมู.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss8-สาคูไส้หมู.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1866,8 +1868,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss6-กุ้งแม่น้ำย่างเกลือ.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="img-take/ss6-กุ้งแม่น้ำย่างเกลือ.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss6-กุ้งแม่น้ำย่างเกลือ.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('productrecom_detail')}}"><img src="{{asset('img-take/ss6-กุ้งแม่น้ำย่างเกลือ.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -1960,8 +1962,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss1-เสื้อเชิ้ต-Linen-blend-Shirt-Slim-Fit.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss1-เสื้อเชิ้ต-Linen-blend-Shirt-Slim-Fit.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss1-เสื้อเชิ้ต-Linen-blend-Shirt-Slim-Fit.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss1-เสื้อเชิ้ต-Linen-blend-Shirt-Slim-Fit.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2019,8 +2021,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss2--MARILYN-HANDBAGS.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss2--MARILYN-HANDBAGS.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss2--MARILYN-HANDBAGS.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss2--MARILYN-HANDBAGS.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2082,8 +2084,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss3-Nike-Air-Max-90.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss3-Nike-Air-Max-90.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss3-Nike-Air-Max-90.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss3-Nike-Air-Max-90.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2143,8 +2145,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss5-กางเกงยีนส์-LEE.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss5-กางเกงยีนส์-LEE.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss5-กางเกงยีนส์-LEE.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss5-กางเกงยีนส์-LEE.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2207,8 +2209,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss4-นาฬิกา-GUESS.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss4-นาฬิกา-GUESS.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss4-นาฬิกา-GUESS.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss4-นาฬิกา-GUESS.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2268,8 +2270,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss6-หมวก-U.S.-POLO-ASSN..jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss6-หมวก-U.S.-POLO-ASSN..jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss6-หมวก-U.S.-POLO-ASSN..jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss6-หมวก-U.S.-POLO-ASSN..jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2331,8 +2333,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss10-ต่างหู-Marks-&-Spencer.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss10-ต่างหู-Marks-&-Spencer.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss10-ต่างหู-Marks-&-Spencer.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss10-ต่างหู-Marks-&-Spencer.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2392,8 +2394,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss9-รองเท้าส้นสูง-ECLIPSE.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss9-รองเท้าส้นสูง-ECLIPSE.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss9-รองเท้าส้นสูง-ECLIPSE.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss9-รองเท้าส้นสูง-ECLIPSE.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2456,8 +2458,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss8-แว่นตา-RAY-BAN.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss8-แว่นตา-RAY-BAN.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss8-แว่นตา-RAY-BAN.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss8-แว่นตา-RAY-BAN.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2517,8 +2519,8 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="img-take/sss7-กระเป๋าสะพายหลัง-MLB.jpg" alt=""></a>
-                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="img-take/sss7-กระเป๋าสะพายหลัง-MLB.jpg" alt=""></a>
+                                            <a class="primary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss7-กระเป๋าสะพายหลัง-MLB.jpg')}}" alt=""></a>
+                                            <a class="secondary_img" href="{{url('product-detail2')}}"><img src="{{asset('img-take/sss7-กระเป๋าสะพายหลัง-MLB.jpg')}}" alt=""></a>
                                             <div class="label_product">
                                                 <span class="label_sale">Sale</span>
                                                 <span class="label_new">New</span>
@@ -2619,7 +2621,7 @@
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('event-detail')}}"> <img src="img-take/1 Take-pet-festival.jpg" alt=""></a>
+                                    <a href="{{url('event-detail')}}"> <img src="{{asset('img-take/1 Take-pet-festival.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -2629,7 +2631,7 @@
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('event-detail')}}"><img src="img-take/2 Take-japan-food.jpg" alt=""></a>
+                                    <a href="{{url('event-detail')}}"><img src="{{asset('img-take/2 Take-japan-food.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -2639,7 +2641,7 @@
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('event-detail')}}"><img src="img-take/3 Tanabata-by-take.jpg" alt=""></a>
+                                    <a href="{{url('event-detail')}}"><img src="{{asset('img-take/3 Tanabata-by-take.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -2663,7 +2665,7 @@
         </div>
 
     </div><!-- End container-fluid  -->
-    <div class="single_slider d-flex align-items-center mb-40" data-bgimg="img-take/ร้านค้า.jpg">
+    <div class="single_slider d-flex align-items-center mb-40" data-bgimg="{{asset('img-take/ร้านค้า.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-xs-6">
@@ -2686,7 +2688,7 @@
     </div>
 
     </div><!-- End container-fluid  -->
-    <div class="single_slider d-flex align-items-center mb-40 " data-bgimg="img-take/Rider.jpg">
+    <div class="single_slider d-flex align-items-center mb-40 " data-bgimg="{{asset('img-take/Rider.jpg')}}">
         <div class="container">
             <div class="row">
 
@@ -2704,7 +2706,7 @@
             </div>
         </div>
     </div>
-    <div class="single_slider d-flex align-items-center " data-bgimg="img-take/dowloadiosand.jpg" style="background-position:unset;">
+    <div class="single_slider d-flex align-items-center " data-bgimg="{{asset('img-take/dowloadiosand.jpg')}}" style="background-position:unset;">
         <div class="container">
             <div class="row">
 
@@ -2716,8 +2718,8 @@
                             ดาวน์โหลด TA-KE App ได้เเล้ววันนี้ฟรี
                             ทั้ง IOS เเละ Android
                         </p>
-                        <a href=""><img src="assets/img/icon/appstore.png" width="150" height="60" alt=""></a>
-                        <a href=""><img src="assets/img/icon/googleplay.png" width="150" height="60" alt=""></a>
+                        <a href=""><img src="{{asset('assets/img/icon/appstore.png')}}" width="150" height="60" alt=""></a>
+                        <a href=""><img src="{{asset('assets/img/icon/googleplay.png')}}" width="150" height="60" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -2770,7 +2772,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/y1.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/y1.jpg')}}" alt=""></a>
 
 
 
@@ -2781,7 +2783,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/y2.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/y2.jpg')}}" alt=""></a>
 
 
 
@@ -2792,7 +2794,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/y3.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/y3.jpg')}}" alt=""></a>
 
 
 
@@ -2803,7 +2805,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/y4.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/y4.jpg')}}" alt=""></a>
 
 
 
@@ -2814,7 +2816,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/y5.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/y5.jpg')}}" alt=""></a>
 
 
 
@@ -2825,7 +2827,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/y6.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/y6.jpg')}}" alt=""></a>
 
 
 
@@ -2836,7 +2838,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/y7.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/y7.jpg')}}" alt=""></a>
 
 
 
@@ -2847,7 +2849,7 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/y8.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/y8.jpg')}}" alt=""></a>
 
 
 
@@ -2866,10 +2868,7 @@
         </div>
     </div>
     <!--footer area start-->
-    <?php
-
-    require_once "footer.php";
-    ?>
+    {{-- @include('templates.footer') --}}
     <!--footer area end-->
     <!-- ร้านอาหารเเนะนำ -->
     <div class="modal fade" id="modal_box5" tabindex="-1" role="dialog" aria-hidden="true">
@@ -2882,7 +2881,7 @@
                     <div class="row">
                         <div class="col-lg-5 col-xs-12">
                             <div class="modal_tab">
-                                <img src="img-take/บอนชอน_1.jpg" alt="">
+                                <img src="{{asset('img-take/บอนชอน_1.jpg')}}" alt="">
 
                             </div>
                         </div>
@@ -2895,7 +2894,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/บอนชอน_2.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/บอนชอน_2.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -2912,7 +2911,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/บอนชอน_3.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/บอนชอน_3.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -2930,7 +2929,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/บอนชอน_4.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/บอนชอน_4.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -2989,7 +2988,7 @@
                     <div class="row">
                         <div class="col-lg-5 col-xs-12">
                             <div class="modal_tab">
-                                <img src="img-take/ก๋วยเตี๋ยวไก่สูตรต้นตำรับ_1.jpg" alt="">
+                                <img src="{{asset('img-take/ก๋วยเตี๋ยวไก่สูตรต้นตำรับ_1.jpg')}}" alt="">
 
                             </div>
                         </div>
@@ -3003,7 +3002,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/ก๋วยเตี๋ยวไก่สูตรต้นตำรับ_2.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/ก๋วยเตี๋ยวไก่สูตรต้นตำรับ_2.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3020,7 +3019,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/ก๋วยเตี๋ยวไก่สูตรต้นตำรับ_3.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/ก๋วยเตี๋ยวไก่สูตรต้นตำรับ_3.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3037,7 +3036,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/ก๋วยเตี๋ยวไก่สูตรต้นตำรับ_4.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/ก๋วยเตี๋ยวไก่สูตรต้นตำรับ_4.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3095,7 +3094,7 @@
                     <div class="row">
                         <div class="col-lg-5 col-xs-12">
                             <div class="modal_tab">
-                                <img src="img-take/พิซซ่า-1-600.jpg" alt="">
+                                <img src="{{asset('img-take/พิซซ่า-1-600.jpg')}}" alt="">
 
                             </div>
                         </div>
@@ -3108,7 +3107,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/พิซซ่า-2-100.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/พิซซ่า-2-100.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3125,7 +3124,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/พิซซ่า-3-100.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/พิซซ่า-3-100.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3142,7 +3141,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/พิซซ่า-4-100.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/พิซซ่า-4-100.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3200,7 +3199,7 @@
                     <div class="row">
                         <div class="col-lg-5 col-xs-12">
                             <div class="modal_tab">
-                                <img src="img-take/โอชายะ--1-600.jpg" alt="">
+                                <img src="{{asset('img-take/โอชายะ--1-600.jpg')}}" alt="">
 
                             </div>
                         </div>
@@ -3214,7 +3213,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/โอชายะ--2-100.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/โอชายะ--2-100.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3231,7 +3230,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/โอชายะ--3-100.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/โอชายะ--3-100.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3248,7 +3247,7 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="">
-                                                <a href="{{url('blog-details')}}"><img src="img-take/โอชายะ--4-100.jpg" alt=""></a>
+                                                <a href="{{url('blog-details')}}"><img src="{{asset('img-take/โอชายะ--4-100.jpg')}}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
@@ -3308,7 +3307,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                <a href="#"><img src="img-take/sss1-เสื้อเชิ้ต-Linen-blend-Shirt-Slim-Fit.jpg" alt=""></a>
+                                <a href="#"><img src="{{asset('img-take/sss1-เสื้อเชิ้ต-Linen-blend-Shirt-Slim-Fit.jpg')}}" alt=""></a>
 
                             </div>
                             <div class="col-lg-5 col-md- col-sm-12 col-xs-12">
@@ -3394,7 +3393,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
                                 <div class="modal_tab">
-                                    <img src="img-take/ss1-ยำหมูยอไข่แดงเค็ม-ไซส์-600.jpg" alt="">
+                                    <img src="{{asset('img-take/ss1-ยำหมูยอไข่แดงเค็ม-ไซส์-600.jpg')}}" alt="">
 
                                 </div>
                             </div>
@@ -3496,7 +3495,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
                                 <div class="modal_tab">
-                                    <img src="img-take/ss2-ผัดไท-ไซส์-600.jpg" alt="">
+                                    <img src="{{asset('img-take/ss2-ผัดไท-ไซส์-600.jpg')}}" alt="">
 
                                 </div>
                             </div>
@@ -3584,7 +3583,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
                                 <div class="modal_tab">
-                                    <img src="img-take/ss2-ผัดไท-ไซส์-600.jpg" alt="">
+                                    <img src="{{asset('img-take/ss2-ผัดไท-ไซส์-600.jpg')}}" alt="">
 
                                 </div>
                             </div>
@@ -3674,7 +3673,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
                                 <div class="modal_tab">
-                                    <img src="img-take/ss2-ผัดไท-ไซส์-600.jpg" alt="">
+                                    <img src="{{asset('img-take/ss2-ผัดไท-ไซส์-600.jpg')}}" alt="">
 
                                 </div>
                             </div>
@@ -3767,7 +3766,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                <a href="#"><img src="img-take/sss2--MARILYN-HANDBAGS.jpg" alt=""></a>
+                                <a href="#"><img src="{{asset('img-take/sss2--MARILYN-HANDBAGS.jpg')}}" alt=""></a>
 
                             </div>
                             <div class="col-lg-5 col-md- col-sm-12 col-xs-12">
@@ -3849,40 +3848,40 @@
     <!--jquery min js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--popper min js-->
-    <script src="assets/js/popper.js"></script>
+    <script src="{{asset('assets/js/popper.js')}}"></script>
     <!--bootstrap min js-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
     <!--owl carousel min js-->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
     <!--slick min js-->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{{asset('assets/js/slick.min.js')}}"></script>
     <!--magnific popup min js-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
     <!--counterup min js-->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
     <!--jquery countdown min js-->
-    <script src="assets/js/jquery.countdown.js"></script>
+    <script src="{{asset('assets/js/jquery.countdown.js')}}"></script>
     <!--jquery ui min js-->
-    <script src="assets/js/jquery.ui.js"></script>
+    <script src="{{asset('assets/js/jquery.ui.js')}}"></script>
     <!--jquery elevatezoom min js-->
-    <script src="assets/js/jquery.elevatezoom.js"></script>
+    <script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
     <!--isotope packaged min js-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
     <!--slinky menu js-->
-    <script src="assets/js/slinky.menu.js"></script>
+    <script src="{{asset('assets/js/slinky.menu.js')}}"></script>
     <!--instagramfeed menu js-->
-    <script src="assets/js/jquery.instagramFeed.min.js"></script>
+    <script src="{{asset('assets/js/jquery.instagramFeed.min.js')}}"></script>
     <!-- Plugins JS -->
 
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
 
 
-    <!-- <script src="js-front/jquery-2.2.4.min.js"></script> -->
-    <script src="js-front/common_scripts_min.js"></script>
-    <script src="js-front/functions.js"></script>
-    <script src="assets/validate.js"></script>
+    <!-- <script src="js-front/jquery-2.2.4.min.js')}}"></script> -->
+    <script src="{{asset('js-front/common_scripts_min.js')}}"></script>
+    <script src="{{asset('js-front/functions.js')}}"></script>
+    <script src="{{asset('assets/validate.js')}}"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('assets/js/main.js')}}"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeYttpuQHuuYdaEXltzMDJ2xXsSRRXMnA&callback=initAutocomplete&libraries=places&v=weekly" defer></script>
     <script>
