@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Manage Store</title>
 </head>
 <body class="dashboard">
@@ -13,8 +13,8 @@
         <div class="db-take">
             <div class="sidenav-db">
                 <div class="sidenav-1">
-                    <a href="#"><img src="../assets\logo/harajuku.png" width="100%"></a>
-                    <a href="manage_order01.html">
+                    <a href="#"><img src="{{asset('assets\logo/harajuku.png')}}" width="100%"></a>
+                    <a href="{{asset('manage_order01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,7 +24,7 @@
                         <br>จัดการ<br>
                         Order
                     </a>
-                    <a href="manage_money01.html">
+                    <a href="{{asset('manage_money01')}}">
                         <svg 
                         mlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -33,7 +33,7 @@
                         </svg>
                         <br>จัดการ<br>เงิน
                     </a>
-                    <a href="manage_store01.html" class="active">
+                    <a href="{{asset('manage_store01')}}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -66,19 +66,19 @@
                 <div class="sidenav-2">
                     <div><h2>จัดการร้าน</h2></div>
                     <div class="sidebar">
-                        <a class="bt row " href="manage_store01.html">
+                        <a class="bt row " href="{{asset('manage_store01')}}">
                             <div class="col-9">ภาพรวม</div><div class="col-3 num">3</div>
                         </a>
-                        <a class="bt row active" href="manage_store02.html">
+                        <a class="bt row active" href="{{asset('manage_store02')}}">
                             <div class="col-9">สินค้า(เมนูอาหาร)</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row " href="manage_store03.html">
+                        <a class="bt row " href="{{asset('manage_store03')}}">
                             <div class="col-9">รายการสั่งซื้อ</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="manage_store04.html">
+                        <a class="bt row" href="{{asset('manage_store04')}}">
                             <div class="col-9">คูปอง</div><div class="col-3 num">100</div>
                         </a>
-                        <a class="bt row" href="manage_store05.html">
+                        <a class="bt row" href="{{asset('manage_store05')}}">
                             <div class="col-9">ตั้งค่าร้าน</div><div class="col-3 num">100</div>
                         </a>
                     </div>
@@ -91,11 +91,11 @@
             &nbsp;
         </div>
         <div class="content2 col-10">
-            <div class="right_content_db"><img src="../assets/img/store.png"> ร้านแบมบูใหญ่</div>
+            <div class="right_content_db"><img src="{{asset('assets/img/store.png')}}"> ร้านแบมบูใหญ่</div>
             <div class="list">
-                <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>สินค้า(เมนูอาหาร)</div>
+                <div class="head-list"><a href="#" class="hamber"><img src="{{asset('assets/icon/hamberger.png')}}"></a>สินค้า(เมนูอาหาร)</div>
                 <div class="row">
-                    <div class="col-md-10 search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#"><img src="../assets/icon/fillter.png">เพิ่มตัวกรอง</a></div>
+                    <div class="col-md-10 search"><a href="#"><img src="{{asset('assets/icon/search.png')}}">ค้นหา</a> <a href="#"><img src="{{asset('assets/icon/fillter.png')}}">เพิ่มตัวกรอง</a></div>
                     <div class="col-md-2 insert"><a href="#" data-toggle="modal" data-target="#mymodal">เพิ่มใหม่ +</a></div>
                 </div>
                 
@@ -177,7 +177,7 @@
                 <div class="container">
                     <!--Modal popup-->
                     <div class="modal fade bd-example-modal-lg" id="mymodal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <div class="container-fluid">
@@ -191,7 +191,7 @@
                                             <div class="col-md-4">
                                                     <div class="col">รายละเอียด</div>
                                                     <br>
-                                                    <div class="col"><img src="../assets/img/food/bambu_4.jpg" style="width: 120px; height: 100px;"></div>
+                                                    <div class="col"><img src="{{asset('assets/img/food/bambu_4.jpg')}}" style="width: 120px; height: 100px;"></div>
                                                     <br>
                                                     <form>
                                                         <div class="col form-group">
@@ -260,7 +260,7 @@
                         </div>
                         <hr>
                         <div class="d-flex bd-highlight">
-                            <div class="col"><img src="../assets/img/food/bambu_1.jpg"></div>
+                            <div class="col"><img src="{{asset('assets/img/food/bambu_1.jpg')}}"></div>
                             <div class="col">ผัดสะตอกุ้ง</div>
                             <div class="col">อาหาร</div>
                             <div class="col">239.-</div>
@@ -275,7 +275,7 @@
                         </div>
                         <hr>
                         <div class="d-flex bd-highlight">
-                            <div class="col"><img src="../assets/img/food/bambu_3.jpg"></div>
+                            <div class="col"><img src="{{asset('assets/img/food/bambu_3.jpg')}}"></div>
                             <div class="col">ลาบทอด</div>
                             <div class="col">อาหาร</div>
                             <div class="col">219.-</div>
@@ -289,7 +289,7 @@
                         </div>
                         <hr>
                         <div class="d-flex bd-highlight">
-                            <div class="col"><img src="../assets/img/food/bambu_4.jpg"></div>
+                            <div class="col"><img src="{{asset('assets/img/food/bambu_4.jpg')}}"></div>
                             <div class="col">ผัดพริกคอหมูย่าง</div>
                             <div class="col">อาหาร</div>
                             <div class="col">189.-</div>
@@ -304,7 +304,7 @@
                         </div>
                         <hr>
                         <div class="d-flex bd-highlight">
-                            <div class="col"><img src="../assets/img/food/Susi.jpg"></div>
+                            <div class="col"><img src="{{asset('assets/img/food/Susi.jpg')}}"></div>
                             <div class="col">ซูซิเซท</div>
                             <div class="col">อาหาร</div>
                             <div class="col">499.-</div>
@@ -319,7 +319,7 @@
                         </div>
                         <hr>
                         <div class="d-flex bd-highlight">
-                            <div class="col"><img src="../assets/img/food/tamthai.jpg"></div>
+                            <div class="col"><img src="{{asset('assets/img/food/tamthai.jpg')}}"></div>
                             <div class="col">ตำไทยหมูยอ</div>
                             <div class="col">อาหาร</div>
                             <div class="col">239.-</div>
@@ -345,7 +345,7 @@
 
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('js/bootstrap.js')}}"></script> 
 <script>
 
 </script>

@@ -2868,7 +2868,7 @@
         </div>
     </div>
     <!--footer area start-->
-    {{-- @include('templates.footer') --}}
+    @include('templates.footer')
     <!--footer area end-->
     <!-- ร้านอาหารเเนะนำ -->
     <div class="modal fade" id="modal_box5" tabindex="-1" role="dialog" aria-hidden="true">
