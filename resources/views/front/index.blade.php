@@ -44,7 +44,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                        <img src="img-take/Logo-Harajuku.png" width="100" alt="" data-retina="true" class="hidden-xs">
+                        <img src="{{asset('img-take/Logo-Harajuku.png')}}" width="100" alt="" data-retina="true" class="hidden-xs">
 
                         <a href="{{url('index')}}" id="logo">
                             <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close hidden-lg hidden-md hidden-sm" href="javascript:void(0);"><span>Menu mobile</span></a>
@@ -104,6 +104,10 @@
 
                                     </ul>
                                 </li>
+
+                                @foreach($menu as $row)
+                                     <li><a href="{{url('event')}}">กิจกรรม</a></li>
+                                @endforeach
 
                             </ul>
                         </div><!-- End main-menu -->
@@ -263,7 +267,15 @@
     <section class="slider_section color_two mb-lg-50 ">
         <div class="owl-carousel" style="display: block;">
             <!-- slider_area -->
-            <div class="single_slider d-flex align-items-center" style="background-image: url(img-take/hero-banner2.jpg);">
+            {{-- @foreach ($data as $row)
+            {{$row->image_path}} --}}
+            @if(isset($data))
+                 <div class="single_slider d-flex align-items-center" style="background-image: url({{asset($data->image_path)}});">
+            @else
+                <div class="single_slider d-flex align-items-center" style="background-image: url({{asset('/img-take/01Take-pet-festival.jpg')}});">
+            @endif
+             {{-- @endforeach --}}
+           
                 <div id="subheader">
                     <div id="sub_content">
                         <h1 style="display: none;">Order Takeaway or Delivery Food</h1>

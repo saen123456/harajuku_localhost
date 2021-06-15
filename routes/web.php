@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::get('/', [ManageController::class, 'index'])->name('home');
-Route::get('/',function(){
-    return view('front.index');
-});
+// Route::get('/',function(){
+//     return view('front.index');
+// });
+Route::get('/', [HomeController::class, 'home_view']);
+
 Route::get('/manage',function(){
     return view('admin.manage');
 });
@@ -265,4 +267,9 @@ Route::get('/delivery', function(){
 
 //admin-leader
 Route::get('/manage_banner', [AdminLeaderController::class, 'manage_banner_view']);
+Route::post('/uploadbanner', [AdminLeaderController::class, 'upload_banner'])->name('banner.upload.post');
+Route::post('/updatebanner/{id}', [AdminLeaderController::class, 'update_banner'])->name('banner.update.post');
+Route::get('/deletebanner/{id}', [AdminLeaderController::class, 'delete_banner'])->name('banner.delete.post');
+
+
 

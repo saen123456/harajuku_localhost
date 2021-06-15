@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/admin_leader/input-image.css')}}">
+
     <title>Manage Banner</title>
 </head>
 <body class="dashboard">
@@ -13,7 +15,7 @@
         <div class="db-take">
             <div class="sidenav-db">
                 <div class="sidenav-1">
-                    <a href="#"><img src="../assets\logo/harajuku.png" width="100%"></a>
+                    <a href="#"><img src="{{asset('/assets/logo/harajuku.png')}}" width="100%"></a>
                     <a href="{{ url('/manage_banner') }}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
@@ -79,16 +81,83 @@
         <div class="content2 col-10">
             <div class="right_content_db"><img src="../assets/img/store.png"> ร้านแบมบูใหญ่</div>
             <div class="list">
-                <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>รายการทั้งหมด</div>
-                <hr class="line_hr">
-                <div class="search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#">รายการเงินเข้า</a><a href="#">รายการถอนเงิน</a></div>
+                <div class="list">
+                    <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>รูปภาพ banner</div>
+                    <div class="row">
+                        <div class="col-md-10 search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#"><img src="../assets/icon/fillter.png">เพิ่มตัวกรอง</a></div>
+                        <div class="col-md-2 insert"><a href="#" data-toggle="modal" data-target="#mymodal">เพิ่มใหม่ +</a></div>
+                    </div>
+                    
+                </div>
             </div>
             <div class="card-list">
                 <!--loop 1 -->
                 <div class="order-hara row">
-                    <div class="card mx-auto order col-md-12">
+                  
                         
+                        @if ($alertFm = Session::get('success'))
+                            <div class="alert alert-success alert-block">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <strong>{{ $alertFm }}</strong>
+                            </div>
+                        @endif
+                        
+                        {{-- <div class="file-upload">
+                            <div class="text-center"><h3>รูปภาพที่กำลังใช้</h3></div>
+                            @if(isset($data->image_path))
+                                <div class="img-show">
+                                    <img src="{{$data->image_path}}" class="img-fluid" alt="Responsive image">
+                                </div><br>
+                            @endif
+
+                            <div class="text-center"><h3>เปลี่ยนรูปภาพ</h3></div>
+                           <form action="{{route('banner.upload.post')}}" method="post" enctype="multipart/form-data">
+                            @csrf
+                                <div class="image-upload-wrap">
+                                    <input class="file-upload-input" type='file' name="image" onchange="readURL(this);" accept="image/*" />
+                                    <div class="drag-text">
+                                    <h3>Drag and drop a file or select add Image</h3>
+                                    </div>
+                                </div>
+                                <div class="file-upload-content">
+                                    <img class="file-upload-image" src="#" alt="your image" />
+                                    <div class="image-title-wrap">
+                                    <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                                    </div>
+                                </div>
+                                <br>
+                                <button class="file-upload-btn" type="submit">Add Image</button>
+                           </form>
+                        </div> --}}
+             
+                    <div class="card mx-auto order col-md-12">
+                        <div class="d-flex bd-highlight grey">
+                            
+                            <div class="col">รูป</div>
+                            <div class="col">ชื่อรูปภาพ</div>
+                          
+                            <div class="col">วันที่เพิ่ม</div>
+                            <div class="col">วันที่อัพเดท</div>
+                            <div class="col"></div>
+                        </div>
+                        <hr>
+                        
+                        <div class="d-flex bd-highlight">
+                            @if(isset($data))
+                                <div class="col"><img src="{{asset($data->image_path)}}"></div>
+                                <div class="col">{{$data->image_name}}</div>
+                        
+                                <div class="col">{{$data->created_at}}</div>
+                                <div class="col">{{$data->updated_at}}</div>
+                                <div class="col"><a href="#" class="btn btn-warning" data-toggle="modal" data-target="#mymodalupdate">แก้ไข</a>
+                                    <a type="button" class="btn btn-danger" onclick="return confirm('Are you sure?')" href="{{route('banner.delete.post', $data->id)}}">ลบ</a>
+                                </div>
+                            
+                            @endif
+                        </div>
+                        <hr>
                     </div>
+                </div>
                 </div>
                 
                 
@@ -98,19 +167,222 @@
 
     </div>
 
+
+    <div class="modal fade bd-example-modal-lg" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <div class="container-fluid">
+                        <div class="row"><h5>เพิ่มรูปภาพ banner</h5></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!--body left-->
+                            <div class="col-md-ค">
+                                    <div class="file-upload">
+                                          
+                                            <form action="{{route('banner.upload.post')}}" method="post" enctype="multipart/form-data">
+                                                @csrf
+                                                    <div class="image-upload-wrap">
+                                                        <input class="file-upload-input" type='file' name="image" onchange="readURL(this);" accept="image/*" />
+                                                        <div class="drag-text">
+                                                        <h3>Drag and drop a file or select add Image</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="file-upload-content">
+                                                        <img class="file-upload-image" src="#" alt="your image" />
+                                                        <div class="image-title-wrap">
+                                                        <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <button class="file-upload-btn" type="submit">Add Image</button>
+                                            </form>
+                                      
+                                    </div>
+                            </div>
+                         
+                           
+                            <!--body Right-->
+                            
+                    </div>
+                    <!--div class="modal-footer">
+                        <button type="button" class="btn btn-success">ยืนยันการรับ Order</button>
+                    </!--div-->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="mymodalupdate" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <div class="container-fluid">
+                    <div class="row"><h5>แก้ไขรูปภาพ banner</h5></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!--body left-->
+                        <div class="col-md-ค">
+                                <div class="file-upload">
+                                    @if(isset($data))   
+                                        <form action="{{route('banner.update.post',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+                                            @csrf
+                                                <div class="image-upload-wrap">
+                                                    <input class="file-upload-input" type='file' name="image" onchange="readURL(this);" accept="image/*" />
+                                                    <div class="drag-text">
+                                                    <h3>Drag and drop a file or select add Image</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="file-upload-content">
+                                                    <img class="file-upload-image" src="#" alt="your image" />
+                                                    <div class="image-title-wrap">
+                                                    <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <button class="file-upload-btn" type="submit">Update Image</button>
+                                        </form>
+                                    @endif
+                                </div>
+                        </div>
+                     
+                       
+                        <!--body Right-->
+                        
+                </div>
+                <!--div class="modal-footer">
+                    <button type="button" class="btn btn-success">ยืนยันการรับ Order</button>
+                </!--div-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+
+{{-- <div class="modal fade" id="practice_modal">
+    <div class="modal-dialog">
+        <form method="post" id="upload-image-form" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+                <input type="file" name="file" class="form-control" id="image-input">
+                <span class="text-danger" id="image-input-error"></span>
+            </div>
+    
+            <div class="form-group">
+              <button type="submit" class="btn btn-success">Upload</button>
+            </div>
+    
+        </form>
+    </div>
+</div> --}}
+
+<div class="modal fade bd-example-modal-lg" id="practice_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <div class="container-fluid">
+                    <div class="row"><h5>เพิ่มรูปภาพ banner</h5></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!--body left-->
+                        <div class="col-md-ค">
+                                <div class="file-upload">
+                                
+                                    <form method="post" id="upload-image-form" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="image-upload-wrap">
+                                            <input class="file-upload-input" type='file' name="image" onchange="readURL(this);" accept="image/*" />
+                                            <div class="drag-text">
+                                            <h3>Drag and drop a file or select add Image</h3>
+                                            </div>
+                                        </div>
+                                        <div class="file-upload-content">
+                                            <img class="file-upload-image" src="#" alt="your image" />
+                                            <div class="image-title-wrap">
+                                            <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <button class="file-upload-btn" type="submit">Update Image</button>
+                                   </form>
+                                </div>
+                        </div>
+                     
+                       
+                        <!--body Right-->
+                        
+                </div>
+                <!--div class="modal-footer">
+                    <button type="button" class="btn btn-success">ยืนยันการรับ Order</button>
+                </!--div-->
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+
+
 </body>
 </html>
 <script src="../js/bootstrap.js"></script> 
-<script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-</script>
+
 <script>
     $('.hamber').on('click', function () {
         $(".sidenav-db").css("display", "none");
     });
- 
-</script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
 
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+            $('.image-upload-wrap').hide();
+
+            $('.file-upload-image').attr('src', e.target.result);
+            $('.file-upload-content').show();
+
+            $('.image-title').html(input.files[0].name);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+        } else {
+            removeUpload();
+        }
+    }
+
+    function removeUpload() {
+    $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+    $('.file-upload-content').hide();
+    $('.image-upload-wrap').show();
+    }
+    $('.image-upload-wrap').bind('dragover', function () {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function () {
+            $('.image-upload-wrap').removeClass('image-dropping');
+    });
+
+</script>

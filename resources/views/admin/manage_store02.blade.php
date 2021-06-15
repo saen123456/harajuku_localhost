@@ -14,7 +14,7 @@
             <div class="sidenav-db">
                 <div class="sidenav-1">
                     <a href="#"><img src="../assets\logo/harajuku.png" width="100%"></a>
-                    <a href="{{url('/manage_order01')}}">
+                    <a href="manage_order01.html">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,7 +24,7 @@
                         <br>จัดการ<br>
                         Order
                     </a>
-                    <a href="{{url('/manage_money01')}}">
+                    <a href="manage_money01.html">
                         <svg 
                         mlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -33,7 +33,7 @@
                         </svg>
                         <br>จัดการ<br>เงิน
                     </a>
-                    <a href="{{url('/manage_store01')}}" class="active">
+                    <a href="manage_store01.html" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -66,19 +66,19 @@
                 <div class="sidenav-2">
                     <div><h2>จัดการร้าน</h2></div>
                     <div class="sidebar">
-                        <a class="bt row " href="{{url('/manage_store01')}}">
+                        <a class="bt row " href="manage_store01.html">
                             <div class="col-9">ภาพรวม</div><div class="col-3 num">3</div>
                         </a>
-                        <a class="bt row active" href="{{url('/manage_store02')}}">
+                        <a class="bt row active" href="manage_store02.html">
                             <div class="col-9">สินค้า(เมนูอาหาร)</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row " href="{{url('/manage_store03')}}">
+                        <a class="bt row " href="manage_store03.html">
                             <div class="col-9">รายการสั่งซื้อ</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="{{url('/manage_store04')}}">
+                        <a class="bt row" href="manage_store04.html">
                             <div class="col-9">คูปอง</div><div class="col-3 num">100</div>
                         </a>
-                        <a class="bt row" href="{{url('/manage_store05')}}">
+                        <a class="bt row" href="manage_store05.html">
                             <div class="col-9">ตั้งค่าร้าน</div><div class="col-3 num">100</div>
                         </a>
                     </div>
@@ -107,7 +107,6 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    
                                     <div class="container-fluid">
                                         <div class="row"><h5>เพิ่มเมนูอาหาร</h5></div>
                                     </div>
@@ -135,11 +134,9 @@
                                                 <br>
                                                 <div class="form-group">
                                                     <select class="form-control" id="exampleFormControlSelect1">
-                                                        <option >เลือกหมวดหมู่</option>
-                                                        <option >อาหารไทย</option>
-                                                        <option>อาหารญี่ปุ่น</option>
-                                                        <option>อาหารเกาหลี</option>
-                                                        <option>Fast Food</option>
+                                                        <option >เลือกประเภท</option>
+                                                        <option >อาหาร</option>
+                                                        <option>สินค้า</option>
                                                     </select>
                                                 </div>
                                                 <br>
@@ -153,7 +150,7 @@
                                                 </div>
                                                 <br>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ราคาโปรโมชั่น">
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="คำอธิบาย">
                                                 </div>
                                                 <br>
                                                 <div class="card">
@@ -177,15 +174,87 @@
                         </div>
                     </div>
                 </div>
+                <div class="container">
+                    <!--Modal popup-->
+                    <div class="modal fade bd-example-modal-lg" id="mymodal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="container-fluid">
+                                        <div class="row"><h5>แก้ไข</h5></div>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <!--body left-->
+                                            <div class="col-md-4">
+                                                    <div class="col">รายละเอียด</div>
+                                                    <br>
+                                                    <div class="col"><img src="../assets/img/food/bambu_4.jpg" style="width: 120px; height: 100px;"></div>
+                                                    <br>
+                                                    <form>
+                                                        <div class="col form-group">
+                                                            <label for="exampleFormControlFile1">เพิ่มรูปภาพ</label>
+                                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                        </div>
+                                                    </form>
+                                            </div>
+                                            <!--body Center-->
+                                            <div class="col-md-3">
+                                                <br><br>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ชื่อเมนู">
+                                                </div>
+                                                <br>
+                                                <div class="form-group">
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option >เลือกประเภท</option>
+                                                        <option >อาหาร</option>
+                                                        <option>สินค้า</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                            </div>
+                                            <!--body Right-->
+                                            <div class="col-md-5">
+                                                <div class="col">ราคาและโปรโมชั่น</div>
+                                                    <br>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ราคา">
+                                                </div>
+                                                <br>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="คำอธิบาย">
+                                                </div>
+                                                <br>
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        โปรโมชั่น & คูปอง
+                                                        <div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck">โปร50% สำหรับเมนูที่เลือก</div>
+                                                        <div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck">ลด10% ฉลองเดือนแห่งความรัก (เฉพาะเมนูที่ร่วมรายการ)</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <br>
+                                                <button type="button" class="insert btn btn-success" >แก้ไข</button>
+                                            </div>  
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--loop 1 -->
                 <div class="order-hara row">
                     <div class="card mx-auto order col-md-12">
                         <div class="d-flex bd-highlight grey">
                             <div class="col">รูป</div>
                             <div class="col">ชื่อเมนู</div>
-                            <div class="col">หมวดหมู่</div>
+                            <div class="col">ประเภท</div>
                             <div class="col">ราคา</div>
-                            <div class="col">พร้อมขายหรือไม่</div>
+                            <div class="col">สถานะ</div>
                             <div class="col">วันที่อัพเดท</div>
                             <div class="col"></div>
                         </div>
@@ -193,29 +262,43 @@
                         <div class="d-flex bd-highlight">
                             <div class="col"><img src="../assets/img/food/bambu_1.jpg"></div>
                             <div class="col">ผัดสะตอกุ้ง</div>
-                            <div class="col">อาหารไทย</div>
+                            <div class="col">อาหาร</div>
                             <div class="col">239.-</div>
-                            <div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck"></div>
+                            <div class="col">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
                             <div class="col">03/06/2564</div>
-                            <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
+                            <div class="col"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal1">แก้ไข</button></div>
                         </div>
                         <hr>
                         <div class="d-flex bd-highlight">
                             <div class="col"><img src="../assets/img/food/bambu_3.jpg"></div>
                             <div class="col">ลาบทอด</div>
-                            <div class="col">อาหารไทย</div>
+                            <div class="col">อาหาร</div>
                             <div class="col">219.-</div>
-                            <div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck"></div>
-                            <div class="col">03/06/2564</div>
-                            <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
+                            <div class="col">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div><div class="col">03/06/2564</div>
+                            <div class="col"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal1">แก้ไข</button></div>
                         </div>
                         <hr>
                         <div class="d-flex bd-highlight">
                             <div class="col"><img src="../assets/img/food/bambu_4.jpg"></div>
                             <div class="col">ผัดพริกคอหมูย่าง</div>
-                            <div class="col">อาหารไทย</div>
+                            <div class="col">อาหาร</div>
                             <div class="col">189.-</div>
-                            <div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck"></div>
+                            <div class="col">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
                             <div class="col">03/06/2564</div>
                             <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
                         </div>
@@ -223,9 +306,14 @@
                         <div class="d-flex bd-highlight">
                             <div class="col"><img src="../assets/img/food/Susi.jpg"></div>
                             <div class="col">ซูซิเซท</div>
-                            <div class="col">อาหารญี่ปุ่น</div>
+                            <div class="col">อาหาร</div>
                             <div class="col">499.-</div>
-                            <div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck"></div>
+                            <div class="col">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
                             <div class="col">03/06/2564</div>
                             <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
                         </div>
@@ -233,9 +321,14 @@
                         <div class="d-flex bd-highlight">
                             <div class="col"><img src="../assets/img/food/tamthai.jpg"></div>
                             <div class="col">ตำไทยหมูยอ</div>
-                            <div class="col">อาหารไทย</div>
+                            <div class="col">อาหาร</div>
                             <div class="col">239.-</div>
-                            <div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck"></div>
+                            <div class="col">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
                             <div class="col">02/06/2564</div>
                             <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
                         </div>
@@ -260,7 +353,7 @@
     $('.hamber').on('click', function () {
         $(".sidenav-db").css("display", "none");
     });
- 
+
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
