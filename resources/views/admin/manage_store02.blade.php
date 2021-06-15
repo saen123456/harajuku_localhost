@@ -112,16 +112,21 @@
                                     </div>
                                 </div>
                                 <div class="modal-body">
+                                    <form action="{{url('/manage_store02/insert')}}" method="post" enctype="multipart/form-data">
                                     <div class="container-fluid">
                                         <div class="row">
+                                        
+                                            @csrf
                                             <!--body left-->
                                             <div class="col-md-4">
                                                     <div class="col">รายละเอียด</div>
+                                           
+
                                                     <br>
                                                     <form>
                                                         <div class="col form-group">
                                                             <label for="exampleFormControlFile1">เพิ่มรูปภาพ</label>
-                                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                            <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
                                                         </div>
                                                     </form>
                                             </div>
@@ -129,14 +134,14 @@
                                             <div class="col-md-3">
                                                 <br><br>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ชื่อเมนู">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" name="food_name" aria-describedby="emailHelp" placeholder="ชื่อเมนู">
                                                 </div>
                                                 <br>
                                                 <div class="form-group">
-                                                    <select class="form-control" id="exampleFormControlSelect1">
-                                                        <option >เลือกประเภท</option>
-                                                        <option >อาหาร</option>
-                                                        <option>สินค้า</option>
+                                                    <select class="form-control" name="food_type" >
+                                                        <option>เลือกประเภท</option>
+                                                        <option value="อาหาร">อาหาร</option>
+                                                        <option value="สินค้า">สินค้า</option>
                                                     </select>
                                                 </div>
                                                 <br>
@@ -146,11 +151,11 @@
                                                 <div class="col">ราคาและโปรโมชั่น</div>
                                                     <br>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ราคา">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" name="food_price" aria-describedby="emailHelp" placeholder="ราคา">
                                                 </div>
                                                 <br>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="คำอธิบาย">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" name="food_detail" aria-describedby="emailHelp" placeholder="คำอธิบาย">
                                                 </div>
                                                 <br>
                                                 <div class="card">
@@ -162,14 +167,15 @@
                                                     
                                                 </div>
                                                 <br>
-                                                <button type="button" class="insert btn btn-success">เพิ่มเมนู</button>
+                                                <button type="submit" class="insert btn btn-success">เพิ่มเมนู</button>
                                             </div>  
+                                       
                                     </div>
                                     <!--div class="modal-footer">
                                         <button type="button" class="btn btn-success">ยืนยันการรับ Order</button>
                                     </!--div-->
                                 </div>
-                                
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -259,22 +265,25 @@
                             <div class="col"></div>
                         </div>
                         <hr>
-                        <div class="d-flex bd-highlight">
-                            <div class="col"><img src="{{asset('assets/img/food/bambu_1.jpg')}}"></div>
-                            <div class="col">ผัดสะตอกุ้ง</div>
-                            <div class="col">อาหาร</div>
-                            <div class="col">239.-</div>
-                            <div class="col">
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                </label>
+                        @foreach($data as $row)
+                            <div class="d-flex bd-highlight">
+                                    <div class="col"><img src="{{asset($row->Fm_Image)}}"></div>
+                                    <div class="col">{{$row->Fm_Name}}</div>
+                                    <div class="col">{{$row->Fm_Type}}</div>
+                                    <div class="col">{{$row->Fm_Price}}.-</div>
+                                    <div class="col">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col">03/06/2564</div>
+                                    <div class="col"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal1">แก้ไข</button></div>
                             </div>
-                            <div class="col">03/06/2564</div>
-                            <div class="col"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal1">แก้ไข</button></div>
-                        </div>
-                        <hr>
-                        <div class="d-flex bd-highlight">
+                            <hr>
+                        @endforeach
+                       
+                        {{-- <div class="d-flex bd-highlight">
                             <div class="col"><img src="{{asset('assets/img/food/bambu_3.jpg')}}"></div>
                             <div class="col">ลาบทอด</div>
                             <div class="col">อาหาร</div>
@@ -332,7 +341,7 @@
                             <div class="col">02/06/2564</div>
                             <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
                         </div>
-                        <hr>
+                        <hr> --}}
                     </div>
                 </div>
                 

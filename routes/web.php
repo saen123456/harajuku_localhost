@@ -60,7 +60,9 @@ Route::get('/manage_store02-1', function(){
     return view('/admin/manage_store02-1');
 });
 
-Route::get('/manage_store02', [AdminShopController::class, 'hommanage_store02_view']);
+Route::get('/manage_store02', [AdminShopController::class, 'manage_store02_view']);
+Route::post('/manage_store02/insert', [AdminShopController::class, 'insert_food']);
+
 
 Route::get('/manage_store03', function(){
     return view('/admin/manage_store03');
@@ -162,12 +164,7 @@ Route::get('/accept', function(){
 Route::get('/manage_store01-1', function(){
     return view('/admin/manage_store01-1');
 });
-Route::get('/manage_store02-1', function(){
-    return view('/admin/manage_store02-1');
-});
-Route::get('/manage_store02', function(){
-    return view('/admin/manage_store02');
-});
+
 Route::get('/manage_store03', function(){
     return view('/admin/manage_store03');
 });
