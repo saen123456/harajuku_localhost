@@ -11,7 +11,7 @@
     <div class="sidenav">
         <div class="container-fluid">
             <div class="row">
-                <div class="col"><a href="#"><img src="../assets//logo/logo_Harajuku.png" width="85px" height="70px"></a></div>
+                <div class="col"><a href="#"><img src="{{asset('assets//logo/logo_Harajuku.png')}}" width="85px" height="70px"></a></div>
                 <div class="col subnav">
                     <a href="{{url('01manageOrder')}}" class="active">
                         <svg 
@@ -25,7 +25,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="managrProject01.html">
+                    <a href="{{url('managrProject01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -36,7 +36,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageCus01.html">
+                    <a href="{{url('manageCus01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageRider01.html">
+                    <a href="{{url('manageRider01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -58,7 +58,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageMoney01.html">
+                    <a href="{{url('manageMoney01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -108,7 +108,7 @@
             <i class="fas fa-search"></i>
                 </a>
             </div>
-            <div class="search_filter"><a href="#"><img src="../assets/icon/fillter.png"> เพิ่มตัวกรอง </a></div>
+            <div class="search_filter"><a href="#"><img src="{{asset('assets/icon/fillter.png')}}"> เพิ่มตัวกรอง </a></div>
         </div>
     </div> 
     <br>

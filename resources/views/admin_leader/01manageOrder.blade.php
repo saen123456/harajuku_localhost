@@ -26,7 +26,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="managrProject01.html">
+                    <a href="{{url('managrProject01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -37,7 +37,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageCus01.html">
+                    <a href="{{url('manageCus01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -48,7 +48,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageRider01.html">
+                    <a href="{{url('manageRider01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -59,7 +59,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageMoney01.html">
+                    <a href="{{url('manageMoney01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"

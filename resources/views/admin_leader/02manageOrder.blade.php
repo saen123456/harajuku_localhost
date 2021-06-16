@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('admin_css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('admin_css/style.css')}}">
     <title>จัดการออร์เดอร์</title>
 </head>
 <body class="dashboard">
@@ -25,7 +25,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="managrProject01.html">
+                    <a href="{{url('managrProject01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -36,7 +36,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageCus01.html">
+                    <a href="{{url('manageCus01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageRider01.html">
+                    <a href="{{url('manageRider01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -58,7 +58,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageMoney01.html">
+                    <a href="{{url('manageMoney01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"

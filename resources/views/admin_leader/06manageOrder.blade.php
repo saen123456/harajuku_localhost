@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{asset('admin_css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('admin_css/style.css')}}">
     <title>เสร็จสิ้น</title>
 </head>
 <body class="dashboard">
     <div class="sidenav">
         <div class="container-fluid">
             <div class="row">
-                <div class="col"><a href="#"><img src="../assets//logo/logo_Harajuku.png" width="85px" height="70px"></a></div>
+                <div class="col"><a href="#"><img src="{{asset('assets//logo/logo_Harajuku.png')}}" width="85px" height="70px"></a></div>
                 <div class="col subnav">
-                    <a href="01manageOrder.html" class="active">
+                    <a href="01manageOrder')}}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,7 +25,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="managrProject01.html">
+                    <a href="{{url('managrProject01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -36,7 +36,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageCus01.html">
+                    <a href="{{url('manageCus01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageRider01.html">
+                    <a href="{{url('manageRider01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -58,7 +58,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="manageMoney01.html">
+                    <a href="{{url('manageMoney01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -94,11 +94,11 @@
         </div>
     </div>
     <div class="btn-group col-md-12" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary" onclick="location.href = '01manageOrder.html';">รายการใหม่</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '03manageOrder.html';">รายการที่ยอมรับ</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '04manageOrder.html';">รอการที่จัดส่ง</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '05manageOrder.html';">กำลังจัดส่ง</button>
-        <button type="button" class="btn btn-secondary active" onclick="location.href = '06manageOrder.html';">เสร็จสิ้น</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('01manageOrder')}}';">รายการใหม่</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('03manageOrder')}}';">รายการที่ยอมรับ</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('04manageOrder')}}';">รอการที่จัดส่ง</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('05manageOrder')}}';">กำลังจัดส่ง</button>
+        <button type="button" class="btn btn-secondary active" onclick="location.href = '{{url('06manageOrder')}}';">เสร็จสิ้น</button>
     </div>
     <div class="row content-db">  
         <div class="btn-fillt ">
@@ -108,13 +108,13 @@
             <i class="fas fa-search"></i>
                 </a>
             </div>
-            <div class="search_filter"><a href="#"><img src="../assets/icon/fillter.png"> เพิ่มตัวกรอง </a></div>
+            <div class="search_filter"><a href="#"><img src="{{asset('assets/icon/fillter.png')}}"> เพิ่มตัวกรอง </a></div>
         </div>
         <div class="card-list">
             <div class="container">
                 <!--Modal popup-->
                 <div class="modal fade bd-example-modal-lg" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <div class="container-fluid">
@@ -194,11 +194,11 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <div>
-                                                        <img src="../assets/icon/star.png">
-                                                        <img src="../assets/icon/star.png">
-                                                        <img src="../assets/icon/star.png">
-                                                        <img src="../assets/icon/star.png">
-                                                        <img src="../assets/icon/star.png">
+                                                        <img src="{{asset('assets/icon/star.png')}}">
+                                                        <img src="{{asset('assets/icon/star.png')}}">
+                                                        <img src="{{asset('assets/icon/star.png')}}">
+                                                        <img src="{{asset('assets/icon/star.png')}}">
+                                                        <img src="{{asset('assets/icon/star.png')}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -350,7 +350,7 @@
         
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('admin_js/bootstrap.js')}}"></script> 
 
 <script>
     $('.hamber').on('click', function () {

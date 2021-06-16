@@ -266,6 +266,15 @@ Route::get('/02manageOrder', function(){
 Route::get('/03manageOrder', function(){
     return view('/admin_leader/03manageOrder');
 });
+Route::get('/04manageOrder', function(){
+    return view('/admin_leader/04manageOrder');
+});
+Route::get('/05manageOrder', function(){
+    return view('/admin_leader/05manageOrder');
+});
+Route::get('/06manageOrder', function(){
+    return view('/admin_leader/06manageOrder');
+});
 
 //admin-leader
 Route::get('/manage_banner', [AdminLeaderController::class, 'manage_banner_view']);
