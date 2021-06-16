@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Manage Order</title>
 </head>
 <body class="dashboard">
@@ -13,7 +13,7 @@
         <div class="db-take">
             <div class="sidenav-db">
                 <div class="sidenav-1">
-                    <a href="#"><img src="../assets/logo/harajuku.png" width="100%"></a>
+                    <a href="#"><img src="{{asset('assets/logo/harajuku.png')}}" width="100%"></a>
                     <a href="{{ url('/manage_order01') }}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
@@ -67,16 +67,16 @@
                     <div><h2>จัดการ Orders</h2></div>
                     <div class="sidebar">
                         <a class="bt row" href="{{ url('/manage_order01') }}">
-                            <div class="col-9">รายการใหม่</div><div class="col-3 num">3</div>
+                            <div class="col-9">รายการใหม่</div><div class="col-3 num">{{$level_1}}</div>
                         </a>
                         <a class="bt row" href="{{ url('/manage_order02') }}">
-                            <div class="col-9">รายการที่ยอมรับ</div><div class="col-3 num">2</div>
+                            <div class="col-9">รายการที่ยอมรับ</div><div class="col-3 num">{{$level_2}}</div>
                         </a>
                         <a class="bt row" href="{{ url('/manage_order03') }}">
-                            <div class="col-9">สินค้ารอการจัดส่ง</div><div class="col-3 num">2</div>
+                            <div class="col-9">สินค้ารอการจัดส่ง</div><div class="col-3 num">{{$level_3}}</div>
                         </a>
                         <a class="bt row active" href="{{ url('/manage_order04') }}">
-                            <div class="col-9">เสร็จสิ้น</div><div class="col-3 num">100</div>
+                            <div class="col-9">เสร็จสิ้น</div><div class="col-3 num">{{$level_4}}</div>
                         </a>
                     </div>
                 </div>
@@ -88,11 +88,11 @@
             &nbsp;
         </div>
         <div class="content2 col-10">
-            <div class="right_content_db"><img src="../assets/img/store.png"> ร้านแบมบูใหญ่</div>
+            <div class="right_content_db"><img src="{{asset('assets/img/store.png')}}"> ร้านแบมบูใหญ่</div>
             <div class="list">
-                <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>เสร็จสิ้น</div>
+                <div class="head-list"><a href="#" class="hamber"><img src="{{asset('assets/icon/hamberger.png')}}"></a>เสร็จสิ้น</div>
                 <hr class="line_hr">
-                <div class="search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#"><img src="../assets/icon/fillter.png">เพิ่มตัวกรอง</a></div>
+                <div class="search"><a href="#"><img src="{{asset('assets/icon/search.png')}}">ค้นหา</a> <a href="#"><img src="{{asset('assets/icon/fillter.png')}}">เพิ่มตัวกรอง</a></div>
             </div>
             <div class="card-list">
                 <div class="container">
@@ -115,6 +115,7 @@
                                                 <div class="col">ประเภทการจัดส่ง</div>
                                                 <div class="col">ยอดรวม</div>
                                             </div>
+                                            
                                             <div class="d-flex bd-highlight">
                                                 <div class="col">#988123</div>
                                                 <div class="col">01/01/2021</div>
@@ -178,11 +179,11 @@
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <div>
-                                                            <img src="../assets/icon/star.png">
-                                                            <img src="../assets/icon/star.png">
-                                                            <img src="../assets/icon/star.png">
-                                                            <img src="../assets/icon/star.png">
-                                                            <img src="../assets/icon/star.png">
+                                                            <img src="{{asset('assets/icon/star.png')}}">
+                                                            <img src="{{asset('assets/icon/star.png')}}">
+                                                            <img src="{{asset('assets/icon/star.png')}}">
+                                                            <img src="{{asset('assets/icon/star.png')}}">
+                                                            <img src="{{asset('assets/icon/star.png')}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -204,6 +205,11 @@
                     </div>
                 </div>
                 <!--loop 1 -->
+                @foreach($data as $row)
+                    <?php
+                        $count = 0;
+                        $count++;
+                    ?>
                 <div class="order-hara row">
                     <div class="card mx-auto order col-md-12">
                         <div class="d-flex bd-highlight grey">
@@ -215,23 +221,21 @@
                             <div class="col">Amount</div>
                             <div class="col">Platform</div>
                         </div>
+                        
                         <div class="d-flex bd-highlight">
-                            <div class="col">#988119</div>
-                            <div class="col">01/01/2020 14.23น.</div>
-                            <div class="col">กัญญารัตน์  ดีงาม</div>
+                            <div class="col">#{{$row->Or_ID}}</div>
+                            <div class="col">{{$row->Or_Date}} {{$row->Or_Datetime}}น.</div>
+                            <div class="col">{{$row->Us_Name}}</div>
                             <div class="col">082-202-1383</div>
                             <div class="col">Delivery</div>
-                            <div class="col">890.-</div>
+                            <div class="col">{{$row->Fm_Price}}.-</div>
                             <div class="col">Application</div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-10 d-flex flex-row bd-highlight .order-hara">
                                 <div class="head grey">รายการ</div>
-                                <div class="dish">ข้าวหมูแดง x2</div>
-                                <div class="dish">ข้าวมันไก่ x2</div>
-                                <div class="dessert">น้ำชาเขียวปั่น x 2</div>
-                                <div class="dessert">น้ำสตอเบอรี่ปั่น x 2</div>
+                                <div class="dish">{{$row->Fm_Name}} x<?php echo $count; ?></div>
                             </div>
                             
                         </div>
@@ -239,7 +243,7 @@
                         <div class="row more">
                             <div class="col-8">
                                 <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
-                                <div class="msg">น้ำชาเขียวปั่น **หวานน้อย**</div> 
+                                <div class="msg">{{$row->Or_Detail}}</div> 
                             </div>
                             
                             <div class="col-4">
@@ -248,8 +252,7 @@
                         </div>
                     </div>
                 </div>
-                
-                
+                @endforeach
             </div>
 
         </div>
@@ -258,7 +261,7 @@
 
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('js/bootstrap.js')}}"></script> 
 <script>
 
 </script>

@@ -192,10 +192,13 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container-fluid">
-                                        <div class="row">
+                                        
                                             <!--body left-->
+                                        
+                                        <div class="row">
                                             <div class="col-md-4">
-                                                    <div class="col">รายละเอียด</div>
+                                                
+                                                   <div class="col">รายละเอียด</div>
                                                     <br>
                                                     <div class="col"><img src="{{asset('assets/img/food/bambu_4.jpg')}}" style="width: 120px; height: 100px;"></div>
                                                     <br>
@@ -204,13 +207,14 @@
                                                             <label for="exampleFormControlFile1">เพิ่มรูปภาพ</label>
                                                             <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                                         </div>
-                                                    </form>
+                                                    </form> 
                                             </div>
                                             <!--body Center-->
                                             <div class="col-md-3">
+                                               
                                                 <br><br>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ชื่อเมนู">
+                                                    <input type="text" class="form-control" name="food_name" id="food_name" aria-describedby="emailHelp" placeholder="ชื่อเมนู">
                                                 </div>
                                                 <br>
                                                 <div class="form-group">
@@ -221,13 +225,13 @@
                                                     </select>
                                                 </div>
                                                 <br>
-                                            </div>
+                                            </div> 
                                             <!--body Right-->
                                             <div class="col-md-5">
                                                 <div class="col">ราคาและโปรโมชั่น</div>
                                                     <br>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ราคา">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ราคา">
                                                 </div>
                                                 <br>
                                                 <div class="form-group">
@@ -246,11 +250,13 @@
                                                 <button type="button" class="insert btn btn-success" >แก้ไข</button>
                                             </div>  
                                     </div>
-                                </div>
+                                 
+                                
                                 
                             </div>
                         </div>
                     </div>
+                        </div>
                 </div>
                 <!--loop 1 -->
                 <div class="order-hara row">
@@ -266,7 +272,7 @@
                         </div>
                         <hr>
                         @foreach($data as $row)
-                            <div class="d-flex bd-highlight">
+                            <div class="d-flex bd-highlight" id="datatable">
                                     <div class="col"><img src="{{asset($row->Fm_Image)}}"></div>
                                     <div class="col">{{$row->Fm_Name}}</div>
                                     <div class="col">{{$row->Fm_Type}}</div>
@@ -278,70 +284,15 @@
                                         </label>
                                     </div>
                                     <div class="col">03/06/2564</div>
-                                    <div class="col"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal1">แก้ไข</button></div>
+                                    <div class="col">
+                                        
+                                        <a type="button" class="btn btn-info"  href="{{url('/manage_store02-1/update',$row->Fm_ID)}}">แก้ไข</a>
+                                        <a href="{{asset('/manage_store02/delete/'.$row->Fm_ID)}}"type="button" class="btn btn-warning">ลบ</a>
+                                    </div>
                             </div>
                             <hr>
                         @endforeach
                        
-                        {{-- <div class="d-flex bd-highlight">
-                            <div class="col"><img src="{{asset('assets/img/food/bambu_3.jpg')}}"></div>
-                            <div class="col">ลาบทอด</div>
-                            <div class="col">อาหาร</div>
-                            <div class="col">219.-</div>
-                            <div class="col">
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div><div class="col">03/06/2564</div>
-                            <div class="col"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal1">แก้ไข</button></div>
-                        </div>
-                        <hr>
-                        <div class="d-flex bd-highlight">
-                            <div class="col"><img src="{{asset('assets/img/food/bambu_4.jpg')}}"></div>
-                            <div class="col">ผัดพริกคอหมูย่าง</div>
-                            <div class="col">อาหาร</div>
-                            <div class="col">189.-</div>
-                            <div class="col">
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                            <div class="col">03/06/2564</div>
-                            <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
-                        </div>
-                        <hr>
-                        <div class="d-flex bd-highlight">
-                            <div class="col"><img src="{{asset('assets/img/food/Susi.jpg')}}"></div>
-                            <div class="col">ซูซิเซท</div>
-                            <div class="col">อาหาร</div>
-                            <div class="col">499.-</div>
-                            <div class="col">
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                            <div class="col">03/06/2564</div>
-                            <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
-                        </div>
-                        <hr>
-                        <div class="d-flex bd-highlight">
-                            <div class="col"><img src="{{asset('assets/img/food/tamthai.jpg')}}"></div>
-                            <div class="col">ตำไทยหมูยอ</div>
-                            <div class="col">อาหาร</div>
-                            <div class="col">239.-</div>
-                            <div class="col">
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                            <div class="col">02/06/2564</div>
-                            <div class="col"><button type="button" class="btn btn-info">แก้ไข</button></div>
-                        </div>
-                        <hr> --}}
                     </div>
                 </div>
                 
@@ -355,16 +306,59 @@
 </body>
 </html>
 <script src="{{asset('js/bootstrap.js')}}"></script> 
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-</script>
+
 <script>
     $('.hamber').on('click', function () {
         $(".sidenav-db").css("display", "none");
     });
+    var quiz_id;
+    var food_id;
+    $(document).ready(function() {
+        $(".sent_food_id").click(function() {
+          
 
+            $("#food_id").attr("value", $(this).attr('food_id'));
+            food_id = $(this).attr('food_id');
+            $.ajax({
+                    url:  'getfoodinfo/'+food_id,
+                    type:'get',
+                    dataType: 'json',
+                    success: function(response) {
+                        console.log(response);
+                       // const obj = JSON.parse(data);
+                        console.log("test "+response['data'][0].Fm_ID);
+
+
+                        $("#showfoodlist").html("");
+                        var len = 0;
+                        if(response['data'] != null){
+                            len = response['data'].length;
+                        }
+                        var Fm_ID;
+                        var Fm_Name;
+                        var Fm_Image;
+                        var Fm_Price;
+                        var Fm_Description,Fm_Type;
+                        if(len > 0){
+                            for(var i=0; i<len; i++){
+                                Fm_ID = response['data'][i].Fm_ID;
+                                Fm_Name = response['data'][i].Fm_Name;
+                                Fm_Image = response['data'][i].Fm_Image;
+                                Fm_Price = response['data'][i].Fm_Price;
+                                Fm_Description = response['data'][i].Fm_Description;
+                                Fm_Type = response['data'][i].Fm_Type;
+
+                                console.log(Fm_Image);
+                            }
+                        }
+                 }
+                    
+            });
+
+        });
+    });
 </script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-

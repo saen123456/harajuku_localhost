@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Manage Store</title>
 </head>
 <body class="dashboard">
@@ -13,8 +13,8 @@
         <div class="db-take">
             <div class="sidenav-db">
                 <div class="sidenav-1">
-                    <a href="#"><img src="../assets/logo/harajuku.png" width="100%"></a>
-                    <a href="{{url('/manage_order01')}}">
+                    <a href="#"><img src="{{asset('assets/logo/harajuku.png')}}" width="100%"></a>
+                    <a href="{{asset('manage_order01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,7 +24,7 @@
                         <br>จัดการ<br>
                         Order
                     </a>
-                    <a href="{{url('/manage_money01')}}">
+                    <a href="{{asset('manage_money01')}}">
                         <svg 
                         mlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -33,7 +33,7 @@
                         </svg>
                         <br>จัดการ<br>เงิน
                     </a>
-                    <a href="{{url('/manage_store01')}}" class="active">
+                    <a href="{{asset('manage_store01')}}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -66,16 +66,16 @@
                 <div class="sidenav-2">
                     <div><h2>จัดการร้าน</h2></div>
                     <div class="sidebar">
-                        <a class="bt row" href="{{url('/manage_store01')}}">
+                        <a class="bt row" href="{{asset('manage_store01')}}">
                             <div class="col-9">ภาพรวม</div><div class="col-3 num">3</div>
                         </a>
-                        <a class="bt row active" href="{{url('/manage_store02')}}">
+                        <a class="bt row active" href="{{asset('manage_store02')}}">
                             <div class="col-9">สินค้า(เมนูอาหาร)</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="{{url('/manage_store04')}}">
+                        <a class="bt row" href="{{asset('manage_store04')}}">
                             <div class="col-9">คูปอง</div><div class="col-3 num">100</div>
                         </a>
-                        <a class="bt row" href="{{url('/manage_store05')}}">
+                        <a class="bt row" href="{{asset('manage_store05')}}">
                             <div class="col-9">ตั้งค่าร้าน</div><div class="col-3 num">100</div>
                         </a>
                     </div>
@@ -88,36 +88,42 @@
             &nbsp;
         </div>
         <div class="content2 col-10">
-            <div class="right_content_db"><img src="../assets/img/store.png"> ร้านแบมบูใหญ่</div>
+            <div class="right_content_db"><img src="{{asset('assets/img/store.png')}}"> ร้านแบมบูใหญ่</div>
             <div class="list">
-                <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>สินค้า(เมนูอาหาร)</div>
+                <div class="head-list"><a href="#" class="hamber"><img src="{{asset('assets/icon/hamberger.png')}}"></a>แก้ไขเมนู</div>
                 <hr class="line_hr">
-                <div class="search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#"><img src="../assets/icon/fillter.png">เพิ่มตัวกรอง</a></div>
             </div>
             <div class="card-list">
-                <!--loop 1 -->
-                <div class="order-hara row">
-                    <div class="card mx-auto order col-md-12">
-                        <div class="d-flex bd-highlight grey">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-3">ชื่อหมวดหมู่</div>
-                            <div class="col-md-3">วันที่อัพเดต</div>
-                            <div class="col-md-3">เปิดใช้งาน</div>
-                            <div class="col-md-4"></div>
+                @foreach($data as $row)
+                <br>
+                <form action="{{url('/manage_store02-1/updatedb',$row->Fm_ID)}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                        <label for="exampleFormControlFile1">เพิ่มรูปภาพ</label>                            
+                        <br>
+                        <input type="file" class="form-control-file" name="image" id="exampleFormControlFile1">
+                        <br>
+                        <img src="{{asset($row->Fm_Image)}}">
+                        <hr class="line_hr">
+                    <div class="row">
+                        <div class="col-4">
+                                <label>ชื่อเมนู</label><input type="text" class="form-control" name="food_name" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$row->Fm_Name}}">
+                                <label>ราคา</label><input type="text" class="form-control" name="food_price" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$row->Fm_Price}}">
                         </div>
-                        <hr>
-                        <div class="d-flex bd-highlight">
-                            <div class="col-md-2"><div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck"></div></div>
-                            <div class="col-md-3">แกงไทย</div>
-                            <div class="col-md-3">11/02/2021</div>
-                            <div class="col-md-3"><div class="col-md-2"><div class="col"><input type="checkbox" class="form-check-input" id="dropdownCheck"></div></div></div>
-                            <div class="col-md-4"></div>
+                        <div class="col-4">
+                            <label>เลือกประเภท</label><select class="form-control" id="exampleFormControlSelect1" name="food_type">
+                                <option value="{{$row->Fm_Type}}">{{$row->Fm_Type}}</option>
+                                <option>เลือกประเภท</option>
+                                <option value="อาหาร">อาหาร</option>
+                                <option value="สินค้า">สินค้า</option>
+                            </select>
+                            <label>คำอธิบาย</label><input type="text" class="form-control" name="food_detail" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$row->Fm_Description}}">
                         </div>
-                        
                     </div>
-                </div>
-                
-                
+                    <br>
+                    <button type="submit" class="insert btn btn-success">เพิ่มเมนู</button>
+                    <a type="button" class="insert btn btn-danger" href="{{url('/manage_store02')}}">ยกเลิก</a>
+                </form>
+                @endforeach
             </div>
 
         </div>
@@ -126,7 +132,7 @@
 
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('js/bootstrap.js')}}"></script> 
 <script>
 
 </script>

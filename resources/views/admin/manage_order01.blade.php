@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Manage Order</title>
 </head>
 <body class="dashboard">
@@ -13,7 +13,7 @@
         <div class="db-take">
             <div class="sidenav-db">
                 <div class="sidenav-1">
-                    <a href="#"><img src="../assets/logo/harajuku.png" width="100%"></a>
+                    <a href="#"><img src="{{asset('assets/logo/harajuku.png')}}" width="100%"></a>
                     <a href="{{ url('/manage_order01') }}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
@@ -65,18 +65,19 @@
                 <!--End sidenav-1 -->
                 <div class="sidenav-2">
                     <div><h2>จัดการ Orders</h2></div>
+                  
                     <div class="sidebar">
                         <a class="bt row active" href="{{ url('/manage_order01') }}">
-                            <div class="col-9">รายการใหม่</div><div class="col-3 num">3</div>
+                            <div class="col-9">รายการใหม่</div><div class="col-3 num">{{$level1}}</div>
                         </a>
                         <a class="bt row" href="{{ url('/manage_order02') }}">
-                            <div class="col-9">รายการที่ยอมรับ</div><div class="col-3 num">2</div>
+                            <div class="col-9">รายการที่ยอมรับ</div><div class="col-3 num">{{$level2}}</div>
                         </a>
                         <a class="bt row" href="{{ url('/manage_order03') }}">
-                            <div class="col-9">สินค้ารอการจัดส่ง</div><div class="col-3 num">2</div>
+                            <div class="col-9">สินค้ารอการจัดส่ง</div><div class="col-3 num">{{$level3}}</div>
                         </a>
                         <a class="bt row" href="{{ url('/manage_order04') }}">
-                            <div class="col-9">เสร็จสิ้น</div><div class="col-3 num">100</div>
+                            <div class="col-9">เสร็จสิ้น</div><div class="col-3 num">{{$level4}}</div>
                         </a>
                     </div>
                 </div>
@@ -88,17 +89,17 @@
             &nbsp;
         </div>
         <div class="content2 col-10">
-            <div class="right_content_db"><img src="../assets/img/store.png"> ร้านแบมบูใหญ่</div>
+            <div class="right_content_db"><img src="{{asset('assets/img/store.png')}}"> ร้านแบมบูใหญ่</div>
             <div class="list">
-                <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>รายการใหม่</div>
+                <div class="head-list"><a href="#" class="hamber"><img src="{{asset('assets/icon/hamberger.png')}}"></a>รายการใหม่</div>
                 <hr class="line_hr">
-                <div class="search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#"><img src="../assets/icon/fillter.png">เพิ่มตัวกรอง</a></div>
+                <div class="search"><a href="#"><img src="{{asset('assets/icon/search.png')}}">ค้นหา</a> <a href="#"><img src="{{asset('assets/icon/fillter.png')}}">เพิ่มตัวกรอง</a></div>
             </div>
             <div class="card-list">
                 <div class="container">
                     <!--Modal popup-->
                     <div class="modal fade bd-example-modal-lg" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <div class="container-fluid">
@@ -143,7 +144,7 @@
                                                             <option>30 นาที</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col"><a href="#"><img src="../assets/icon/delete.png"></a></div>
+                                                    <div class="col"><a href="#"><img src="{{asset('assets/icon/delete.png')}}"></a></div>
                                                 </div>
                                                 <br>
                                                 <div class="row">
@@ -157,7 +158,7 @@
                                                             <option>30 นาที</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col"><a href="#"><img src="../assets/icon/delete.png"></a></div>
+                                                    <div class="col"><a href="#"><img src="{{asset('assets/icon/delete.png')}}"></a></div>
                                                 </div>  
                                                 <br>
                                                 <div class="row">
@@ -211,6 +212,11 @@
                     </div>
                 </div>
                 <!--loop 1 -->
+                @foreach($data as $row)
+                    <?php
+                        $count = 0;
+                        $count++;
+                    ?>
                 <div class="order-hara row">
                     <div class="card mx-auto order col-md-12">
                         <div class="d-flex bd-highlight grey">
@@ -222,21 +228,22 @@
                             <div class="col">Amount</div>
                             <div class="col">Platform</div>
                         </div>
+                  
+                    
                         <div class="d-flex bd-highlight">
-                            <div class="col">#988123</div>
-                            <div class="col">01/01/2020 14.35น.</div>
-                            <div class="col">สุกัญญา เรียนดี</div>
+                            <div class="col">#{{$row->Or_ID}}</div>
+                            <div class="col">{{$row->Or_Date}} {{$row->Or_Datetime}}น.</div>
+                            <div class="col">{{$row->Us_Name}}</div>
                             <div class="col">089-448-6633</div>
                             <div class="col">Delivery</div>
-                            <div class="col">580.-</div>
+                            <div class="col">{{$row->Fm_Price}}.-</div>
                             <div class="col">Application</div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-10 d-flex flex-row bd-highlight .order-hara">
                                 <div class="head grey">รายการ</div>
-                                <div class="dish">หมกทะเล x2</div>
-                                <div class="dessert">น้ำพร้าวปั่น x 1</div>
+                                <div class="dish">{{$row->Fm_Name}} x<?php echo $count; ?></div>
                             </div>
                             <div class="col-2">
                                 <div class="time">เหลือเวลารับ 40 วินาที</div>
@@ -246,105 +253,16 @@
                         <div class="row more">
                             <div class="col-10">
                                 <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
-                                <div class="msg">หมกทะเลไม่ใส่กุ้งนะครับ ที่บ้านมีคนแพ้</div> 
+                                <div class="msg">{{$row->Or_Detail}}</div> 
                             </div>
                             <div class="col-2">
-                                <div class="see-ord"><a href="#" data-toggle="modal" data-target="#mymodal">ดู Order</a></div>
+                                <div class="see-ord"><a type="button" class="btn btn-success"  href="{{url('/manage_order01/update', $row->Or_ID)}}">ยืนยัน</a></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!--loop 2 -->
-                <div class="order-hara row">
-                    <div class="card mx-auto order col-md-12">
-                        <div class="d-flex bd-highlight grey">
-                            <div class="col">Order Number</div>
-                            <div class="col">Date & Time</div>
-                            <div class="col">Name</div>
-                            <div class="col">Tel</div>
-                            <div class="col">Trans Type</div>
-                            <div class="col">Amount</div>
-                            <div class="col">Platform</div>
-                        </div>
-                        <div class="d-flex bd-highlight">
-                            <div class="col">#988122</div>
-                            <div class="col">01/01/2020 14.25น.</div>
-                            <div class="col">อาทิตย์ พากเพียร</div>
-                            <div class="col">086-665-4873</div>
-                            <div class="col"><span class="pickup">Pickup</span></div>
-                            <div class="col">1,200.-</div>
-                            <div class="col">Application</div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-10 d-flex flex-row bd-highlight .order-hara">
-                                <div class="head grey">รายการ</div>
-                                <div class="dish">ข้าวผัดทะเล x1</div>
-                                <div class="dish">สุกี้รวมหมู x1</div>
-                                <div class="dessert">น้ำแตงโมปั่น x 2</div>
-                            </div>
-                            <div class="col-2">
-                                <div class="time">เหลือเวลารับ 35 วินาที</div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row more">
-                            <div class="col-10">
-                                <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
-                                <div class="msg">สุกี้ไม่ใส่ผักนะครับ</div> 
-                            </div>
-                            <div class="col-2">
-                                <div class="see-ord"><a href="#" data-toggle="modal" data-target="#mymodal">ดู Order</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--loop 3 -->
-                <div class="order-hara row">
-                    <div class="card mx-auto order col-md-12">
-                        <div class="d-flex bd-highlight grey">
-                            <div class="col">Order Number</div>
-                            <div class="col">Date & Time</div>
-                            <div class="col">Name</div>
-                            <div class="col">Tel</div>
-                            <div class="col">Trans Type</div>
-                            <div class="col">Amount</div>
-                            <div class="col">Platform</div>
-                        </div>
-                        <div class="d-flex bd-highlight">
-                            <div class="col">#988121</div>
-                            <div class="col">01/01/2020 14.23น.</div>
-                            <div class="col">Kanokwan K...</div>
-                            <div class="col">099-785-3322</div>
-                            <div class="col">Delivery</div>
-                            <div class="col">890.-</div>
-                            <div class="col">Application</div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-10 d-flex flex-row bd-highlight .order-hara">
-                                <div class="head grey">รายการ</div>
-                                <div class="dish">ข้าวคลุกกะปิ x2</div>
-                                <div class="dessert">น้ำมะม่วงปั่น x 1</div>
-                            </div>
-                            <div class="col-2">
-                                <div class="time">เหลือเวลารับ 20 วินาที</div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row more">
-                            <div class="col-10">
-                                <div class="msg-more">ข้อความเพิ่มเติมจากลูกค้า</div>
-                                <div class="msg">น้ำมะม่วงปั่น **หวานน้อย**</div> 
-                            </div>
-                            <div class="col-2">
-                                <div class="see-ord"><a href="#" data-toggle="modal" data-target="#mymodal">ดู Order</a></div>
-                            </div>
-                        </div>
-                        
-                    </div>
                     
+                    </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -352,7 +270,7 @@
 
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('js/bootstrap.js')}}"></script> 
 <script>
 
 </script>

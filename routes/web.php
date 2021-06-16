@@ -32,9 +32,7 @@ Route::get('/manage_money02',function(){
 Route::get('/manage_money03',function(){
     return view('admin.manage_money03');
 });
-Route::get('/manage_order01',function(){
-    return view('admin.manage_order01');
-});
+
 Route::get('/manage_order02',function(){
     return view('admin.manage_order02');
 });
@@ -56,12 +54,9 @@ Route::get('/accept', function(){
 Route::get('/manage_store01-1', function(){
     return view('/admin/manage_store01-1');
 });
-Route::get('/manage_store02-1', function(){
-    return view('/admin/manage_store02-1');
-});
 
-Route::get('/manage_store02', [AdminShopController::class, 'manage_store02_view']);
-Route::post('/manage_store02/insert', [AdminShopController::class, 'insert_food']);
+
+
 
 
 Route::get('/manage_store03', function(){
@@ -267,6 +262,25 @@ Route::get('/manage_banner', [AdminLeaderController::class, 'manage_banner_view'
 Route::post('/uploadbanner', [AdminLeaderController::class, 'upload_banner'])->name('banner.upload.post');
 Route::post('/updatebanner/{id}', [AdminLeaderController::class, 'update_banner'])->name('banner.update.post');
 Route::get('/deletebanner/{id}', [AdminLeaderController::class, 'delete_banner'])->name('banner.delete.post');
+
+Route::get('/manage_store02', [AdminShopController::class, 'manage_store02_view']);
+Route::post('/manage_store02/insert', [AdminShopController::class, 'insert_food']);
+Route::get('/getfoodinfo/{id}', [AdminShopController::class, 'getfoodinfo']);
+
+Route::get('/manage_order01', [ManageController::class, 'index_lv_1']);
+Route::get('/manage_order01/update/{id}', [ManageController::class, 'update_lv_1']);
+
+Route::get('/manage_order02', [ManageController::class, 'index_lv_2']);
+Route::get('/manage_order02/update/{id}', [ManageController::class, 'update_lv_2']);
+
+Route::get('/manage_order03', [ManageController::class, 'index_lv_3']);
+Route::get('/manage_order03/update/{id}', [ManageController::class, 'update_lv_3']);
+Route::get('/manage_order04', [ManageController::class, 'index_lv_4']);
+
+Route::get('/manage_store02-1/update/{id}', [AdminShopController::class, 'update_food']);
+Route::post('/manage_store02-1/updatedb/{id}', [AdminShopController::class, 'update_food_db']);
+
+Route::get('/manage_store02/delete/{id}', [AdminShopController::class, 'store_delete']);
 
 
 
