@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>รายการที่ยอมรับ</title>
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <title>จัดการออร์เดอร์</title>
 </head>
 <body class="dashboard">
     <div class="sidenav">
         <div class="container-fluid">
             <div class="row">
-                <div class="col"><a href="#"><img src="../assets//logo/logo_Harajuku.png" width="85px" height="70px"></a></div>
+                <div class="col"><a href="#"><img src="{{asset('assets//logo/logo_Harajuku.png')}}" width="85px" height="70px"></a></div>
                 <div class="col subnav">
-                    <a href="01manageOrder.html" class="active">
+                    <a href="#" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -94,113 +94,30 @@
         </div>
     </div>
     <div class="btn-group col-md-12" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary" onclick="location.href = '01manageOrder.html';">รายการใหม่</button>
-        <button type="button" class="btn btn-secondary active" onclick="location.href = '03manageOrder.html';">รายการที่ยอมรับ</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '04manageOrder.html';">รอการที่จัดส่ง</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '05manageOrder.html';">กำลังจัดส่ง</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '06manageOrder.html';">เสร็จสิ้น</button>
+        <button type="button" class="btn btn-secondary active" onclick="location.href = '{{url('01manageOrder')}}';">รายการใหม่</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('03manageOrder')}}';">รายการที่ยอมรับ</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('04manageOrder')}}';">รอการที่จัดส่ง</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('05manageOrder')}}';">กำลังจัดส่ง</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('06manageOrder')}}';">เสร็จสิ้น</button>
     </div>
-    <div class="row content-db">  
-        <div class="btn-fillt ">
+    <div class="row content-db">
+        <div class="d-flex bd-highlight mb-3 btn-fillt">
+            <div class="me-auto bd-highlight fillt"><a href="{{url('01manageOrder')}}">ทั้งหมด</a><a href="{{url('02manageOrder')}}" class="active">รออนุมัติ</a></div>
             <div class="search-box">
                 <input class="search-txt" type="text" placeholder="Search . . .">
                 <a class="search-btn" href="#">
             <i class="fas fa-search"></i>
                 </a>
             </div>
-            <div class="search_filter"><a href="#"><img src="../assets/icon/fillter.png"> เพิ่มตัวกรอง </a></div>
         </div>
     </div> 
-    <br>
     <div class="card-list">
         <div class="order-hara row">
             <!-- loop -->
             <div class="col-md-4">
-                <div class="card mx-auto order">
+                <div class="card mx-auto orders">
                     <div class="d-flex bd-highlight grey">
-                        <div class="me-auto bd-highlight ">#988123</div>
-                        <div class="bd-highlight">Delivery</div>
-                    </div>
-                    <div class="d-flex bd-highlight">
-                        <div class="flex-fill bd-highlight">สุกัญญา ...</div>
-                        <div class="flex-fill bd-highlight">092-231-3212</div>
-                        <div class="me-auto bd-highlight bath">990.-</div>
-                    </div>
-                    <div class="d-flex bd-highlight">
-                        <div class="flex-fill bd-highlight"></div>
-                        <div class="me-auto bd-highlight">3.4 km</div>
-                    </div>
-                    <div>รายการ</div>
-                    <div class="d-flex bd-highlight">
-                        <div class="flex-fill bd-highlight grey">ร้านแบมบูใหญ่</div>
-                        <div class="flex-fill bd-highlight">490.-</div>
-                        <div class="flex-fill bd-highlight grey">ร้านฟูจิ</div>
-                        <div class="flex-fill bd-highlight">500.-</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 dishs">หมกทะเล x 1</div>
-                        <div class="col-6 dishs">เซ็ตซูชิ Big Size x 1</div>
-                        <div class="col-6 dishs">ข้าวผัดรวมทะเล x 1</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 desserts">น้ำมะพร้าวปั่น x 3</div>
-                    </div>
-                    <div class="row shipping">
-                        <div class="col-6">ค่าจัดส่ง(อัตโนมัติ) <span>+50</span></div>
-                        <div class="col-6 end"><a href="#">ไม่อนุมัติ</a> <a href="#" class="accepts">อนุมัติ</a></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control order" id="exampleFormControlTextarea1" rows="2">สั่งสีฟ้า ที่เป็นอาหารก่อน พอได้ครบ ค่อยสั่งน้ำมะพร้าว </textarea>
-                    </div>
-                
-                </div>
-            </div>
-            <!-- loop -->
-            <div class="col-md-4">
-                <div class="card mx-auto order">
-                    <div class="d-flex bd-highlight grey">
-                        <div class="me-auto bd-highlight ">#988123</div>
-                        <div class="bd-highlight">Delivery</div>
-                    </div>
-                    <div class="d-flex bd-highlight">
-                        <div class="flex-fill bd-highlight">สุกัญญา ...</div>
-                        <div class="flex-fill bd-highlight">092-231-3212</div>
-                        <div class="me-auto bd-highlight bath">990.-</div>
-                    </div>
-                    <div class="d-flex bd-highlight">
-                        <div class="flex-fill bd-highlight"></div>
-                        <div class="me-auto bd-highlight">3.4 km</div>
-                    </div>
-                    <div>รายการ</div>
-                    <div class="d-flex bd-highlight">
-                        <div class="flex-fill bd-highlight grey">ร้านแบมบูใหญ่</div>
-                        <div class="flex-fill bd-highlight">490.-</div>
-                        <div class="flex-fill bd-highlight grey">ร้านฟูจิ</div>
-                        <div class="flex-fill bd-highlight">500.-</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 dishs">หมกทะเล x 1</div>
-                        <div class="col-6 dishs">เซ็ตซูชิ Big Size x 1</div>
-                        <div class="col-6 dishs">ข้าวผัดรวมทะเล x 1</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 desserts">น้ำมะพร้าวปั่น x 3</div>
-                    </div>
-                    <div class="row shipping">
-                        <div class="col-6">ค่าจัดส่ง(อัตโนมัติ) <span>+50</span></div>
-                        <div class="col-6 end"><a href="#">ไม่อนุมัติ</a> <a href="#" class="accepts">อนุมัติ</a></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control order" id="exampleFormControlTextarea1" rows="2">สั่งสีฟ้า ที่เป็นอาหารก่อน พอได้ครบ ค่อยสั่งน้ำมะพร้าว </textarea>
-                    </div>
-                
-                </div>
-            </div>
-            <!-- loop -->
-            <div class="col-md-4">
-                <div class="card mx-auto order">
-                    <div class="d-flex bd-highlight grey">
-                        <div class="me-auto bd-highlight ">#988123</div>
+                        <div class="me-auto bd-highlight">#988123</div>
                         <div class="bd-highlight">Delivery</div>
                     </div>
                     <div class="d-flex bd-highlight">
@@ -215,21 +132,81 @@
                     <div>รายการ</div>
                     <div class="d-flex bd-highlight">
                         <div class="flex-fill bd-highlight grey">ร้านแบมบูใหญ่</div>
-                        <div class="flex-fill bd-highlight">490.-</div>
+                        <div class="flex-fill bd-highlight">600.-</div>
                         <div class="flex-fill bd-highlight grey">ร้านฟูจิ</div>
-                        <div class="flex-fill bd-highlight">500.-</div>
+                        <div class="flex-fill bd-highlight">600.-</div>
                     </div>
                     <div class="row">
-                        <div class="col-6 dishs">หมกทะเล x 1</div>
-                        <div class="col-6 dishs">เซ็ตซูชิ Big Size x 1</div>
-                        <div class="col-6 dishs">ข้าวผัดรวมทะเล x 1</div>
+                        <div class="col-6 dish">หมกทะเล x 1</div>
+                        <div class="col-6 dish">เซ็ตซูชิ Big Size x 1</div>
+                        <div class="col-6 dish">ข้าวผัดรวมทะเล x 1</div>
                     </div>
                     <div class="row">
-                        <div class="col-6 desserts">น้ำมะพร้าวปั่น x 3</div>
+                        <div class="col-6 dessert">น้ำมะพร้าวปั่น x 3</div>
                     </div>
                     <div class="row shipping">
                         <div class="col-6">ค่าจัดส่ง(อัตโนมัติ) <span>+50</span></div>
-                        <div class="col-6 end"><a href="#">ไม่อนุมัติ</a> <a href="#" class="accepts">อนุมัติ</a></div>
+                        <div class="col-6 end"><a href="#">ไม่อนุมัติ</a> <a href="#" class="accept">อนุมัติ</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="change">เปลี่ยนยานพาหนะ</a>
+                        </div>
+                        
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                รถจักรยานยนต์
+                            </label>
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                รถยนต์
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control order" id="exampleFormControlTextarea1" rows="2">สั่งสีฟ้า ที่เป็นอาหารก่อน พอได้ครบ ค่อยสั่งน้ำมะพร้าว </textarea>
+                    </div>
+                    <a href="#" class="take-order">ยืนยัน Order</a>
+                </div>
+            </div>
+            <!-- loop -->
+            <div class="col-md-4">
+                <div class="card mx-auto orders">
+                    <div class="d-flex bd-highlight grey">
+                        <div class="me-auto bd-highlight">#988123</div>
+                        <div class="bd-highlight">Delivery</div>
+                    </div>
+                    <div class="d-flex bd-highlight">
+                        <div class="flex-fill bd-highlight">สุกัญญา ...</div>
+                        <div class="flex-fill bd-highlight">092-231-3212</div>
+                        <div class="me-auto bd-highlight bath">1,200.-</div>
+                    </div>
+                    <div class="d-flex bd-highlight">
+                        <div class="flex-fill bd-highlight"></div>
+                        <div class="me-auto bd-highlight">3.4 km</div>
+                    </div>
+                    <div>รายการ</div>
+                    <div class="d-flex bd-highlight">
+                        <div class="flex-fill bd-highlight grey">ร้านแบมบูใหญ่</div>
+                        <div class="flex-fill bd-highlight">600.-</div>
+                        <div class="flex-fill bd-highlight grey">ร้านฟูจิ</div>
+                        <div class="flex-fill bd-highlight">600.-</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 dish">หมกทะเล x 1</div>
+                        <div class="col-6 dish">เซ็ตซูชิ Big Size x 1</div>
+                        <div class="col-6 dish">ข้าวผัดรวมทะเล x 1</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 dessert">น้ำมะพร้าวปั่น x 3</div>
+                    </div>
+                    <div class="row shipping">
+                        <div class="col-6">ค่าจัดส่ง(อัตโนมัติ) <span>+50</span></div>
+                        <div class="col-6 end"><a href="#">ไม่อนุมัติ</a> <a href="#" class="accept">อนุมัติ</a></div>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -249,17 +226,18 @@
                             </label>
                         </div>
                     </div>
+                    
                     <div class="form-group">
                         <textarea class="form-control order" id="exampleFormControlTextarea1" rows="2">สั่งสีฟ้า ที่เป็นอาหารก่อน พอได้ครบ ค่อยสั่งน้ำมะพร้าว </textarea>
                     </div>
-                
+                    <a href="#" class="take-order">ยืนยัน Order</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('admin_js/bootstrap.js')}}"></script> 
 
 <script>
     $('.hamber').on('click', function () {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('admin_css/bootstrap.css')}}">
-    <link rel="stylesheet" href="../admin_css/style.css">
+    <link rel="stylesheet" href="{{asset('admin_css/style.css')}}">
     <script defer src="http://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <title>รายการใหม่</title>
 </head>
@@ -12,9 +12,9 @@
     <div class="sidenav">
         <div class="container-fluid">
             <div class="row">
-                <div class="col"><a href="#"><img src="../assets//logo/logo_Harajuku.png" width="85px" height="70px"></a></div>
+                <div class="col"><a href="#"><img src="{{asset('assets//logo/logo_Harajuku.png')}}" width="85px" height="70px"></a></div>
                 <div class="col subnav">
-                    <a href="01manageOrder.html" class="active">
+                    <a href="{{url('01manageOrder')}}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -95,15 +95,15 @@
         </div>
     </div>
     <div class="btn-group col-md-12" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary active" onclick="location.href = '01manageOrder.html';">รายการใหม่</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '03manageOrder.html';">รายการที่ยอมรับ</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '04manageOrder.html';">รอการที่จัดส่ง</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '05manageOrder.html';">กำลังจัดส่ง</button>
-        <button type="button" class="btn btn-secondary" onclick="location.href = '06manageOrder.html';">เสร็จสิ้น</button>
+        <button type="button" class="btn btn-secondary active" onclick="location.href = '{{url('01manageOrder')}}'">รายการใหม่</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('03manageOrder')}}'">รายการที่ยอมรับ</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('04manageOrder')}}'">รอการที่จัดส่ง</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('05manageOrder')}}'">กำลังจัดส่ง</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href = '{{url('06manageOrder')}}'">เสร็จสิ้น</button>
     </div>
     <div class="row content-db">
         <div class="d-flex bd-highlight mb-3 btn-fillt">
-            <div class="me-auto bd-highlight fillt"><a href="01manageOrder.html" class="active">ทั้งหมด</a><a href="02manageOrder.html">รออนุมัติ</a></div>
+            <div class="me-auto bd-highlight fillt"><a href="{{url('01manageOrder')}}" class="active">ทั้งหมด</a><a href="{{url('02manageOrder')}}">รออนุมัติ</a></div>
             <div class="search-box">
                 <input class="search-txt" type="text" placeholder="Search . . .">
                 <a class="search-btn" href="#">
@@ -278,7 +278,7 @@
     </div>
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('admin_js/bootstrap.js')}}"></script> 
 
 <script>
     $('.hamber').on('click', function () {

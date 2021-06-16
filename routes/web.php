@@ -260,6 +260,12 @@ Route::get('/delivery', function(){
 Route::get('/01manageOrder', function(){
     return view('/admin_leader/01manageOrder');
 });
+Route::get('/02manageOrder', function(){
+    return view('/admin_leader/02manageOrder');
+});
+Route::get('/03manageOrder', function(){
+    return view('/admin_leader/03manageOrder');
+});
 
 //admin-leader
 Route::get('/manage_banner', [AdminLeaderController::class, 'manage_banner_view']);
