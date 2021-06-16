@@ -257,6 +257,10 @@ Route::get('/delivery', function(){
     return view('/front/delivery');
 });
 
+Route::get('/01manageOrder', function(){
+    return view('/admin_leader/01manageOrder');
+});
+
 //admin-leader
 Route::get('/manage_banner', [AdminLeaderController::class, 'manage_banner_view']);
 Route::post('/uploadbanner', [AdminLeaderController::class, 'upload_banner'])->name('banner.upload.post');
@@ -281,6 +285,8 @@ Route::get('/manage_store02-1/update/{id}', [AdminShopController::class, 'update
 Route::post('/manage_store02-1/updatedb/{id}', [AdminShopController::class, 'update_food_db']);
 
 Route::get('/manage_store02/delete/{id}', [AdminShopController::class, 'store_delete']);
+
+
 
 
 

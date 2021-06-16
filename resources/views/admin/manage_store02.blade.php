@@ -287,7 +287,7 @@
                                     <div class="col">
                                         
                                         <a type="button" class="btn btn-info"  href="{{url('/manage_store02-1/update',$row->Fm_ID)}}">แก้ไข</a>
-                                        <a href="{{asset('/manage_store02/delete/'.$row->Fm_ID)}}"type="button" class="btn btn-warning">ลบ</a>
+                                        <a href="{{url('/manage_store02/delete/'.$row->Fm_ID)}}"type="button" class="btn btn-warning">ลบ</a>
                                     </div>
                             </div>
                             <hr>
