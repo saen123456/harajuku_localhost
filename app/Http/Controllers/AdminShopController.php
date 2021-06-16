@@ -31,7 +31,7 @@ class AdminShopController extends Controller
 
         DB::table('tbl_Food_Master')->insert([
             ['Fm_Name' => $request['food_name'],'Fm_Description' => $request['food_detail'], 'Fm_Price' => $request['food_price'], 
-            'Fm_Type' => $request['food_type'], 'Fm_Image' => $image_path, 'Fm_Status' => "active"]
+            'Fm_Type' => $request['food_type'], 'Fm_Image' => $image_path, 'Fm_Status' => "false"]
         ]);
         return back()->with('success','You have successfully upload image.');
 

@@ -14,7 +14,7 @@
             <div class="sidenav-db">
                 <div class="sidenav-1">
                     <a href="#"><img src="{{asset('assets\logo/harajuku.png')}}" width="100%"></a>
-                    <a href="{{asset('manage_order01')}}">
+                    <a href="{{url('manage_order01')}}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,7 +24,7 @@
                         <br>จัดการ<br>
                         Order
                     </a>
-                    <a href="{{asset('manage_money01')}}">
+                    <a href="{{url('manage_money01')}}">
                         <svg 
                         mlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -33,7 +33,7 @@
                         </svg>
                         <br>จัดการ<br>เงิน
                     </a>
-                    <a href="{{asset('manage_store01')}}" class="active">
+                    <a href="{{url('manage_store01')}}" class="active">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -66,19 +66,19 @@
                 <div class="sidenav-2">
                     <div><h2>จัดการร้าน</h2></div>
                     <div class="sidebar">
-                        <a class="bt row " href="{{asset('manage_store01')}}">
+                        <a class="bt row " href="{{url('manage_store01')}}">
                             <div class="col-9">ภาพรวม</div><div class="col-3 num">3</div>
                         </a>
-                        <a class="bt row active" href="{{asset('manage_store02')}}">
+                        <a class="bt row active" href="{{url('manage_store02')}}">
                             <div class="col-9">สินค้า(เมนูอาหาร)</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row " href="{{asset('manage_store03')}}">
+                        <a class="bt row " href="{{url('manage_store03')}}">
                             <div class="col-9">รายการสั่งซื้อ</div><div class="col-3 num">2</div>
                         </a>
-                        <a class="bt row" href="{{asset('manage_store04')}}">
+                        <a class="bt row" href="{{url('manage_store04')}}">
                             <div class="col-9">คูปอง</div><div class="col-3 num">100</div>
                         </a>
-                        <a class="bt row" href="{{asset('manage_store05')}}">
+                        <a class="bt row" href="{{url('manage_store05')}}">
                             <div class="col-9">ตั้งค่าร้าน</div><div class="col-3 num">100</div>
                         </a>
                     </div>

@@ -79,12 +79,12 @@
             &nbsp;
         </div>
         <div class="content2 col-10">
-            <div class="right_content_db"><img src="../assets/img/store.png"> ร้านแบมบูใหญ่</div>
+            <div class="right_content_db"><img src="{{asset('assets/img/store.png')}}"> ร้านแบมบูใหญ่</div>
             <div class="list">
                 <div class="list">
-                    <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>รูปภาพ banner</div>
+                    <div class="head-list"><a href="#" class="hamber"><img src="{{asset('assets/icon/hamberger.png')}}"></a>รูปภาพ banner</div>
                     <div class="row">
-                        <div class="col-md-10 search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#"><img src="../assets/icon/fillter.png">เพิ่มตัวกรอง</a></div>
+                        <div class="col-md-10 search"><a href="#"><img src="{{asset('assets/icon/search.png')}}">ค้นหา</a> <a href="#"><img src="{{asset('assets/icon/fillter.png')}}">เพิ่มตัวกรอง</a></div>
                         <div class="col-md-2 insert"><a href="#" data-toggle="modal" data-target="#mymodal">เพิ่มใหม่ +</a></div>
                     </div>
                     
@@ -220,7 +220,7 @@
 </div>
 
 <div class="modal fade bd-example-modal-lg" id="mymodalupdate" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 
@@ -340,7 +340,7 @@
 
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('js/bootstrap.js')}}"></script> 
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="

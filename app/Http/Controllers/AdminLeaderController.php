@@ -10,7 +10,7 @@ class AdminLeaderController extends Controller
 {
     //
     public function manage_banner_view(){
-        $data = DB::table('bannerpic')->orderBy('created_at', 'desc')->first();
+        $data = DB::table('tbl_Banner')->orderBy('created_at', 'desc')->first();
         
         return view('admin_leader.manage_banner',compact('data'));
     }
@@ -46,7 +46,7 @@ class AdminLeaderController extends Controller
         $request->image->move(public_path('/upload_banner'), $imageName);
 
       
-        $image_path = '/upload_banner/'. $imageName;
+        $image_path = 'upload_banner/'. $imageName;
         BannerPic::where('id', $id)->update(['image_name' => $imageName ,'image_path' => $image_path]);
         //$bannerpic->save();
     

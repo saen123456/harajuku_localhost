@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Manage Store</title>
 </head>
 <body class="dashboard">
@@ -13,7 +13,7 @@
         <div class="db-take">
             <div class="sidenav-db">
                 <div class="sidenav-1">
-                    <a href="#"><img src="../assets\logo/harajuku.png" width="100%"></a>
+                    <a href="#"><img src="{{asset('assets\logo/harajuku.png')}}" width="100%"></a>
                     <a href="{{ url('/manage_order01') }}">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg"
@@ -91,11 +91,11 @@
             &nbsp;
         </div>
         <div class="content2 col-10">
-            <div class="right_content_db"><img src="../assets/img/store.png"> ร้านแบมบูใหญ่</div>
+            <div class="right_content_db"><img src="{{asset('assets/img/store.png')}}"> ร้านแบมบูใหญ่</div>
             <div class="list">
-                <div class="head-list"><a href="#" class="hamber"><img src="../assets/icon/hamberger.png"></a>ตั้งค่าร้าน</div>
+                <div class="head-list"><a href="#" class="hamber"><img src="{{asset('assets/icon/hamberger.png')}}"></a>ตั้งค่าร้าน</div>
                 <hr class="line_hr">
-                <div class="search"><a href="#"><img src="../assets/icon/search.png">ค้นหา</a> <a href="#"><img src="../assets/icon/fillter.png">เพิ่มตัวกรอง</a></div>
+                <div class="search"><a href="#"><img src="{{asset('assets/icon/search.png')}}">ค้นหา</a> <a href="#"><img src="{{asset('assets/icon/fillter.png')}}">เพิ่มตัวกรอง</a></div>
             </div>
             <div class="card-list">
                 <!--loop 1 -->
@@ -114,7 +114,7 @@
 
 </body>
 </html>
-<script src="../js/bootstrap.js"></script> 
+<script src="{{asset('js/bootstrap.js')}}"></script> 
 <script>
 
 </script>

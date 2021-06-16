@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class BannerPic extends Model
 {
     use HasFactory;
-    protected $table = 'bannerpic';
+    protected $table = 'tbl_Banner';
     protected $primaryKey = 'id';
     protected $fillable = [
         'image_name',

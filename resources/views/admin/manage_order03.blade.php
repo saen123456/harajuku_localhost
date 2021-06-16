@@ -138,7 +138,7 @@
                             </div>
                             
                             <div class="col-4 ">
-                                <div class="rec-ord"><a href="{{asset('/manage_order03/update/'.$row->Or_ID)}}" style="float: right;">ยืนยันการจัดส่ง</a></div>
+                                <div class="rec-ord"><a href="{{url('/manage_order03/update/'.$row->Or_ID)}}" style="float: right;">ยืนยันการจัดส่ง</a></div>
                             </div>
                         </div>
                     </div>

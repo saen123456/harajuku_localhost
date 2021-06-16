@@ -272,7 +272,7 @@
             @if(isset($data))
                  <div class="single_slider d-flex align-items-center" style="background-image: url({{asset($data->image_path)}});">
             @else
-                <div class="single_slider d-flex align-items-center" style="background-image: url({{asset('/img-take/01Take-pet-festival.jpg')}});">
+                <div class="single_slider d-flex align-items-center" style="background-image: url({{asset('img-take/01Take-pet-festival.jpg')}});">
             @endif
              {{-- @endforeach --}}
            
