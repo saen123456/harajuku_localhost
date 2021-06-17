@@ -1,8 +1,6 @@
-<?php
 
-require_once "config.php";
-require_once "header.php";
-?>
+@include('templates.config')
+@include('templates.header')
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -29,7 +27,7 @@ require_once "header.php";
 
 
     <!--breadcrumbs area start-->
-    <div class="breadcrumbs_area" style="height: 200px; background: url(img-take/bg.jpg) no-repeat 0 0;">
+    <div class="breadcrumbs_area" style="height: 200px; background: url({{asset('img-take/bg.jpg')}}) no-repeat 0 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -127,51 +125,47 @@ require_once "header.php";
         </div>
     </div>
     <!-- customer login end -->
-    <?php
-
-require_once "footer.php";
-
-?>
+    @include('templates.footer')
     
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--popper min js-->
-    <script src="assets/js/popper.js"></script>
+    <script src="{{asset('assets/js/popper.js')}}"></script>
     <!--bootstrap min js-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
     <!--owl carousel min js-->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
     <!--slick min js-->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{{asset('assets/js/slick.min.js')}}"></script>
     <!--magnific popup min js-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
     <!--counterup min js-->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
     <!--jquery countdown min js-->
-    <script src="assets/js/jquery.countdown.js"></script>
+    <script src="{{asset('assets/js/jquery.countdown.js')}}"></script>
     <!--jquery ui min js-->
-    <script src="assets/js/jquery.ui.js"></script>
+    <script src="{{asset('assets/js/jquery.ui.js')}}"></script>
     <!--jquery elevatezoom min js-->
-    <script src="assets/js/jquery.elevatezoom.js"></script>
+    <script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
     <!--isotope packaged min js-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
     <!--slinky menu js-->
-    <script src="assets/js/slinky.menu.js"></script>
+    <script src="{{asset('assets/js/slinky.menu.js')}}"></script>
     <!--instagramfeed menu js-->
-    <script src="assets/js/jquery.instagramFeed.min.js"></script>
+    <script src="{{asset('assets/js/jquery.instagramFeed.min.js')}}"></script>
     <!-- Plugins JS -->
 
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
 
 
-    <!-- <script src="js-front/jquery-2.2.4.min.js"></script> -->
-    <script src="js-front/common_scripts_min.js"></script>
-    <script src="js-front/functions.js"></script>
-    <script src="assets/validate.js"></script>
+    <!-- <script src="js-front/jquery-2.2.4.min.js')}}"></script> -->
+    <script src="{{asset('js-front/common_scripts_min.js')}}"></script>
+    <script src="{{asset('js-front/functions.js')}}"></script>
+    <script src="{{asset('assets/validate.js')}}"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('assets/js/main.js')}}"></script>
 
 </body>
 

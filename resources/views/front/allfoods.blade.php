@@ -1,8 +1,6 @@
-<?php
 
-require_once "config.php";
-require_once "header.php";
-?>
+@include('templates.config')
+@include('templates.header')
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -17,7 +15,7 @@ require_once "header.php";
 
 
     <!--modernizr min js here-->
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="{{asset('assets/js/vendor/modernizr-3.7.1.min.js')}}"></script>
 </head>
 
 <body>
@@ -41,17 +39,17 @@ require_once "header.php";
                         <div class="slider_area owl-carousel ">
                             <div class="single_banner">
                                 <div class="banner_thumb">
-                                    <a href="{{url('shop')}}"><img src="img-take/ปกบนซ้าย-1.jpg" alt=""></a>
+                                    <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนซ้าย-1.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                             <div class="single_banner">
                                 <div class="banner_thumb">
-                                    <a href="{{url('shop')}}"><img src="img-take/ปกบนซ้าย-2.jpg" alt=""></a>
+                                    <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนซ้าย-2.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                             <div class="single_banner">
                                 <div class="banner_thumb">
-                                    <a href="{{url('shop')}}"><img src="img-take/ปกบนซ้าย-3.jpg" alt=""></a>
+                                    <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนซ้าย-3.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -65,14 +63,14 @@ require_once "header.php";
                             <div class="slider_area owl-carousel">
                                 <div class="single_banner">
                                     <div class="banner_thumb" id="single_banner">
-                                        <a href="{{url('shop')}}"><img src="img-take/ปกบนแบบใหม่-บนขวา-1.jpg" alt=""></a>
+                                        <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนแบบใหม่-บนขวา-1.jpg')}}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="banner_thumb" id="single_banner">
-                                    <a href="{{url('shop')}}"><img src="img-take/ปกบนแบบใหม่-บนขวา-2.jpg" alt=""></a>
+                                    <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนแบบใหม่-บนขวา-2.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="banner_thumb" id="single_banner">
-                                    <a href="{{url('shop')}}"><img src="img-take/ปกบนแบบใหม่-บนขวา-3.jpg" alt=""></a>
+                                    <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนแบบใหม่-บนขวา-3.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                         </section>
@@ -81,14 +79,14 @@ require_once "header.php";
                             <div class="slider_area owl-carousel">
                                 <div class="single_banner">
                                     <div class="banner_thumb">
-                                        <a href="{{url('shop')}}"><img src="img-take/ปกบนแบบใหม่ล่างขวา1.jpg" alt=""></a>
+                                        <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนแบบใหม่ล่างขวา1.jpg')}}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="banner_thumb">
-                                    <a href="{{url('shop')}}"><img src="img-take/ปกบนแบบใหม่ล่างขวา2.jpg" alt=""></a>
+                                    <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนแบบใหม่ล่างขวา2.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="banner_thumb">
-                                    <a href="{{url('shop')}}"><img src="img-take/ปกบนแบบใหม่ล่างขวา3.jpg" alt=""></a>
+                                    <a href="{{url('shop')}}"><img src="{{asset('img-take/ปกบนแบบใหม่ล่างขวา3.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                         </section>
@@ -118,7 +116,7 @@ require_once "header.php";
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb product_thumb1">
-                                    <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/01-อาหารเกาหลี.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/01-อาหารเกาหลี.jpg')}}" alt=""></a>
 
 
                                 </div>
@@ -132,7 +130,7 @@ require_once "header.php";
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb product_thumb1">
-                                    <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/02-อาหารจีน.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/02-อาหารจีน.jpg')}}" alt=""></a>
 
 
 
@@ -147,7 +145,7 @@ require_once "header.php";
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb product_thumb1">
-                                    <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/03-อาหารญี่ปุ่น.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/03-อาหารญี่ปุ่น.jpg')}}" alt=""></a>
 
 
                                     <div class="catagory_take">
@@ -162,7 +160,7 @@ require_once "header.php";
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb product_thumb1">
-                                    <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/04-อาหารไทย.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/04-อาหารไทย.jpg')}}" alt=""></a>
 
                                     <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
@@ -176,7 +174,7 @@ require_once "header.php";
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb product_thumb1">
-                                    <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/05-อาหารตะวันตก.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/05-อาหารตะวันตก.jpg')}}" alt=""></a>
 
                                     <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
@@ -190,7 +188,7 @@ require_once "header.php";
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb product_thumb1">
-                                    <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/06-อาหารอินเดีย.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/06-อาหารอินเดีย.jpg')}}" alt=""></a>
 
                                     <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
@@ -204,7 +202,7 @@ require_once "header.php";
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb product_thumb1">
-                                    <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/07-อาหารเวียดนาม.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/07-อาหารเวียดนาม.jpg')}}" alt=""></a>
 
                                     <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
@@ -218,7 +216,7 @@ require_once "header.php";
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb product_thumb1">
-                                    <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/08-อาหารเม็กซิกัน.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/08-อาหารเม็กซิกัน.jpg')}}" alt=""></a>
 
                                     <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
@@ -264,7 +262,7 @@ require_once "header.php";
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('blog-details')}}"><img src="img-take/d1.jpg" alt=""></a>
+                                    <a href="{{url('blog-details')}}"><img src="{{asset('img-take/d1.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -274,7 +272,7 @@ require_once "header.php";
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('blog-details')}}"><img src="img-take/d2.jpg" alt=""></a>
+                                    <a href="{{url('blog-details')}}"><img src="{{asset('img-take/d2.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -284,7 +282,7 @@ require_once "header.php";
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('blog-details')}}"><img src="img-take/d3.jpg" alt=""></a>
+                                    <a href="{{url('blog-details')}}"><img src="{{asset('img-take/d3.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -294,7 +292,7 @@ require_once "header.php";
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('blog-details')}}"><img src="img-take/d4.jpg" alt=""></a>
+                                    <a href="{{url('blog-details')}}"><img src="{{asset('img-take/d4.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -304,7 +302,7 @@ require_once "header.php";
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('blog-details')}}"><img src="img-take/d5.jpg" alt=""></a>
+                                    <a href="{{url('blog-details')}}"><img src="{{asset('img-take/d5.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -314,7 +312,7 @@ require_once "header.php";
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{url('blog-details')}}"><img src="img-take/d6.jpg" alt=""></a>
+                                    <a href="{{url('blog-details')}}"><img src="{{asset('img-take/d6.jpg')}}" alt=""></a>
                                 </div>
 
                             </figure>
@@ -351,7 +349,7 @@ require_once "header.php";
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/01.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/01.jpg')}}" alt=""></a>
                                         <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
 
@@ -366,7 +364,7 @@ require_once "header.php";
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/02.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/02.jpg')}}" alt=""></a>
                                         <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
 
@@ -381,7 +379,7 @@ require_once "header.php";
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/03.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/03.jpg')}}" alt=""></a>
                                         <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
 
@@ -396,7 +394,7 @@ require_once "header.php";
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/04.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/04.jpg')}}" alt=""></a>
 
                                         <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
@@ -411,7 +409,7 @@ require_once "header.php";
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/05.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/05.jpg')}}" alt=""></a>
                                         <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
 
@@ -426,7 +424,7 @@ require_once "header.php";
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/06.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/06.jpg')}}" alt=""></a>
 
                                         <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
@@ -441,7 +439,7 @@ require_once "header.php";
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/07.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/07.jpg')}}" alt=""></a>
 
                                         <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
@@ -456,7 +454,7 @@ require_once "header.php";
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/08.jpg" alt=""></a>
+                                        <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/08.jpg')}}" alt=""></a>
                                         <div class="catagory_take">
                                          <h4 href="#">อาหารไทย</h4>
 
@@ -499,8 +497,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/01 สเต็กปลาแซลมอน.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/01 สเต็กปลาแซลมอน.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/01 สเต็กปลาแซลมอน.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/01 สเต็กปลาแซลมอน.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -554,8 +552,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/01 สเต็กปลาแซลมอน.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/01 สเต็กปลาแซลมอน.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/01 สเต็กปลาแซลมอน.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/01 สเต็กปลาแซลมอน.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -609,8 +607,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/02 แพนเค้ก.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/02 แพนเค้ก.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/02 แพนเค้ก.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/02 แพนเค้ก.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -665,8 +663,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/03 ต้มยำทะเลน้ำข้น.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/03 ต้มยำทะเลน้ำข้น.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/03 ต้มยำทะเลน้ำข้น.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/03 ต้มยำทะเลน้ำข้น.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -721,8 +719,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/04 ส้มตำปูปลาร้า.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/04 ส้มตำปูปลาร้า.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/04 ส้มตำปูปลาร้า.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/04 ส้มตำปูปลาร้า.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -777,8 +775,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/05 ซูชิ.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/05 ซูชิ.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/05 ซูชิ.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/05 ซูชิ.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -833,8 +831,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/06 ปูผัดผงกะหรี่.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/06 ปูผัดผงกะหรี่.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/06 ปูผัดผงกะหรี่.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/06 ปูผัดผงกะหรี่.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -889,8 +887,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/07 ไก่ทอดแม่พลอย.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/07 ไก่ทอดแม่พลอย.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/07 ไก่ทอดแม่พลอย.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/07 ไก่ทอดแม่พลอย.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -944,8 +942,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/08 ชาไข่มุก.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/08 ชาไข่มุก.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/08 ชาไข่มุก.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/08 ชาไข่มุก.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -1000,8 +998,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/09 ปลาหมึกทอดกระเทียมพริกไทย.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/09 ปลาหมึกทอดกระเทียมพริกไทย.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/09 ปลาหมึกทอดกระเทียมพริกไทย.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/09 ปลาหมึกทอดกระเทียมพริกไทย.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -1056,8 +1054,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/09 ปลาหมึกทอดกระเทียมพริกไทย.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/09 ปลาหมึกทอดกระเทียมพริกไทย.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/09 ปลาหมึกทอดกระเทียมพริกไทย.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/09 ปลาหมึกทอดกระเทียมพริกไทย.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -1112,8 +1110,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('product-details')}}"><img src="img-take/10 ไก่ทอดเกาหลี.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('product-details')}}"><img src="img-take/10 ไก่ทอดเกาหลี.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/10 ไก่ทอดเกาหลี.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('product-details')}}"><img src="{{asset('img-take/10 ไก่ทอดเกาหลี.jpg')}}" alt=""></a>
 
                                 <div class="action_links">
                                     <ul>
@@ -1184,9 +1182,7 @@ require_once "header.php";
     </div>
 
     <!--footer area start-->
-    <?php
-    require_once "footer.php"
-    ?>
+    @include('templates.footer')
     <!--footer area end-->
 
     <!-- modal area start-->
@@ -1201,7 +1197,7 @@ require_once "header.php";
                         <div class="row">
                             <div class="col-lg-6 col-md-5 col-sm-12">
                                 <div class="modal_tab">
-                                    <img src="img-take/01 สเต็กปลาแซลมอน.jpg" alt="">
+                                    <img src="{{asset('img-take/01 สเต็กปลาแซลมอน.jpg')}}" alt="">
 
                                 </div>
                             </div>
@@ -1268,7 +1264,7 @@ require_once "header.php";
                         <div class="row">
                             <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
                                 <div class="modal_tab">
-                                    <img src="assets/img/product/productbig1.jpg" alt="">
+                                    <img src="assets/img/product/productbig1.jpg')}}" alt="">
 
                                 </div>
                             </div>
@@ -1327,46 +1323,46 @@ require_once "header.php";
 
     <!-- modal area end-->
 
-    <script src="assets/js/js-take_products.js"></script>
-    <script src="assets/js/js-take_option.js"></script>
-    <script src="assets/js/js-detailres.js"></script>
+    <script src="{{asset('assets/js/js-take_products.js')}}"></script>
+    <script src="{{asset('assets/js/js-take_option.js')}}"></script>
+    <script src="{{asset('assets/js/js-detailres.js')}}"></script>
     <!--jquery min js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--popper min js-->
-    <script src="assets/js/popper.js"></script>
+    <script src="{{asset('assets/js/popper.js')}}"></script>
     <!--bootstrap min js-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
     <!--owl carousel min js-->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
     <!--slick min js-->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{{asset('assets/js/slick.min.js')}}"></script>
     <!--magnific popup min js-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
     <!--counterup min js-->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
     <!--jquery countdown min js-->
-    <script src="assets/js/jquery.countdown.js"></script>
+    <script src="{{asset('assets/js/jquery.countdown.js')}}"></script>
     <!--jquery ui min js-->
-    <script src="assets/js/jquery.ui.js"></script>
+    <script src="{{asset('assets/js/jquery.ui.js')}}"></script>
     <!--jquery elevatezoom min js-->
-    <script src="assets/js/jquery.elevatezoom.js"></script>
+    <script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
     <!--isotope packaged min js-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
     <!--slinky menu js-->
-    <script src="assets/js/slinky.menu.js"></script>
+    <script src="{{asset('assets/js/slinky.menu.js')}}"></script>
     <!--instagramfeed menu js-->
-    <script src="assets/js/jquery.instagramFeed.min.js"></script>
+    <script src="{{asset('assets/js/jquery.instagramFeed.min.js')}}"></script>
     <!-- Plugins JS -->
 
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
 
 
-    <!-- <script src="js-front/jquery-2.2.4.min.js"></script> -->
-    <script src="js-front/common_scripts_min.js"></script>
-    <script src="js-front/functions.js"></script>
-    <script src="assets/validate.js"></script>
+    <!-- <script src="js-front/jquery-2.2.4.min.js')}}"></script> -->
+    <script src="{{asset('js-front/common_scripts_min.js')}}"></script>
+    <script src="{{asset('js-front/functions.js')}}"></script>
+    <script src="{{asset('assets/validate.js')}}"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('assets/js/main.js')}}"></script>
     <script>
         $("#single_banner > div:gt(0)").hide();
         setInterval(function() {

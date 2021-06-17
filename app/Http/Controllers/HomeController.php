@@ -2,20 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BannerPic;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    //
-    public function home_view(){
-        //$data = BannerPic::order_by('created_at', 'desc')->first();
-        $data = DB::table('tbl_Banner')->first();
-        // $data = DB::table('bannerpic')->orderBy('created_at', 'desc')->first();
-        // $menu = DB::table('menu_tab')->orderBy('id', 'asc')->get();
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-        //return view('front.index', compact('data','menu'));
-        return view('front.index',compact('data'));
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
 }

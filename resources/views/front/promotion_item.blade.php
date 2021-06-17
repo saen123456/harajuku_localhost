@@ -1,8 +1,5 @@
-<?php
-
-require_once "config.php";
-require_once "header.php";
-?>
+@include('templates.config')
+@include('templates.header')
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -17,7 +14,7 @@ require_once "header.php";
 
 
     <!--modernizr min js here-->
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="{{asset('assets/js/vendor/modernizr-3.7.1.min.js')}}"></script>
 </head>
 
 <body>
@@ -38,7 +35,7 @@ require_once "header.php";
         <div class="owl-carousel" style="display: block;">
             <!-- slider_area -->
             <div class="single_slider d-flex align-items-center" style="height: auto;">
-                <img src="img-take/img_proitembn.png" alt="" style="width: 100%;">
+                <img src="{{asset('img-take/img_proitembn.png')}}" alt="" style="width: 100%;">
 
             </div>
 
@@ -49,16 +46,16 @@ require_once "header.php";
     <!--banner fullwidth area end-->
 
     <!-- End SubHeader ============================================ -->
-    <!-- style="background-image: url(img-take/ปก1.jpg);background-size: cover; background-position: top; padding-top:5%" -->
+    <!-- style="background-image: url({{asset('img-take/ปก1.jpg')}});background-size: cover; background-position: top; padding-top:5%" -->
     <section class="productbg_right_side blog_section blog_section2  color_two eventhome" style="background-image: url();">
-        <img src="img-take/ปก1.jpg" alt="">
+        <img src="{{asset('img-take/ปก1.jpg')}}" alt="">
         <div class="container-fluid">
 
 
             <div class="row">
                 <div class="product_carousel product_column3 owl-carousel">
                     <div class="col-lg-12 col-xs-12">
-                        <div class="single_slider4 d-flex align-items-center" data-bgimg="img-take/01สินค้าตัวอย่าง-1.jpg">
+                        <div class="single_slider4 d-flex align-items-center" data-bgimg="{{asset('img-take/01สินค้าตัวอย่าง-1.jpg')}}">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 col-xs-12">
@@ -72,7 +69,7 @@ require_once "header.php";
                         </div>
                     </div>
                     <div class="col-lg-12 col-xs-12">
-                        <div class="single_slider4 d-flex align-items-center" data-bgimg="img-take/02สินค้าตัวอย่าง-2.jpg">
+                        <div class="single_slider4 d-flex align-items-center" data-bgimg="{{asset('img-take/02สินค้าตัวอย่าง-2.jpg')}}">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 col-xs-12">
@@ -86,7 +83,7 @@ require_once "header.php";
                         </div>
                     </div>
                     <div class="col-lg-12 col-xs-12">
-                        <div class="single_slider4 d-flex align-items-center" data-bgimg="img-take/03สินค้าตัวอย่าง-3.jpg">
+                        <div class="single_slider4 d-flex align-items-center" data-bgimg="{{asset('img-take/03สินค้าตัวอย่าง-3.jpg')}}">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 col-xs-12">
@@ -115,17 +112,17 @@ require_once "header.php";
                     <div class="slider_area owl-carousel prorecom">
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-2.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-2.jpg')}}" alt=""></a>
                             </div>
                         </div>
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-2.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-2.jpg')}}" alt=""></a>
                             </div>
                         </div>
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-2.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-2.jpg')}}" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -136,17 +133,17 @@ require_once "header.php";
                     <div class="slider_area owl-carousel prorecom">
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-3.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-3.jpg')}}" alt=""></a>
                             </div>
                         </div>
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-3.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-3.jpg')}}" alt=""></a>
                             </div>
                         </div>
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-3.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-3.jpg')}}" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -165,7 +162,7 @@ require_once "header.php";
 
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-4-1.jpg" alt=""></a>
+                            <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-4-1.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -174,7 +171,7 @@ require_once "header.php";
 
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-4-2.jpg" alt=""></a>
+                            <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-4-2.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -183,7 +180,7 @@ require_once "header.php";
 
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-4-3.jpg" alt=""></a>
+                            <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-4-3.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -201,26 +198,26 @@ require_once "header.php";
                 <div class="product_carousel product_column4 owl-carousel">
                     <div class="col-lg-12 col-xs-12">
                         <div class="single_slider5 d-flex align-items-center">
-                            <img src="img-take/คูปอง-3.png" alt="">
+                            <img src="{{asset('img-take/คูปอง-3.png')}}" alt="">
                             <a class="btn-coupon" href="{{url('/shop')}}">Collect</a>
                         </div>
                     </div>
                     <div class="col-lg-12 col-xs-12">
                         <div class="single_slider5 d-flex align-items-center">
-                            <img src="img-take/คูปอง-3.png" alt="">
+                            <img src="{{asset('img-take/คูปอง-3.png')}}" alt="">
                             <a class="btn-coupon" href="{{url('/shop')}}">Collect</a>
                         </div>
                     </div>
                     <div class="col-lg-12 col-xs-12">
                         <div class="single_slider5 d-flex align-items-center">
-                            <img src="img-take/คูปอง-3.png" alt="">
+                            <img src="{{asset('img-take/คูปอง-3.png')}}" alt="">
                             <a class="btn-coupon" href="{{url('/shop')}}">Collect</a>
                         </div>
 
                     </div>
                     <div class="col-lg-12 col-xs-12">
                         <div class="single_slider5 d-flex align-items-center">
-                            <img src="img-take/คูปอง-3.png" alt="">
+                            <img src="{{asset('img-take/คูปอง-3.png')}}" alt="">
                             <a class="btn-coupon" href="{{url('/shop')}}">Collect</a>
                         </div>
 
@@ -334,8 +331,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/1--Anessa-Perfect-UV-Sunscreen-Skin-Care-Milk.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/1--Anessa-Perfect-UV-Sunscreen-Skin-Care-Milk.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/1--Anessa-Perfect-UV-Sunscreen-Skin-Care-Milk.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/1--Anessa-Perfect-UV-Sunscreen-Skin-Care-Milk.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -389,8 +386,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/2--Banobagi สลีฟปิ้งมาร์ค.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/2--Banobagi สลีฟปิ้งมาร์ค.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/2--Banobagi สลีฟปิ้งมาร์ค.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/2--Banobagi สลีฟปิ้งมาร์ค.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -444,8 +441,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/3--Nu-Formula-นู-ฟอร์มูล่า-มิเนอรัล-คลีนซิ่ง-วอเตอร์.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/3--Nu-Formula-นู-ฟอร์มูล่า-มิเนอรัล-คลีนซิ่ง-วอเตอร์.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/3--Nu-Formula-นู-ฟอร์มูล่า-มิเนอรัล-คลีนซิ่ง-วอเตอร์.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/3--Nu-Formula-นู-ฟอร์มูล่า-มิเนอรัล-คลีนซิ่ง-วอเตอร์.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -499,8 +496,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/4-MizuMi-เจลแต้มสิว.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/4-MizuMi-เจลแต้มสิว.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/4-MizuMi-เจลแต้มสิว.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/4-MizuMi-เจลแต้มสิว.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -554,8 +551,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/5-Skinsista-เซรั่ม.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/5-Skinsista-เซรั่ม.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/5-Skinsista-เซรั่ม.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/5-Skinsista-เซรั่ม.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -609,8 +606,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/6-The-Original-ดิ-ออริจินัล-ชาร์โคล-ดีพ-คลีนซิ่ง.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/6-The-Original-ดิ-ออริจินัล-ชาร์โคล-ดีพ-คลีนซิ่ง.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/6-The-Original-ดิ-ออริจินัล-ชาร์โคล-ดีพ-คลีนซิ่ง.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/6-The-Original-ดิ-ออริจินัล-ชาร์โคล-ดีพ-คลีนซิ่ง.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -664,8 +661,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/7--St.Ives-เซนท์-ไอฟ-เบลมมิช-คอนโทรล-แอปริคอต-สครับ.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/7--St.Ives-เซนท์-ไอฟ-เบลมมิช-คอนโทรล-แอปริคอต-สครับ.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/7--St.Ives-เซนท์-ไอฟ-เบลมมิช-คอนโทรล-แอปริคอต-สครับ.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/7--St.Ives-เซนท์-ไอฟ-เบลมมิช-คอนโทรล-แอปริคอต-สครับ.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -719,8 +716,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/8--Arra-TopFace.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/8--Arra-TopFace.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/8--Arra-TopFace.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/8--Arra-TopFace.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -781,8 +778,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/8.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/8.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/8.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/8.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -836,8 +833,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/1--POMELO-เสื้อสายเดี่ยวสีชมพู.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/1--POMELO-เสื้อสายเดี่ยวสีชมพู.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/1--POMELO-เสื้อสายเดี่ยวสีชมพู.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/1--POMELO-เสื้อสายเดี่ยวสีชมพู.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -891,8 +888,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/7.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/7.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/7.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/7.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -946,8 +943,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/2--H_M.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/2--H_M.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/2--H_M.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/2--H_M.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -1001,8 +998,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/3.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/3.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/3.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/3.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -1056,8 +1053,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/4.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/4.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/4.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/4.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -1111,8 +1108,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/5.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/5.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/5.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/5.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -1166,8 +1163,8 @@ require_once "header.php";
                                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                                 <div class="single_product">
                                                     <div class="product_thumb">
-                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/6.jpg" alt=""></a>
-                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/6.jpg" alt=""></a>
+                                                        <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/6.jpg')}}" alt=""></a>
+                                                        <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/6.jpg')}}" alt=""></a>
                                                         <div class="label_product">
                                                             <span class="label_sale">Sale</span>
                                                             <span class="label_new">New</span>
@@ -1249,17 +1246,17 @@ require_once "header.php";
                         <div class="slider_area owl-carousel prorecom">
                             <div class="single_banner">
                                 <div class="banner_thumb">
-                                    <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-5--1.jpg" alt=""></a>
+                                    <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-5--1.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                             <div class="single_banner">
                                 <div class="banner_thumb">
-                                    <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-5--2.jpg" alt=""></a>
+                                    <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-5--2.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                             <div class="single_banner">
                                 <div class="banner_thumb">
-                                    <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์-5--1.jpg" alt=""></a>
+                                    <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์-5--1.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -1279,8 +1276,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-5.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-5.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-5.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-5.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -1338,8 +1335,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-6.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-6.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-6.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-6.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -1393,8 +1390,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-7.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-7.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-7.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-7.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -1448,8 +1445,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-8.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-8.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-8.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-8.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -1503,8 +1500,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-9.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-9.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-9.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-9.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -1559,8 +1556,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-10.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-10.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-10.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-10.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -1615,8 +1612,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-16.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-16.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-16.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-16.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -1670,8 +1667,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-12.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-12.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-12.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-12.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -1726,8 +1723,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-13.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-13.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-13.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-13.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -1780,8 +1777,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-14.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-14.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-14.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-14.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -1836,8 +1833,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-15.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-15.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-15.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-15.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -1891,8 +1888,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-16.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/Untitled-16.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-16.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/Untitled-16.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -1975,7 +1972,7 @@ require_once "header.php";
                 <div class="col-lg-2 col-xs-4">
                     <div class="single_services">
                         <div class="services_thumb">
-                            <a href=""><img src="img-take/b1.jpg" alt=""></a>
+                            <a href=""><img src="{{asset('img-take/b1.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -1983,7 +1980,7 @@ require_once "header.php";
                 <div class="col-lg-2 col-xs-4">
                     <div class="single_services">
                         <div class="services_thumb">
-                            <a href=""><img src="img-take/b2.jpg" alt=""></a>
+                            <a href=""><img src="{{asset('img-take/b2.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -1991,7 +1988,7 @@ require_once "header.php";
                 <div class="col-lg-2 col-xs-4">
                     <div class="single_services">
                         <div class="services_thumb">
-                            <a href=""><img src="img-take/b3.jpg" alt=""></a>
+                            <a href=""><img src="{{asset('img-take/b3.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -1999,7 +1996,7 @@ require_once "header.php";
                 <div class="col-lg-2 col-xs-4">
                     <div class="single_services">
                         <div class="services_thumb">
-                            <a href=""><img src="img-take/b4.jpg" alt=""></a>
+                            <a href=""><img src="{{asset('img-take/b4.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -2007,7 +2004,7 @@ require_once "header.php";
                 <div class="col-lg-2 col-xs-4">
                     <div class="single_services">
                         <div class="services_thumb">
-                            <a href=""><img src="img-take/b5.jpg" alt=""></a>
+                            <a href=""><img src="{{asset('img-take/b5.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -2015,7 +2012,7 @@ require_once "header.php";
                 <div class="col-lg-2 col-xs-4">
                     <div class="single_services">
                         <div class="services_thumb">
-                            <a href=""><img src="img-take/b6.jpg" alt=""></a>
+                            <a href=""><img src="{{asset('img-take/b6.jpg')}}" alt=""></a>
                         </div>
 
                     </div>
@@ -2036,8 +2033,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd1.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd1.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd1.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd1.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -2092,8 +2089,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd2.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd2.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd2.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd2.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -2147,8 +2144,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd3.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd3.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd3.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd3.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -2202,8 +2199,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd4.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd4.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd4.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd4.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -2257,8 +2254,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd5.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd5.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd5.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd5.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -2312,119 +2309,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd6.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd6.jpg" alt=""></a>
-                                    <div class="label_product">
-                                        <span class="label_sale">Sale</span>
-                                        <span class="label_new">New</span>
-                                    </div>
-                                    <div class="action_links">
-                                        <ul>
-                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <span class="product_name"><a href="{{url('/product-details')}}">Letraset Sheets</a></span>
-
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <span class="placelist pull-right">
-                                                <a href="#">TAKE TOWN</a>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="price_box">
-
-                                                <span>1048 ฿</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="product_quantity1">
-                                                <form id='myform2' method='POST' action='#'>
-                                                    <button type="button" class="btn btn-default btn-number qtyminus butsmallleft" disabled="disabled" data-type="minus" data-field="quant[3]">
-                                                        <span class="glyphicon glyphicon-minus"></span>
-                                                    </button>
-                                                    <input type="text" name="quant[3]" class=" input-number" value="1" min="1" max="10">
-                                                    <button type="button" class="btn btn-default btn-number qtyplus butsmallright" data-type="plus" data-field="quant[3]">
-                                                        <span class="glyphicon glyphicon-plus"></span>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd7.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd7.jpg" alt=""></a>
-                                    <div class="label_product">
-                                        <span class="label_sale">Sale</span>
-                                    </div>
-                                    <div class="action_links">
-                                        <ul>
-                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product_content grid_content">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <span class="product_name"><a href="{{url('/product-details')}}">Letraset Sheets</a></span>
-
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <span class="placelist pull-right">
-                                                <a href="#">TAKE TOWN</a>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="price_box">
-
-                                                <span>1048 ฿</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="product_quantity1">
-                                                <form id='myform2' method='POST' action='#'>
-                                                    <button type="button" class="btn btn-default btn-number qtyminus butsmallleft" disabled="disabled" data-type="minus" data-field="quant[3]">
-                                                        <span class="glyphicon glyphicon-minus"></span>
-                                                    </button>
-                                                    <input type="text" name="quant[3]" class=" input-number" value="1" min="1" max="10">
-                                                    <button type="button" class="btn btn-default btn-number qtyplus butsmallright" data-type="plus" data-field="quant[3]">
-                                                        <span class="glyphicon glyphicon-plus"></span>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd8.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd8.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd6.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd6.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -2479,8 +2365,119 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd9.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd9.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd7.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd7.jpg')}}" alt=""></a>
+                                    <div class="label_product">
+                                        <span class="label_sale">Sale</span>
+                                    </div>
+                                    <div class="action_links">
+                                        <ul>
+                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product_content grid_content">
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <span class="product_name"><a href="{{url('/product-details')}}">Letraset Sheets</a></span>
+
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <span class="placelist pull-right">
+                                                <a href="#">TAKE TOWN</a>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="price_box">
+
+                                                <span>1048 ฿</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="product_quantity1">
+                                                <form id='myform2' method='POST' action='#'>
+                                                    <button type="button" class="btn btn-default btn-number qtyminus butsmallleft" disabled="disabled" data-type="minus" data-field="quant[3]">
+                                                        <span class="glyphicon glyphicon-minus"></span>
+                                                    </button>
+                                                    <input type="text" name="quant[3]" class=" input-number" value="1" min="1" max="10">
+                                                    <button type="button" class="btn btn-default btn-number qtyplus butsmallright" data-type="plus" data-field="quant[3]">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd8.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd8.jpg')}}" alt=""></a>
+                                    <div class="label_product">
+                                        <span class="label_sale">Sale</span>
+                                        <span class="label_new">New</span>
+                                    </div>
+                                    <div class="action_links">
+                                        <ul>
+                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product_content grid_content">
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <span class="product_name"><a href="{{url('/product-details')}}">Letraset Sheets</a></span>
+
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <span class="placelist pull-right">
+                                                <a href="#">TAKE TOWN</a>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="price_box">
+
+                                                <span>1048 ฿</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="product_quantity1">
+                                                <form id='myform2' method='POST' action='#'>
+                                                    <button type="button" class="btn btn-default btn-number qtyminus butsmallleft" disabled="disabled" data-type="minus" data-field="quant[3]">
+                                                        <span class="glyphicon glyphicon-minus"></span>
+                                                    </button>
+                                                    <input type="text" name="quant[3]" class=" input-number" value="1" min="1" max="10">
+                                                    <button type="button" class="btn btn-default btn-number qtyplus butsmallright" data-type="plus" data-field="quant[3]">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd9.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd9.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -2535,8 +2532,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd12.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd12.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd12.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd12.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -2591,8 +2588,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd10.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd10.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd10.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd10.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                     </div>
@@ -2646,8 +2643,8 @@ require_once "header.php";
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/hd11.jpg" alt=""></a>
-                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/hd11.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd11.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/hd11.jpg')}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span>
@@ -2719,10 +2716,7 @@ require_once "header.php";
             </div>
         </div> <br>
         <!--footer area start-->
-        <?php
-
-        require_once "footer.php";
-        ?>
+        @include('templates.footer')
         <!--footer area end-->
 
         <!-- modal area start-->
@@ -2740,38 +2734,38 @@ require_once "header.php";
                                         <div class="tab-content product-details-large">
                                             <div class="tab-pane fade show active" id="tab1" role="tabpanel">
                                                 <div class="modal_tab_img">
-                                                    <a href="#"><img src="assets/img/product/productbig1.jpg" alt=""></a>
+                                                    <a href="#"><img src="{{asset('assets/img/product/productbig1.jpg')}}" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="tab2" role="tabpanel">
                                                 <div class="modal_tab_img">
-                                                    <a href="#"><img src="assets/img/product/productbig2.jpg" alt=""></a>
+                                                    <a href="#"><img src="{{asset('assets/img/product/productbig2.jpg')}}" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="tab3" role="tabpanel">
                                                 <div class="modal_tab_img">
-                                                    <a href="#"><img src="img-take/hd1.jpg" alt=""></a>
+                                                    <a href="#"><img src="{{asset('img-take/hd1.jpg')}}" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="tab4" role="tabpanel">
                                                 <div class="modal_tab_img">
-                                                    <a href="#"><img src="img-take/hd1.jpg" alt=""></a>
+                                                    <a href="#"><img src="{{asset('img-take/hd1.jpg')}}" alt=""></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal_tab_button">
                                             <ul class="nav product_navactive owl-carousel" role="tablist">
                                                 <li>
-                                                    <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false"><img src="assets/img/product/product1.jpg" alt=""></a>
+                                                    <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false"><img src="{{asset('assets/img/product/product1.jpg')}}" alt=""></a>
                                                 </li>
                                                 <li>
-                                                    <a class="nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><img src="assets/img/product/product6.jpg" alt=""></a>
+                                                    <a class="nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><img src="{{asset('assets/img/product/product6.jpg')}}" alt=""></a>
                                                 </li>
                                                 <li>
-                                                    <a class="nav-link button_three" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false"><img src="assets/img/product/product2.jpg" alt=""></a>
+                                                    <a class="nav-link button_three" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false"><img src="{{asset('assets/img/product/product2.jpg')}}" alt=""></a>
                                                 </li>
                                                 <li>
-                                                    <a class="nav-link" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false"><img src="assets/img/product/product7.jpg" alt=""></a>
+                                                    <a class="nav-link" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false"><img src="{{asset('assets/img/product/product7.jpg')}}" alt=""></a>
                                                 </li>
 
                                             </ul>
@@ -2844,46 +2838,46 @@ require_once "header.php";
 
 
 
-        <!-- JS
+        <!-- JS-->
 
 
         <!--jquery min js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!--popper min js-->
-        <script src="assets/js/popper.js"></script>
+        <script src="{{asset('assets/js/popper.js')}}"></script>
         <!--bootstrap min js-->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
         <!--owl carousel min js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
         <!--slick min js-->
-        <script src="assets/js/slick.min.js"></script>
+        <script src="{{asset('assets/js/slick.min.js')}}"></script>
         <!--magnific popup min js-->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
         <!--counterup min js-->
-        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
         <!--jquery countdown min js-->
-        <script src="assets/js/jquery.countdown.js"></script>
+        <script src="{{asset('assets/js/jquery.countdown.js')}}"></script>
         <!--jquery ui min js-->
-        <script src="assets/js/jquery.ui.js"></script>
+        <script src="{{asset('assets/js/jquery.ui.js')}}"></script>
         <!--jquery elevatezoom min js-->
-        <script src="assets/js/jquery.elevatezoom.js"></script>
+        <script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
         <!--isotope packaged min js-->
-        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
         <!--slinky menu js-->
-        <script src="assets/js/slinky.menu.js"></script>
+        <script src="{{asset('assets/js/slinky.menu.js')}}"></script>
         <!--instagramfeed menu js-->
-        <script src="assets/js/jquery.instagramFeed.min.js"></script>
+        <script src="{{asset('assets/js/jquery.instagramFeed.min.js')}}"></script>
         <!-- Plugins JS -->
 
-        <script src="assets/js/plugins.js"></script>
+        <script src="{{asset('assets/js/plugins.js')}}"></script>
 
 
-        <!-- <script src="js-front/jquery-2.2.4.min.js"></script> -->
-        <script src="js-front/common_scripts_min.js"></script>
-        <script src="js-front/functions.js"></script>
-        <script src="assets/validate.js"></script>
+        <!-- <script src="js-front/jquery-2.2.4.min.js')}}"></script> -->
+        <script src="{{asset('js-front/common_scripts_min.js')}}"></script>
+        <script src="{{asset('js-front/functions.js')}}"></script>
+        <script src="{{asset('assets/validate.js')}}"></script>
         <!-- Main JS -->
-        <script src="assets/js/main.js"></script>
+        <script src="{{asset('assets/js/main.js')}}"></script>
 
 
 </body>

@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\DB;
 class AdminLeaderController extends Controller
 {
     //
+    public function login_view(){
+        return view('admin_leader.login');
+    }
     public function manage_banner_view(){
         $data = DB::table('tbl_Banner')->orderBy('created_at', 'desc')->first();
         

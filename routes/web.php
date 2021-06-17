@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -301,6 +302,32 @@ Route::post('/manage_store02-1/updatedb/{id}', [AdminShopController::class, 'upd
 
 Route::get('/manage_store02/delete/{id}', [AdminShopController::class, 'store_delete']);
 
+
+
+
+
+
+//Auth::routes();
+Route::get('/admin_shop/login', [AdminShopController::class, 'login_view']);
+Route::post('/admin_shop/login_check', [AdminShopController::class, 'login_check']);
+Route::post('/admin_shop/logout', [AdminShopController::class, 'logout']);
+
+//Route::get('/admin_shop/login', [AdminShopController::class, 'login_view']);
+
+Route::get('/rider/login', [RiderController::class, 'login_view']);
+Route::post('/rider/login_check', [RiderController::class, 'login_check']);
+
+Route::get('/rider/delivery', [RiderController::class, 'delivery_view']);
+Route::get('/rider/cornfirm_order/{id}', [RiderController::class, 'cornfirm_order']);
+
+Route::get('/rider/details', [RiderController::class, 'details_view']);
+Route::get('/rider/sent_order/{id}', [RiderController::class, 'sent_order']);
+
+Route::get('/rider/sent', [RiderController::class, 'sent_view']);
+Route::get('/rider/success_order/{id}', [RiderController::class, 'success_order']);
+
+Route::get('/rider/report', [RiderController::class, 'report_view']);
+Route::post('/rider/logout', [RiderController::class, 'logout']);
 
 
 

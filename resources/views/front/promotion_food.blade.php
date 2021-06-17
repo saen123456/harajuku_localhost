@@ -1,8 +1,5 @@
-<?php
-
-require_once "config.php";
-require_once "header.php";
-?>
+@include('templates.config')
+@include('templates.header')
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -17,7 +14,7 @@ require_once "header.php";
 
 
     <!--modernizr min js here-->
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="{{asset('assets/js/vendor/modernizr-3.7.1.min.js')}}"></script>
 </head>
 
 <body>
@@ -39,7 +36,7 @@ require_once "header.php";
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="{{url('/shop')}}"><img src="img-take/แบนเนอร์ใหญ่-1.jpg" alt="" style="width: 100%;"></a>
+                            <a href="{{url('/shop')}}"><img src="{{asset('img-take/แบนเนอร์ใหญ่-1.jpg')}}" alt="" style="width: 100%;"></a>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-4">
@@ -63,7 +60,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/แบนเนอร์รอง-1770-1.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/แบนเนอร์รอง-1770-1.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -74,7 +71,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/แบนเนอร์รอง-1770-2.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/แบนเนอร์รอง-1770-2.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -85,7 +82,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/แบนเนอร์รอง-1770-3.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/แบนเนอร์รอง-1770-3.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -103,7 +100,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/แบนเนอร์รอง-1770-4.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/แบนเนอร์รอง-1770-4.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -114,7 +111,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/แบนเนอร์รอง-1770-5.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/แบนเนอร์รอง-1770-5.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -125,7 +122,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/แบนเนอร์รอง-1770-6.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/แบนเนอร์รอง-1770-6.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -146,7 +143,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-1.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-1.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -165,7 +162,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-2.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-2.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -184,7 +181,7 @@ require_once "header.php";
 
                                 <div class="blog_thumb">
 
-                                    <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-3.jpg" alt=""></a>
+                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-3.jpg')}}" alt=""></a>
                                 </div>
                             </figure>
                         </article>
@@ -212,7 +209,7 @@ require_once "header.php";
 
                                             <div class="blog_thumb">
 
-                                                <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-1.jpg" alt=""></a>
+                                                <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-1.jpg')}}" alt=""></a>
                                             </div>
                                         </figure>
                                     </article>
@@ -223,7 +220,7 @@ require_once "header.php";
 
                                             <div class="blog_thumb">
 
-                                                <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-2.jpg" alt=""></a>
+                                                <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-2.jpg')}}" alt=""></a>
                                             </div>
                                         </figure>
                                     </article>
@@ -234,7 +231,7 @@ require_once "header.php";
 
                                             <div class="blog_thumb">
 
-                                                <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-3.jpg" alt=""></a>
+                                                <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-3.jpg')}}" alt=""></a>
                                             </div>
                                         </figure>
                                     </article>
@@ -253,7 +250,7 @@ require_once "header.php";
 
                                             <div class="blog_thumb">
 
-                                                <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-4.jpg" alt=""></a>
+                                                <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-4.jpg')}}" alt=""></a>
                                             </div>
                                         </figure>
                                     </article>
@@ -264,7 +261,7 @@ require_once "header.php";
 
                                             <div class="blog_thumb">
 
-                                                <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-5.jpg" alt=""></a>
+                                                <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-5.jpg')}}" alt=""></a>
                                             </div>
                                         </figure>
                                     </article>
@@ -275,7 +272,7 @@ require_once "header.php";
 
                                             <div class="blog_thumb">
 
-                                                <a href="{{url('/blog-details')}}"><img src="img-take/ร้านอาหารแนะนำ-1770-1.jpg" alt=""></a>
+                                                <a href="{{url('/blog-details')}}"><img src="{{asset('img-take/ร้านอาหารแนะนำ-1770-1.jpg')}}" alt=""></a>
                                             </div>
                                         </figure>
                                     </article>
@@ -304,17 +301,17 @@ require_once "header.php";
                     <div class="slider_area owl-carousel">
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}"><img src="img-take/โปรโมชัน-1.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}"><img src="{{asset('img-take/โปรโมชัน-1.jpg')}}" alt=""></a>
                             </div>
                         </div>
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}"><img src="img-take/โปรโมชัน-2.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}"><img src="{{asset('img-take/โปรโมชัน-2.jpg')}}" alt=""></a>
                             </div>
                         </div>
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="{{url('/shop')}}l"><img src="img-take/โปรโมชัน-3.jpg" alt=""></a>
+                                <a href="{{url('/shop')}}l"><img src="{{asset('img-take/โปรโมชัน-3.jpg')}}" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -323,7 +320,7 @@ require_once "header.php";
             <div class="col-lg-5 col-xs-12">
                 <!-- <div class="single_services"> -->
                 <div class="single_banner">
-                    <a href="{{url('/shop')}}"> <img class="height-free" src="img-take/ฟรีค่าส่ง-600-400(1).jpg" alt="" style=" width:100%;"></a>
+                    <a href="{{url('/shop')}}"> <img class="height-free" src="{{asset('img-take/ฟรีค่าส่ง-600-400(1).jpg')}}" alt="" style=" width:100%;"></a>
 
                 </div>
 
@@ -346,8 +343,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/01-ไก่ทอดแม่พลอย.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/01-ไก่ทอดแม่พลอย.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/01-ไก่ทอดแม่พลอย.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/01-ไก่ทอดแม่พลอย.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                     <span class="label_new">New</span>
@@ -403,8 +400,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/02---ปลาหมึกผัดกระเทียมพริกไทย.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/02---ปลาหมึกผัดกระเทียมพริกไทย.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/02---ปลาหมึกผัดกระเทียมพริกไทย.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/02---ปลาหมึกผัดกระเทียมพริกไทย.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                 </div>
@@ -457,63 +454,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/03-ชาไข่มุก.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/03-ชาไข่มุก.jpg" alt=""></a>
-                                <div class="label_product">
-                                    <span class="label_sale">Sale</span>
-                                </div>
-                                <div class="action_links">
-                                    <ul>
-                                        <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <figcaption class="product_content">
-                                <div class="row">
-                                    <div class="col-lg-7">
-                                        <span class="product_name"><a href="{{url('/product-details')}}">Letraset Sheets</a></span>
-
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <span class="placelist pull-right">
-                                            <a href="#">TAKE TOWN</a>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                        <div class="price_box">
-
-                                            <span>฿ 1048</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                                        <div class="product_quantity1">
-                                            <form id='myform2' method='POST' action='#'>
-                                                <button type="button" class="btn btn-default btn-number qtyminus butsmallleft" disabled="disabled" data-type="minus" data-field="quant[2]">
-                                                    <span class="glyphicon glyphicon-minus"></span>
-                                                </button>
-                                                <input type="text" name="quant[2]" class=" input-number" value="0" min="1" max="10">
-                                                <button type="button" data-toggle="modal" data-target="#modal_box" class="btn btn-default btn-number qtyplus butsmallright" data-type="plus" data-field="quant[2]">
-                                                    <span class="glyphicon glyphicon-plus"></span>
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-
-                            </figcaption>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="single_product">
-                            <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/04-สาคูไส้หมู.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/04-สาคูไส้หมู.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/03-ชาไข่มุก.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/03-ชาไข่มุก.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                 </div>
@@ -567,8 +509,63 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/05-บัวลอยไข่หวาน.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/05-บัวลอยไข่หวาน.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/04-สาคูไส้หมู.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/04-สาคูไส้หมู.jpg')}}" alt=""></a>
+                                <div class="label_product">
+                                    <span class="label_sale">Sale</span>
+                                </div>
+                                <div class="action_links">
+                                    <ul>
+                                        <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <figcaption class="product_content">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <span class="product_name"><a href="{{url('/product-details')}}">Letraset Sheets</a></span>
+
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <span class="placelist pull-right">
+                                            <a href="#">TAKE TOWN</a>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                        <div class="price_box">
+
+                                            <span>฿ 1048</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                                        <div class="product_quantity1">
+                                            <form id='myform2' method='POST' action='#'>
+                                                <button type="button" class="btn btn-default btn-number qtyminus butsmallleft" disabled="disabled" data-type="minus" data-field="quant[2]">
+                                                    <span class="glyphicon glyphicon-minus"></span>
+                                                </button>
+                                                <input type="text" name="quant[2]" class=" input-number" value="0" min="1" max="10">
+                                                <button type="button" data-toggle="modal" data-target="#modal_box" class="btn btn-default btn-number qtyplus butsmallright" data-type="plus" data-field="quant[2]">
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="single_product">
+                            <div class="product_thumb">
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/05-บัวลอยไข่หวาน.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/05-บัวลอยไข่หวาน.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                     <span class="label_new">New</span>
@@ -623,8 +620,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/12-เส้นเล็กหมูน้ำตก.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/12-เส้นเล็กหมูน้ำตก.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/12-เส้นเล็กหมูน้ำตก.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/12-เส้นเล็กหมูน้ำตก.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                     <span class="label_new">New</span>
@@ -679,8 +676,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/11-คะน้าหมูกรอบ.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/11-คะน้าหมูกรอบ.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/11-คะน้าหมูกรอบ.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/11-คะน้าหมูกรอบ.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                 </div>
@@ -734,8 +731,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/10-ผัดไท.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/10-ผัดไท.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/10-ผัดไท.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/10-ผัดไท.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                     <span class="label_new">New</span>
@@ -790,8 +787,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/06-ยำมาม่าทะเล.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/06-ยำมาม่าทะเล.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/06-ยำมาม่าทะเล.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/06-ยำมาม่าทะเล.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                 </div>
@@ -845,8 +842,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/07-ข้าวซอยไก่.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/07-ข้าวซอยไก่.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/07-ข้าวซอยไก่.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/07-ข้าวซอยไก่.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                     <span class="label_new">New</span>
@@ -900,8 +897,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/08-ข้าวแกงกะหรี่หมูทงคัตสึ.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/08-ข้าวแกงกะหรี่หมูทงคัตสึ.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/08-ข้าวแกงกะหรี่หมูทงคัตสึ.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/08-ข้าวแกงกะหรี่หมูทงคัตสึ.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">Sale</span>
                                 </div>
@@ -956,8 +953,8 @@ require_once "header.php";
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="single_product">
                             <div class="product_thumb">
-                                <a class="primary_img" href="{{url('/product-details')}}"><img src="img-take/09-ส้มตำปูปลาร้า.jpg" alt=""></a>
-                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="img-take/09-ส้มตำปูปลาร้า.jpg" alt=""></a>
+                                <a class="primary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/09-ส้มตำปูปลาร้า.jpg')}}" alt=""></a>
+                                <a class="secondary_img" href="{{url('/product-details')}}"><img src="{{asset('img-take/09-ส้มตำปูปลาร้า.jpg')}}" alt=""></a>
                                 <div class="label_product">
                                     <span class="label_sale">โปรโมชั่น</span>
                                     <span class="label_new">New</span>
@@ -1016,10 +1013,7 @@ require_once "header.php";
     <!--shop  area end-->
 
     <!--footer area start-->
-    <?php
-
-    require_once "footer.php";
-    ?>
+    @include('templates.footer')
     <!--footer area end-->
 
     <!-- modal area start-->
@@ -1034,7 +1028,7 @@ require_once "header.php";
                         <div class="row">
                             <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
                                 <div class="modal_tab">
-                                    <img src="assets/img/product/productbig1.jpg" alt="">
+                                    <img src="assets/img/product/productbig1.jpg')}}" alt="">
 
                                 </div>
                             </div>
@@ -1095,40 +1089,40 @@ require_once "header.php";
     <!--jquery min js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--popper min js-->
-    <script src="assets/js/popper.js"></script>
+    <script src="{{asset('assets/js/popper.js')}}"></script>
     <!--bootstrap min js-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
     <!--owl carousel min js-->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
     <!--slick min js-->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{{asset('assets/js/slick.min.js')}}"></script>
     <!--magnific popup min js-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
     <!--counterup min js-->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
     <!--jquery countdown min js-->
-    <script src="assets/js/jquery.countdown.js"></script>
+    <script src="{{asset('assets/js/jquery.countdown.js')}}"></script>
     <!--jquery ui min js-->
-    <script src="assets/js/jquery.ui.js"></script>
+    <script src="{{asset('assets/js/jquery.ui.js')}}"></script>
     <!--jquery elevatezoom min js-->
-    <script src="assets/js/jquery.elevatezoom.js"></script>
+    <script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
     <!--isotope packaged min js-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
     <!--slinky menu js-->
-    <script src="assets/js/slinky.menu.js"></script>
+    <script src="{{asset('assets/js/slinky.menu.js')}}"></script>
     <!--instagramfeed menu js-->
-    <script src="assets/js/jquery.instagramFeed.min.js"></script>
+    <script src="{{asset('assets/js/jquery.instagramFeed.min.js')}}"></script>
     <!-- Plugins JS -->
 
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
 
 
-    <!-- <script src="js-front/jquery-2.2.4.min.js"></script> -->
-    <script src="js-front/common_scripts_min.js"></script>
-    <script src="js-front/functions.js"></script>
-    <script src="assets/validate.js"></script>
+    <!-- <script src="js-front/jquery-2.2.4.min.js')}}"></script> -->
+    <script src="{{asset('js-front/common_scripts_min.js')}}"></script>
+    <script src="j{{asset('s-front/functions.js')}}"></script>
+    <script src="{{asset('assets/validate.js')}}"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('assets/js/main.js')}}"></script>
     <script>
         //plugin bootstrap minus and plus
         //http://jsfiddle.net/laelitenetwork/puJ6G/

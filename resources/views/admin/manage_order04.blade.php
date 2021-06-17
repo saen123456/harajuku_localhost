@@ -88,7 +88,13 @@
             &nbsp;
         </div>
         <div class="content2 col-10">
-            <div class="right_content_db"><img src="{{asset('assets/img/store.png')}}"> ร้านแบมบูใหญ่</div>
+            <div class="right_content_db"><img src="{{asset(session()->get('St_Logo'))}}"> {{ session()->get('St_Name') }}</div>
+            <div class="right_content_db">
+                <form action="{{url('/admin_shop/logout')}}" method="post">
+                    @csrf
+                    <button type="submit" class="insert btn btn-danger">ออกจากระบบ</button>
+                </form>
+            </div>
             <div class="list">
                 <div class="head-list"><a href="#" class="hamber"><img src="{{asset('assets/icon/hamberger.png')}}"></a>เสร็จสิ้น</div>
                 <hr class="line_hr">
@@ -98,12 +104,12 @@
                 <div class="container">
                     <!--Modal popup-->
                     <div class="modal fade bd-example-modal-lg" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document"">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <h5 class="col-md-10">สุกัญญา หนุนทรัพย์</h5>
+                                            <h5 class="col-md-10" id="Us_Name">สุกัญญา หนุนทรัพย์</h5>
                                         </div>
                                         <div class="row">
                                             <div class="col">092-232-1934</div>
@@ -247,7 +253,7 @@
                             </div>
                             
                             <div class="col-4">
-                                <div class="rec-ord"><a href="#" style="float: right;" data-toggle="modal" data-target="#mymodal">รายละเอียด</a></div>
+                                <div class="rec-ord"><a href="#" style="float: right;" data-toggle="modal" data-target="#mymodal" data-name="{{$row->Us_Name}}">รายละเอียด</a></div>
                             </div>
                         </div>
                     </div>
@@ -262,16 +268,27 @@
 </body>
 </html>
 <script src="{{asset('js/bootstrap.js')}}"></script> 
-<script>
-
-</script>
-<script>
-    $('.hamber').on('click', function () {
-        $(".sidenav-db").css("display", "none");
-    });
- 
-</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<script>
+    // $('.hamber').on('click', function () {
+    //     $(".sidenav-db").css("display", "none");
+    // });
+    // $(document).ready(function(){
+    //     $('#mymodal').on('show', function(e) {
+    //         console.log("testestest");
+    //     // var link     = e.relatedTarget(),
+    //     //     modal    = $(this),
+    //     //     username = link.data("username"),
+    //     //     email    = link.data("email");
+
+    //     // modal.find("#email").val(email);
+    //     // modal.find("#username").val(username);
+    //     });
+    // });
+    $('#myModal .close').click();
+
+</script>
 

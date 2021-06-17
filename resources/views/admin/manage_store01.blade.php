@@ -91,7 +91,13 @@
             &nbsp;
         </div>
         <div class="content2 col-10">
-            <div class="right_content_db"><img src="{{asset('assets/img/store.png')}}"> ร้านแบมบูใหญ่</div>
+            <div class="right_content_db"><img src="{{asset(session()->get('St_Logo'))}}"> {{ session()->get('St_Name') }}</div>
+            <div class="right_content_db">
+                <form action="{{url('/admin_shop/logout')}}" method="post">
+                    @csrf
+                    <button type="submit" class="insert btn btn-danger">ออกจากระบบ</button>
+                </form>
+            </div>
             <div class="list">
                 <div class="head-list"><a href="#" class="hamber"><img src="{{asset('assets/icon/hamberger.png')}}"></a>ภาพรวม</div>
                 <hr class="line_hr">

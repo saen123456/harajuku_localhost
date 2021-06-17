@@ -1,8 +1,5 @@
-<?php
-
-require_once "config.php";
-require_once "header.php";
-?>
+@include('templates.config')
+@include('templates.header')
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +13,7 @@ require_once "header.php";
     <title>CHECKOUT</title>
 
     <!-- Favicons-->
-    <link href="css-front/skins/square/grey.css" rel="stylesheet">
+    <link href="{{asset('css/skins/square/grey.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +27,7 @@ require_once "header.php";
     <!-- End Header =============================================== -->
 
     <!-- SubHeader =============================================== -->
-    <div class="breadcrumbs_area" style="height:200px;background-image:url(img-take/ปกแบนเนอร์บนสุด-ติดตามสถานะสินค้า_1.jpg)">
+    <div class="breadcrumbs_area" style="height:200px;background-image:url({{asset('img-take/ปกแบนเนอร์บนสุด-ติดตามสถานะสินค้า_1.jpg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-xs-12">
@@ -141,7 +138,7 @@ require_once "header.php";
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <img src="img-take/ta-kewallet.png" alt="" style="width: 90%; margin-top: -7px;">
+                            <img src="{{asset('img-take/ta-kewallet.png')}}" alt="" style="width: 90%; margin-top: -7px;">
                         </div>
                         <div class="col-lg-3">
                         </div>
@@ -217,8 +214,8 @@ require_once "header.php";
                                                                     Credit card
                                                                 </div>
                                                                 <div class="col-lg-4">
-                                                                    <img class="pull-right" width="50" style="height: 50px;" src="assets/img/icon/visa.png" alt="">
-                                                                    <img class="pull-right" width="50" style="height: 50px;" src="assets/img/icon/mastercard.png" alt="">
+                                                                    <img class="pull-right" width="50" style="height: 50px;" src="{{asset('assets/img/icon/visa.png')}}" alt="">
+                                                                    <img class="pull-right" width="50" style="height: 50px;" src="{{asset('assets/img/icon/mastercard.png')}}" alt="">
 
                                                                 </div>
                                                             </button></td>
@@ -312,7 +309,7 @@ require_once "header.php";
                                                                 <div>
                                                                     <div class="bank_choice">
                                                                         <input id="payment" name="check_method" type="radio" data-target="createp_account" />
-                                                                        <img src="img-take/ibang_1.PNG" alt="">
+                                                                        <img src="{{asset('img-take/ibang_1.PNG')}}" alt="">
                                                                         <label for="payment" style="font-size: 15px;">ธนาคารกรุงไทย</label>
                                                                         <span for="payment" style="font-size: 15px;">เลขบัญชี 444-444-4444</span>
                                                                     </div>
@@ -326,7 +323,7 @@ require_once "header.php";
                                                                 <div>
                                                                     <div class="bank_choice">
                                                                         <input id="payment" name="check_method" type="radio" data-target="createp_account" />
-                                                                        <img src="img-take/ibang_2.PNG" alt="">
+                                                                        <img src="{{asset('img-take/ibang_2.PNG')}}" alt="">
                                                                         <label for="payment" style="font-size: 15px;">ธนาคารกสิกรไทย</label>
                                                                         <span for="payment" style="font-size: 15px;">เลขบัญชี 444-444-4444</span>
                                                                     </div>
@@ -340,7 +337,7 @@ require_once "header.php";
                                                                 <div>
                                                                     <div class="bank_choice">
                                                                         <input id="payment" name="check_method" type="radio" data-target="createp_account" />
-                                                                        <img src="img-take/ibang_3.PNG" alt="">
+                                                                        <img src="{{asset('img-take/ibang_3.PNG')}}" alt="">
                                                                         <label for="payment" style="font-size: 15px;">ธนาคารกรุงเทพ</label>
                                                                         <span for="payment" style="font-size: 15px;">เลขบัญชี 444-444-4444</span>
                                                                     </div>
@@ -375,7 +372,7 @@ require_once "header.php";
                                                                 </div>
                                                                 <div class="col-lg-4 pull-right" style="text-align: right;">
                                                                     <!-- <img class="pull-right" width="150" src="assets/img/icon/papyel.png" alt=""> -->
-                                                                    <img src="assets/img/icon/paypal.png" alt="" style="height: 30px;">
+                                                                    <img src="{{asset('assets/img/icon/paypal.png')}}" alt="" style="height: 30px;">
                                                                 </div>
                                                             </button></td>
                                                     </tr>
@@ -387,7 +384,7 @@ require_once "header.php";
 
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="border-left: 1px solid #ededed; border-right: 1px solid #ededed; border-bottom: 1px solid #ededed;">
-                                        <div class="card-body">      
+                                        <div class="card-body>      
                                 <div class="table table-borderless" style="margin-left:10%;">
                                             <div class="payment_method">
                                                 <br>
@@ -515,10 +512,7 @@ require_once "header.php";
     <!-- End Content =============================================== -->
 
     <!-- Footer ================================================== -->
-    <?php
-
-    require_once "footer.php";
-    ?>
+    @include('templates.footer')
     <!-- End Footer =============================================== -->
 
     <div class="layer"></div><!-- Mobile menu overlay mask -->
@@ -578,44 +572,44 @@ require_once "header.php";
     <!-- End Search Menu -->
 
     <!-- COMMON SCRIPTS -->
-    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="{{asset('assets/js/vendor/jquery-3.4.1.min.js')}}"></script>
     <!--popper min js-->
-    <script src="assets/js/popper.js"></script>
+    <script src="{{asset('assets/js/popper.js')}}"></script>
     <!--bootstrap min js-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
     <!--owl carousel min js-->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
     <!--slick min js-->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{{asset('assets/js/slick.min.js')}}"></script>
     <!--magnific popup min js-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
     <!--counterup min js-->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
     <!--jquery countdown min js-->
-    <script src="assets/js/jquery.countdown.js"></script>
+    <script src="{{asset('assets/js/jquery.countdown.js')}}"></script>
     <!--jquery ui min js-->
-    <script src="assets/js/jquery.ui.js"></script>
+    <script src="{{asset('assets/js/jquery.ui.js')}}"></script>
     <!--jquery elevatezoom min js-->
-    <script src="assets/js/jquery.elevatezoom.js"></script>
+    <script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
     <!--isotope packaged min js-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
     <!--slinky menu js-->
-    <script src="assets/js/slinky.menu.js"></script>
+    <script src="{{asset('assets/js/slinky.menu.js')}}"></script>
     <!--instagramfeed menu js-->
-    <script src="assets/js/jquery.instagramFeed.min.js"></script>
+    <script src="{{asset('assets/js/jquery.instagramFeed.min.js')}}"></script>
     <!-- Plugins JS -->
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-    <script src="js-front/jquery-2.2.4.min.js"></script>
-    <script src="js-front/common_scripts_min.js"></script>
-    <script src="js-front/functions.js"></script>
-    <script src="assets/validate.js"></script>
+    <script src="{{asset('assets/js/main.js')}}"></script>
+    <script src="{{asset('js-front/jquery-2.2.4.min.js')}}"></script>
+    <script src="{{asset('js-front/common_scripts_min.js')}}"></script>
+    <script src="{{asset('js-front/functions.js')}}"></script>
+    <script src="{{asset('assets/validate.js')}}"></script>
 
     <!-- SPECIFIC SCRIPTS -->
-    <script src="js-front/ResizeSensor.min.js"></script>
-    <script src="js-front/theia-sticky-sidebar.min.js"></script>
+    <script src="{{asset('js-front/ResizeSensor.min.js')}}"></script>
+    <script src="{{asset('js-front/theia-sticky-sidebar.min.js')}}"></script>
     <script>
         jQuery('#sidebar').theiaStickySidebar({
             additionalMarginTop: 80
@@ -623,8 +617,8 @@ require_once "header.php";
     </script>
 
     <!-- Date and time pickers -->
-    <script src="js-front/bootstrap-datepicker.js"></script>
-    <script src="js-front/bootstrap-timepicker.js"></script>
+    <script src="{{asset('js-front/bootstrap-datepicker.js')}}"></script>
+    <script src="{{asset('js-front/bootstrap-timepicker.js')}}"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
         $('input.date-pick').datepicker('setDate', 'today');

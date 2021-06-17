@@ -8,9 +8,42 @@ use Illuminate\Support\Facades\DB;
 class AdminShopController extends Controller
 {
     //
-    public function manage_store02_view(){
-        $data = DB::table('tbl_Food_Master')->orderBy('Fm_ID', 'desc')->get();
-        return view('admin/manage_store02',compact('data'));
+    public function login_view(){
+        return view('admin.login');
+    }
+    public function login_check(Request $request)
+    {
+        $input = $request->all();
+        $this->validate($request, [
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+        $data = DB::table('tbl_Store')->where('St_User_Shop', $input['username'])->where('St_Pass_Shop',$input['password'])->get();
+        if($data->count()==1){
+            foreach($data as $row) :
+                $request->session()->put('St_ID', $row->St_ID);
+                $request->session()->put('St_Name', $row->St_Name);
+                $request->session()->put('St_Logo', $row->St_Logo);
+            endforeach;
+            $data = DB::table('tbl_Food_Master')->join('tbl_Store','tbl_Food_Master.St_ID','=','tbl_Store.St_ID')->where('tbl_Food_Master.St_ID', $request->session()->get('St_ID'))->orderBy('tbl_Food_Master.Fm_ID', 'desc')->get();
+
+            return redirect('manage_store02');
+            //echo $data;
+        }else{
+            return redirect('admin_shop/login')->with('error','You username or Password Wrong!!');
+        }
+    }
+    public function manage_store02_view(Request $request){
+        //echo $request->session()->get('St_ID');
+        if($request->session()->has('St_ID')){
+            $data = DB::table('tbl_Food_Master')->join('tbl_Store','tbl_Food_Master.St_ID','=','tbl_Store.St_ID')->where('tbl_Food_Master.St_ID', $request->session()->get('St_ID'))->orderBy('tbl_Food_Master.Fm_ID', 'desc')->get();
+            return view('admin/manage_store02',compact('data'));
+            //return view('admin/manage_store02',compact('data'));
+            //echo $data;
+        }else{
+            return redirect('admin_shop/login')->with('error','You must login!!');
+        }
+        
     }
     public function insert_food(Request $request){
         //echo "test";
@@ -31,7 +64,7 @@ class AdminShopController extends Controller
 
         DB::table('tbl_Food_Master')->insert([
             ['Fm_Name' => $request['food_name'],'Fm_Description' => $request['food_detail'], 'Fm_Price' => $request['food_price'], 
-            'Fm_Type' => $request['food_type'], 'Fm_Image' => $image_path, 'Fm_Status' => "false"]
+            'Fm_Type' => $request['food_type'], 'Fm_Image' => $image_path, 'Fm_Status' => "false", 'St_ID'=>$request->session()->get('St_ID')]
         ]);
         return back()->with('success','You have successfully upload image.');
 
@@ -43,15 +76,6 @@ class AdminShopController extends Controller
         return view('admin/manage_store02-1',compact('data'));
     }
     public function update_food_db(Request $request,$id){
-        //echo $id;
-        // $request->validate([
-        //     'food_name' => 'required|min:3|max:1000',
-        //     'food_price' => 'required',
-        //     'food_type' => 'required',
-        //     'food_detail' => 'required|min:3|max:1000',
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-        // echo $request['food_name'];
         if(isset($request['image'])){
             $imageName = time().'.'.$request->image->extension();  
      
@@ -81,5 +105,9 @@ class AdminShopController extends Controller
         $id = $request['id'];
         DB::table('tbl_Food_Master')->where('Fm_ID', $id)->delete();
         return back();
+    }
+    public function logout(Request $request){
+        $request->session()->flush();
+        return redirect('admin_shop/login');
     }
 }

@@ -1,8 +1,6 @@
-<?php
 
-require_once "config.php";
-require_once "header.php";
-?>
+@include('templates.config')
+@include('templates.header')
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -14,38 +12,38 @@ require_once "header.php";
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/favicon.ico')}}">
 
     <!-- CSS 
     ========================= -->
     <!--bootstrap min css-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <!--owl carousel min css-->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
     <!--slick min css-->
-    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
     <!--magnific popup min css-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
     <!--font awesome css-->
-    <link rel="stylesheet" href="assets/css/font.awesome.css">
+    <link rel="stylesheet" href="{{asset('assets/css/font.awesome.css')}}">
     <!--ionicons css-->
-    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/ionicons.min.css')}}">
     <!--linearicons css-->
-    <link rel="stylesheet" href="assets/css/linearicons.css">
+    <link rel="stylesheet" href="{{asset('assets/css/linearicons.css')}}">
     <!--animate css-->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
     <!--jquery ui min css-->
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.min.css')}}">
     <!--slinky menu css-->
-    <link rel="stylesheet" href="assets/css/slinky.menu.css">
+    <link rel="stylesheet" href="{{asset('assets/css/slinky.menu.css')}}">
     <!--plugins css-->
-    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="{{asset('assets/css/plugins.css')}}">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 
     <!--modernizr min js here-->
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="{{asset('assets/js/vendor/modernizr-3.7.1.min.js')}}"></script>
     <style>
         .avatar-upload {
             position: relative;
@@ -174,7 +172,7 @@ require_once "header.php";
                     </div>
                     <div class="box_style_1 hidden-lg  mt-xs-2">
                         <ul id="cat_nav">
-                            <li><a href="#" onclick="myFunction()">เมนู จัดการอื่นๆ <img class="pull-right" src="img-take/filter.png" width="20" alt=""> </a></li>
+                            <li><a href="#" onclick="myFunction()">เมนู จัดการอื่นๆ <img class="pull-right" src="{{asset('img-take/filter.PNG')}}" width="20" alt=""> </a></li>
 
                         </ul>
                     </div><!-- End box_style_1 -->
@@ -286,7 +284,7 @@ require_once "header.php";
 
                                                 <div class="row track_bottom">
                                                     <div class="col-lg-12 col-xs-12">
-                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="img-take/bonchon.jpg" alt="" width="50" height="50"></a>
+                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="{{asset('img-take/bonchon.jpg')}}" alt="" width="50" height="50"></a>
                                                         </div>
                                                         <div class="col-lg-5 col-xs-6 tracking_name">
                                                              <div class="nameorder">
@@ -343,7 +341,7 @@ require_once "header.php";
 
                                                 <div class="row track_bottom">
                                                     <div class="col-lg-12 col-xs-12">
-                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="img-take/หอยทอด.jpeg" alt="" width="50" height="50"></a>
+                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="{{asset('img-take/หอยทอด.jpeg')}}" alt="" width="50" height="50"></a>
                                                         </div>
                                                         <div class="col-lg-5 col-xs-6 tracking_name">
                                                         <div class="nameorder">
@@ -399,7 +397,7 @@ require_once "header.php";
 
                                                 <div class="row track_bottom">
                                                     <div class="col-lg-12 col-xs-12">
-                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="img-take/641742.jpg" alt="" width="50" height="50"></a>
+                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="{{asset('img-take/641742.jpg')}}" alt="" width="50" height="50"></a>
                                                         </div>
                                                         <div class="col-lg-5 col-xs-6 tracking_name">
                                                         <div class="nameorder">
@@ -476,7 +474,7 @@ require_once "header.php";
 
                                                 <div class="row track_bottom">
                                                     <div class="col-lg-12 col-xs-12">
-                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="img-take/ramen.jpg" alt="" width="50" height="50"></a>
+                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="{{asset('img-take/ramen.jpg')}}" alt="" width="50" height="50"></a>
                                                         </div>
                                                         <div class="col-lg-5 col-xs-6 tracking_name">
                                                         <div class="nameorder">
@@ -533,7 +531,7 @@ require_once "header.php";
 
                                                 <div class="row track_bottom">
                                                     <div class="col-lg-12 col-xs-12">
-                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="img-take/หอยทอด.jpeg" alt="" width="50" height="50"></a>
+                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="{{asset('img-take/หอยทอด.jpeg')}}" alt="" width="50" height="50"></a>
                                                         </div>
                                                         <div class="col-lg-5 col-xs-6 tracking_name">
                                                         <div class="nameorder">
@@ -589,7 +587,7 @@ require_once "header.php";
 
                                                 <div class="row track_bottom">
                                                     <div class="col-lg-12 col-xs-12">
-                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="img-take/nara.jpg" alt="" width="50" height="50"></a>
+                                                        <div class="col-lg-2 col-xs-6 tracking_thumb"><a href="#"><img src="{{asset('img-take/nara.jpg')}}" alt="" width="50" height="50"></a>
                                                         </div>
                                                         <div class="col-lg-5 col-xs-6 tracking_name">
                                                         <div class="nameorder">
@@ -660,7 +658,7 @@ require_once "header.php";
                                                            
                                                             <h5><a class="nameshop" href="">Adidas</a></h5>
                                                             <br>
-                                                            <img src="img-take/Logo-Kerry-Express_2-3.png" width="50" height="50" alt="">
+                                                            <img src="{{asset('img-take/Logo-Kerry-Express_2-3.png')}}" width="50" height="50" alt="">
                                                             <p class="d-md-">หมายเลขพัสดุ
                                                                 <a href="#" data-toggle="modal" data-target="#modal_box6" title="" data-original-title="quick view" style="font-size: 13px;">KR001</a>
                                                         </div>
@@ -803,7 +801,7 @@ require_once "header.php";
                                                             <hr>
                                                         </div>
                                                         <div class="col-lg-1 col-xs-4">
-                                                            <img src="assets/img/product/product3.jpg" alt="">
+                                                            <img src="{{asset('assets/img/product/product3.jpg')}}" alt="">
                                                         </div>
                                                         <div class="col-lg-9 col-xs-6">
                                                             <p> Apple iPad Pro Case เคสไอแพด 11 iPad case 2020</p>
@@ -854,11 +852,11 @@ require_once "header.php";
                                                 <div class="col-lg-4 col-xs-8">
                                                     <div class="avatar-upload">
                                                         <div class="avatar-edit">
-                                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg')}}" />
                                                             <label for="imageUpload"></label>
                                                         </div>
                                                         <div class="avatar-preview">
-                                                            <div id="imagePreview" style="    background-image: url(img/img-nong.png);">
+                                                            <div id="imagePreview" style="    background-image: url({{asset('img/img-nong.png')}});">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -948,7 +946,7 @@ require_once "header.php";
                             <!--login area start-->
                             <br>
                             <div class="head_tf">
-                                <p>เปลี่ยนรหัสผ่าน</ย>
+                                <p>เปลี่ยนรหัสผ่าน</p>
                             </div>
                             <div class="product_tracking_inner">
                                 <div class="customer_login" style="padding:0px;">
@@ -1112,7 +1110,7 @@ require_once "header.php";
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
-                                        <img src="img-take/ta-kewallet.png" alt="" style="width: 90%; margin-top: -7px;">
+                                        <img src="{{asset('img-take/ta-kewallet.PNG')}}" alt="" style="width: 90%; margin-top: -7px;">
                                     </div>
                                     <div class="col-lg-3">
                                     </div>
@@ -1188,8 +1186,8 @@ require_once "header.php";
                                                                             Credit card
                                                                         </div>
                                                                         <div class="col-lg-4">
-                                                                            <img class="pull-right" width="50" style="height: 50px;" src="assets/img/icon/visa.png" alt="">
-                                                                            <img class="pull-right" width="50" style="height: 50px;" src="assets/img/icon/mastercard.png" alt="">
+                                                                            <img class="pull-right" width="50" style="height: 50px;" src="{{asset('assets/img/icon/visa.png')}}" alt="">
+                                                                            <img class="pull-right" width="50" style="height: 50px;" src="{{asset('assets/img/icon/mastercard.png')}}" alt="">
 
                                                                         </div>
                                                                     </button></td>
@@ -1262,10 +1260,10 @@ require_once "header.php";
                                                                             Mobile Banking
                                                                         </div>
                                                                         <div class="col-lg-4  pull-right" style="text-align: right;">
-                                                                            <!-- <img class="pull-right" width="150" src="assets/img/icon/papyel.png" alt=""> -->
-                                                                            <img src="img-take/ibang_1.PNG" alt="" style="height: 30px;">
-                                                                            <img src="img-take/ibang_2.PNG" alt="" style="height: 30px;">
-                                                                            <img src="img-take/ibang_3.PNG" alt="" style="height: 30px;">
+                                                                            <!-- <img class="pull-right" width="150" src="{{asset('assets/img/icon/papyel.png')}}" alt=""> -->
+                                                                            <img src="{{asset('img-take/ibang_1.PNG')}}" alt="" style="height: 30px;">
+                                                                            <img src="{{asset('img-take/ibang_2.PNG')}}" alt="" style="height: 30px;">
+                                                                            <img src="{{asset('img-take/ibang_3.PNG')}}" alt="" style="height: 30px;">
                                                                         </div>
                                                                     </button></td>
                                                             </tr>
@@ -1283,7 +1281,7 @@ require_once "header.php";
                                                                         <div>
                                                                             <div class="bank_choice">
                                                                                 <input id="payment" name="check_method" type="radio" data-target="createp_account" />
-                                                                                <img src="img-take/ibang_1.PNG" alt="">
+                                                                                <img src="{{asset('img-take/ibang_1.PNG')}}" alt="">
                                                                                 <label for="payment" style="font-size: 15px;">ธนาคารกรุงไทย</label>
                                                                                 <span for="payment" style="font-size: 15px;">เลขบัญชี 444-444-4444</span>
                                                                             </div>
@@ -1297,7 +1295,7 @@ require_once "header.php";
                                                                         <div>
                                                                             <div class="bank_choice">
                                                                                 <input id="payment" name="check_method" type="radio" data-target="createp_account" />
-                                                                                <img src="img-take/ibang_2.PNG" alt="">
+                                                                                <img src="{{asset('img-take/ibang_2.PNG')}}" alt="">
                                                                                 <label for="payment" style="font-size: 15px;">ธนาคารกสิกรไทย</label>
                                                                                 <span for="payment" style="font-size: 15px;">เลขบัญชี 444-444-4444</span>
                                                                             </div>
@@ -1311,7 +1309,7 @@ require_once "header.php";
                                                                         <div>
                                                                             <div class="bank_choice">
                                                                                 <input id="payment" name="check_method" type="radio" data-target="createp_account" />
-                                                                                <img src="img-take/ibang_3.PNG" alt="">
+                                                                                <img src="{{asset('img-take/ibang_3.PNG')}}" alt="">
                                                                                 <label for="payment" style="font-size: 15px;">ธนาคารกรุงเทพ</label>
                                                                                 <span for="payment" style="font-size: 15px;">เลขบัญชี 444-444-4444</span>
                                                                             </div>
@@ -1345,8 +1343,8 @@ require_once "header.php";
                                                                             Paypal
                                                                         </div>
                                                                         <div class="col-lg-4 pull-right" style="text-align: right;">
-                                                                            <!-- <img class="pull-right" width="150" src="assets/img/icon/papyel.png" alt=""> -->
-                                                                            <img src="assets/img/icon/paypal.png" alt="" style="height: 30px;">
+                                                                            <!-- <img class="pull-right" width="150" src="{{asset('assets/img/icon/papyel.png')}}" alt=""> -->
+                                                                            <img src="{{asset('assets/img/icon/paypal.png')}}" alt="" style="height: 30px;">
                                                                         </div>
                                                                     </button></td>
                                                             </tr>
@@ -1481,10 +1479,9 @@ require_once "header.php";
         </div>
 
         <!--footer area start-->
-        <?php
 
-        require_once "footer.php";
-        ?>
+        @include('templates.footer')
+
         <!-- modal area start-->
         <div class="modal fade " id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -1724,7 +1721,7 @@ require_once "header.php";
                         <span aria-hidden="true"><i class="fa fa-times"></i></span>
                     </button>
                     <div class="modal_body" id="optionsmenu">
-                        <img src="img-take/krtracking.jpg" alt="">
+                        <img src="{{asset('img-take/krtracking.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -1791,45 +1788,45 @@ require_once "header.php";
         <!--map js code here-->
         <script src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyChs2QWiAhnzz0a4OEhzqCXwx_qA9ST_lE"></script>
         <script src="https://www.google.com/jsapi"></script>
-        <script src="assets/js/map.js"></script>
+        <script src="{{asset('assets/js/map.js')}}"></script>
 
         <!--jquery min js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!--popper min js-->
-        <script src="assets/js/popper.js"></script>
+        <script src="{{asset('assets/js/popper.js')}}"></script>
         <!--bootstrap min js-->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
         <!--owl carousel min js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
         <!--slick min js-->
-        <script src="assets/js/slick.min.js"></script>
+        <script src="{{asset('assets/js/slick.min.js')}}"></script>
         <!--magnific popup min js-->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
         <!--counterup min js-->
-        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
         <!--jquery countdown min js-->
-        <script src="assets/js/jquery.countdown.js"></script>
+        <script src="{{asset('assets/js/jquery.countdown.js')}}"></script>
         <!--jquery ui min js-->
-        <script src="assets/js/jquery.ui.js"></script>
+        <script src="{{asset('assets/js/jquery.ui.js')}}"></script>
         <!--jquery elevatezoom min js-->
-        <script src="assets/js/jquery.elevatezoom.js"></script>
+        <script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
         <!--isotope packaged min js-->
-        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
         <!--slinky menu js-->
-        <script src="assets/js/slinky.menu.js"></script>
+        <script src="{{asset('assets/js/slinky.menu.js')}}"></script>
         <!--instagramfeed menu js-->
-        <script src="assets/js/jquery.instagramFeed.min.js"></script>
+        <script src="{{asset('assets/js/jquery.instagramFeed.min.js')}}"></script>
         <!-- Plugins JS -->
 
-        <script src="assets/js/plugins.js"></script>
+        <script src="{{asset('assets/js/plugins.js')}}"></script>
 
 
-        <!-- <script src="js-front/jquery-2.2.4.min.js"></script> -->
-        <script src="js-front/common_scripts_min.js"></script>
-        <script src="js-front/functions.js"></script>
-        <script src="assets/validate.js"></script>
+        <!-- <script src="js-front/jquery-2.2.4.min.js')}}"></script> -->
+        <script src="{{asset('js-front/common_scripts_min.js')}}"></script>
+        <script src="{{asset('js-front/functions.js')}}"></script>
+        <script src="{{asset('assets/validate.js')}}"></script>
         <!-- Main JS -->
-        <script src="assets/js/main.js"></script>
+        <script src="{{asset('assets/js/main.js')}}"></script>
 
         <script>
             function myFunction() {
@@ -1846,7 +1843,7 @@ require_once "header.php";
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
                     reader.onload = function(e) {
-                        $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                        $('#imagePreview').css')}}('background-image', 'url(' + e.target.result + ')');
                         $('#imagePreview').hide();
                         $('#imagePreview').fadeIn(650);
                     }
